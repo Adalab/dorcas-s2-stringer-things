@@ -8,6 +8,10 @@
 </head>
 <body>
 
+
+  <a href="index.html">Landing Page</a>
+
+
   <header class="header">
 
   </header>
@@ -15,7 +19,31 @@
   <main>
 
     <section class="section-card">
-
+      <button type="button" name="Reset" alt="reset button">Reset</button>
+      <div class="card">
+        <div class="section-card__top">
+          <p>Nombre apellido</p>
+          <p>Profesión</p>
+        </div>
+        <div class="section-card__image">
+          <img src="images/image-card.png" alt="user-photo">
+        </div>
+        <div class="section-card__social">
+          <ul>
+            <li> <button type="button" name="mobile" alt="button mobile" class= "button button--mobile"></button> </li>
+            <li> <button type="button" name="mail" alt="button mail" class= "button button--mail"></button> </li>
+            <li> <button type="button" name="linkedin" alt= "button linkedin" class= "button button--linkedin"></button> </li>
+            <li> <button type="button" name="github" alt="buttonbgithub" class="button button--github"></button> </li>
+          </ul>
+        </div>
+        <div class="section-card__skills">
+          <ul>
+            <li class= "skill">habilidad 1</li>
+            <li class= "skill">habilidad 2</li>
+            <li class= "skill">habilidad 3</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
 
@@ -26,11 +54,63 @@
 
         <fieldset class="design">
           <div class="design-title">
-            <legend class="design-legend"></legend>
+            <legend class="design-legend">
+              diseña
+            </legend>
           </div>
-
           <div class="design-form">
+            <div class="div-colors">
+              <label for="colors">
+                colores
+              </label>
+              <input id="colors" type="radio" name="colors" value="palet1" checked>
+              <div class="palet1-color1">
 
+              </div>
+              <div class="palet1-color2">
+
+              </div>
+              <div class="palet1-color3">
+
+              </div>
+              <input id="colors" type="radio" name="colors" value="palet2">
+              <div class="palet2-color1">
+
+              </div>
+              <div class="palet2-color2">
+
+              </div>
+              <div class="palet2-color3">
+
+              </div>
+              <input id="colors" type="radio" name="colors" value="palet3">
+              <div class="palet3-color1">
+
+              </div>
+              <div class="palet3-color2">
+
+              </div>
+              <div class="palet3-color3">
+
+              </div>
+            </div>
+            <div class="div-fonts">
+              <label for="fonts">
+                fuentes
+              </label>
+              <input id="fonts" type="radio" name="fonts" value="font1">
+              <div class="font1">
+                ubuntu
+              </div>
+              <input id="fonts" type="radio" name="fonts" value="font2" checked>
+              <div class="font2">
+                comic sans
+              </div>
+              <input id="fonts" type="radio" name="fonts" value="font3">
+              <div class="font3">
+                monserrat
+              </div>
+            </div>
           </div>
         </fieldset>
 
@@ -39,41 +119,76 @@
 
         <fieldset class="fill">
           <div class="fill-title">
-            <legend class="fill-legend"></legend>
-          </div>
-        </div>
-        <div class="fill-form">
-        </div>
-      </fieldset>
+            <legend class="fill-legend">RELLENA</legend>                      </div>
+            <div class="fill-form">
+              <label for="nmb ">Nombre completo</label>
+              <input placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
+
+              <label for="job ">Puesto</label>
+              <input placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="">
+
+              <label for="add-image">Imagen de perfil</label>
+              <input id="add-image" type="submit" value="Añadir imagen">
+
+              <div class="image">"cuadrado"</div>
+
+              <label for="emailaddress">Email</label>
+              <input placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="text" name="" value="">
+
+              <label for="phone">Teléfono</label>
+              <input placeholder="Ej: 555-55-55-55" id="phone" type="tel" name="telephone" value="">
+
+              <label for="lkdn">Linkedin</label>
+              <input placeholder="Ej: linkedin.com/in/sally.hill" id="lkdn" type="email" name="mail" value="">
+
+              <label for="GH">Github</label>
+              <input placeholder="Ej: @sally-hill" id="GH" type="email" name="mail" value="">
+
+              <label for="">Habilidades (máximo 3)</label>
+              <select class="select-first" name="abilities">
+                <option value="value1">HTML</option>
+                <option value="value2">CSS</option>
+                <option value="value3">JAVASCRIPT</option>
+                <option value="value4">SASS</option>
+              </select>
+
+              <select class="select-second" name="abilities">
+                <option value="value1">CSS</option>
+                <option value="value2">JAVASCRIPT</option>
+                <option value="value3">SASS</option>
+              </select>
+
+              <button type="button" name="button">+</button>
+              <button type="button" name="button">-</button>
+
+            </div>
+          </fieldset>
+
+
+          <fieldset class="share">
+            <div class="share-title">
+              <legend class="share-legend"></legend>
+            </div>
+
+            <div class="share-form">
+
+            </div>
+          </fieldset>
+
+        </form>
+      </section>
+
+    </main>
+    <footer class="footer">
+
+    </footer>
 
 
 
-      <fieldset class="share">
-        <div class="share-title">
-          <legend class="share-legend"></legend>
-        </div>
 
 
-      </div>
-      <div class="share-form">
+    <!-- Como toques aquí te matamos -->
+    <script type="text/javascript" src="js/main.js"></script>
 
-      </div>
-    </fieldset>
-
-  </form>
-</section>
-
-</main>
-<footer class="footer">
-
-</footer>
-
-
-
-
-
-<!-- Como toques aquí te matamos -->
-<script type="text/javascript" src="js/main.js"></script>
-
-</body>
-</html>
+  </body>
+  </html>
