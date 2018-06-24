@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <title>Awesome profile-cards</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -114,13 +115,13 @@
           </div>
         </fieldset>
 
+        <!--SECCIÓN MARÍA-->
 
-
-
-        <fieldset class="fill">
-          <div class="fill-title">
+        <fieldset class="section-collapsible__fill">
+          <div class="section-collapsible__fill--title">
             <legend class="fill-legend">RELLENA</legend>                      </div>
-            <div class="fill-form">
+
+            <div class="section-collapsible__fill--form">
               <label for="nmb ">Nombre completo</label>
               <input placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
 
@@ -144,51 +145,69 @@
               <label for="GH">Github</label>
               <input placeholder="Ej: @sally-hill" id="GH" type="email" name="mail" value="">
 
-              <label for="">Habilidades (máximo 3)</label>
-              <select class="select-first" name="abilities">
-                <option value="value1">HTML</option>
-                <option value="value2">CSS</option>
-                <option value="value3">JAVASCRIPT</option>
-                <option value="value4">SASS</option>
-              </select>
+              <div class="abilities-fill">
+                <label for="">Habilidades (máximo 3)</label>
+                <select class="select-first" name="abilities">
+                  <option value="value1">HTML</option>
+                  <option value="value2">CSS</option>
+                  <option value="value3">JAVASCRIPT</option>
+                  <option value="value4">SASS</option>
+                </select>
 
-              <select class="select-second" name="abilities">
-                <option value="value1">CSS</option>
-                <option value="value2">JAVASCRIPT</option>
-                <option value="value3">SASS</option>
-              </select>
+                <select class="select-second" name="abilities">
+                  <option value="value1">CSS</option>
+                  <option value="value2">JAVASCRIPT</option>
+                  <option value="value3">SASS</option>
+                </select>
 
-              <button type="button" name="button">+</button>
-              <button type="button" name="button">-</button>
-
-            </div>
-          </fieldset>
-
-
-          <fieldset class="share">
-            <div class="share-title">
-              <legend class="share-legend"></legend>
-            </div>
-
-            <div class="share-form">
+                <button class="button-abilities__mas" type="button" name="button">+</button>
+                <button class="button-abilities__menos" type="button" name="button">-</button>
+              </div>
 
             </div>
           </fieldset>
 
-        </form>
-      </section>
 
-    </main>
-    <footer class="footer">
+          <fieldset class="section-collapsible__share">
+            <div class="section-collapsible__share--title">
+              <legend class="share-legend">COMPARTE</legend>
+            </div>
 
-    </footer>
+            <div class="section-collapsible__share--button">
+
+              <button class="btn-create-card" type="button" name="button"><span><i class="far fa-address-card" style="font-size: 15px;"></i></span>CREAR TARJETA</button>
+
+            </div>
+
+            <div class="section-collapsible__share--end">
+              <p class="phrase">La tarjeta ha sido creada:</p>
+
+              <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a>
+
+
+              <a class="link-twitter" href="#">
+                <button class="btn-create-card" type="button" name="button">
+                  <span><i class="fab fa-twitter" style="font-size: 15px;"></i>
+                  </span>Compartir en twitter</button>
+                </a>
+
+              </div>
+            </fieldset>
+               
+      </form>
+    </section>
+
+  </main>
+  <footer class="footer">
+
+  </footer>
 
 
 
 
 
-    <!-- Como toques aquí te matamos -->
-    <script type="text/javascript" src="js/main.js"></script>
+  <!-- Como toques aquí te matamos -->
+  <script type="text/javascript" src="js/main.js"></script>
 
-  </body>
-  </html>
+</body>
+</html>
