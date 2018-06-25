@@ -1,10 +1,14 @@
-.box {
-  height: 25px;
-  width: 30px;
-  border: 1px solid red;
+.section-collapsible__fill {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
 }
 
-.big-box {
+.section-collapsible__fill--title {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,22 +18,32 @@
   flex-direction: row;
 }
 
-.prueba {
+.icon-title {
+  padding-right: 10px;
+}
+
+.section-collapsible__fill--form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.div-colors {
+.section-collapsible__share--title {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.esto {
+.section-collapsible__share--end {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
