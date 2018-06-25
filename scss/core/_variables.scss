@@ -1,8 +1,77 @@
-$color-grey-mouse: #f5f5f5;
-$color-green-fish: #a2deaf;
-$color-green-camaleon: #114e4e;
-$color-white-horse: #fff;
 $color-orange-monkey: #e17334;
-$color-grey-gorilla: #54585a;
+$color-grey-mouse: #f5f5f5;
+$color-white-horse: #fff;
+$color-blue-peacock: #00a0f5;
+
+// $color-grey-gorilla: #54585a;
+// $color-grey-cat: #6b6b6b;
+
+/* Palette 1 */
+$color-green-camaleon: #114e4e;
 $color-green-sirena: #438792;
+$color-green-fish: #a2deaf;
+
+/* Palette 2 */
+$color-red-crab: #420101;
+$color-red-lobster: #bd1010;
+$color-red-prawn: #e95626;
+
+/* Palette 3 */
+$color-blue-elephant: #3e5b65;
+$color-blue-dolphin: #dfe5eb;
+$color-blue-whale: #a0c0cf;
+
+/* Palette 4 */
+$color-purple-milka: #7a0177;
+$color-purple-butterfly: #c51b8a;
+$color-pink-snail: #f768a1;
+
+/* color check */
+
+$color-check: $color-blue-peacock;
+
+$color-primary: $color-green-camaleon;
+$color-secondary: $color-orange-monkey;
+$color-terciary: $color-green-fish;
+
+$background-primary: $color-grey-mouse;
+$background-secondary: $color-purple-milka;
+$background-terciary: $color-white-horse;
+
+$color-palette-11: $color-green-camaleon;
+$color-palette-12: $color-green-sirena;
+$color-palette-13: $color-green-fish;
+
+$color-palette-21: $color-red-crab;
+$color-palette-22: $color-red-lobster;
+$color-palette-23: $color-red-prawn;
+
+$color-palette-31: $color-blue-elephant;
+$color-palette-32: $color-blue-dolphin;
+$color-palette-33: $color-blue-whale;
+
+$color-palette-41: $color-purple-milka;
+$color-palette-42: $color-purple-butterfly;
+$color-palette-43: $color-pink-snail;
+
 $color-grey-cat: #6b6b6b;
+
+/* Tipo de fuente */
+
+$font-family-open: "Open Sans, sans-serif";
+$font-family-merri: "Merriweather";
+$font-family-comic: "ComicSansMS";
+
+$font-family-primary: $font-family-open;
+$font-family-secondary: $font-family-merri;
+$font-family-tertiary: $font-family-comic;
+
+/* Tamaño fuente */
+
+$font-size-mega: 28px;
+$font-size-kilo: 19px;
+$font-size-hecta: 18px;
+$font-size3-deca: 16px;
+$font-size4-deci: 14px;
+$font-size2-centi: 13px;
+$font-size6-mili: 12px;
