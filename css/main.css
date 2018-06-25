@@ -1,7 +1,7 @@
-
-/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check */
-
-@charset "UTF-8";/* colores de pagina *//* Tipo de fuente *//* Tamaño fuente */
-
+@charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check *//* Tipo de fuente *//* Tamaño fuente */.cover-main__text--title {
+  color: #e17334;
+  font-family: "Merriweather";
+  font-size: 19px;
+}
 
 /*# sourceMappingURL=main.css.map */
