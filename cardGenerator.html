@@ -118,39 +118,42 @@
           </div>
         </fieldset>
 
-        <!--SECCIÓN MARÍA-->
+        <!--SECCIÓN OLATZ-->
 
         <fieldset class="section-collapsible__fill">
           <div class="section-collapsible__fill--title">
             <span class="icon-title"><i class="far fa-keyboard"></i></span>
-            <legend class="fill-legend">RELLENA</legend>                     </div>
+            <legend class="fill-legend">rellena</legend>                     </div>
 
             <div class="section-collapsible__fill--form">
-              <label for="nmb ">Nombre completo</label>
-              <input placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
+              <label class="fill-input" for="nmb ">Nombre completo</label>
+              <input class="fill-input__placeholder" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
 
-              <label for="job ">Puesto</label>
-              <input placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="">
+              <label class="fill-input" for="job ">Puesto</label>
+              <input class="fill-input__placeholder" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="">
 
-              <label for="add-image">Imagen de perfil</label>
-              <input id="add-image" type="submit" value="Añadir imagen">
+              <label class="fill-input" for="add-image">Imagen de perfil</label>
+              <div class="fill-input__image__square">
 
-              <div class="image">"cuadrado"</div>
 
-              <label for="emailaddress">Email</label>
-              <input placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="text" name="" value="">
+              <input class="fill-input__image" id="add-image" type="submit" value="Añadir imagen">
 
-              <label for="phone">Teléfono</label>
-              <input placeholder="Ej: 555-55-55-55" id="phone" type="tel" name="telephone" value="">
+              <div class="square__white"></div>
+              </div>
+              <label class="fill-input" for="emailaddress">Email</label>
+              <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="text" name="" value="">
 
-              <label for="lkdn">Linkedin</label>
-              <input placeholder="Ej: linkedin.com/in/sally.hill" id="lkdn" type="email" name="mail" value="">
+              <label class="fill-input" for="phone">Teléfono</label>
+              <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="tel" name="telephone" value="">
 
-              <label for="GH">Github</label>
-              <input placeholder="Ej: @sally-hill" id="GH" type="email" name="mail" value="">
+              <label class="fill-input" for="lkdn">Linkedin</label>
+              <input class="fill-input__placeholder" placeholder="Ej: linkedin.com/in/sally.hill" id="lkdn" type="email" name="mail" value="">
+
+              <label class="fill-input" for="GH">Github</label>
+              <input class="fill-input__placeholder" placeholder="Ej: @sally-hill" id="GH" type="email" name="mail" value="">
 
               <div class="abilities-fill">
-                <label for="">Habilidades (máximo 3)</label>
+                <label class="fill-input" for="">Habilidades (máximo 3)</label>
                 <select class="select-first" name="abilities">
                   <option value="value1">HTML</option>
                   <option value="value2">CSS</option>
