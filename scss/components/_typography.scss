@@ -7,11 +7,53 @@
 .cover-main__text--p {
   color: $color-primary;
   font-family: $font-family-primary;
-  font-size: $font-size2-centi;
+  font-size: $font-size-centi;
 }
 
 .cover-main__list {
-  color: $color-grey-gorilla;
+  color: $color-terciary;
   font-family: $font-family-primary;
-  font-size: $font-size3-deca;
+  font-size: $font-size-deca;
+}
+
+.footer--credit {
+  color: $color-grey-cat;
+  font-family: $font-family-primary;
+  font-size: $font-size-deci;
+}
+
+.design-legend {
+  color: $color-terciary;
+  font-family: $font-family-primary;
+  font-size: $font-size-hecta;
+}
+
+.skill {
+  color: $color-white-horse;
+  font-family: $font-family-primary;
+  font-size: $font-size-centi;
+}
+
+.fill-legend {
+  color: $color-terciary;
+  font-family: $font-family-primary;
+  font-size: $font-size-hecta;
+}
+
+.share-legend {
+  color: $color-terciary;
+  font-family: $font-family-primary;
+  font-size: $font-size-hecta;
+}
+
+.title-div-design {
+  color: $color-terciary;
+  font-family: $font-family-primary;
+  font-size: $font-size-deci;
+}
+
+.section-collapsible__fill--form {
+  color: $color-primary;
+  font-family: $font-family-primary;
+  font-size: $font-size-deci;
 }
