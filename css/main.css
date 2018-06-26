@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-.section-collapsible__fill {
+@charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check *//* Tipo de fuente *//* Tamaño fuente */.section-collapsible__fill {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100vh;
@@ -53,12 +52,34 @@
   -ms-flex-direction: column;
   flex-direction: column;
 }
-=======
 
-/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check */
+.cover-main__text--title {
+  color: #e17334;
+  font-family: "Merriweather";
+  font-size: 19px;
+}
 
-@charset "UTF-8";/* colores de pagina *//* Tipo de fuente *//* Tamaño fuente */
+.cover-main__text--p {
+  color: #114e4e;
+  font-family: "Open Sans, sans-serif";
+  font-size: 13px;
+}
 
->>>>>>> 16ec025a76ef6e2213aeffdeb1c701fa7f821407
+.cover-main__list {
+  color: #54585a;
+  font-family: "Open Sans, sans-serif";
+  font-size: 16px;
+}
+
+* {
+  border: 1px solid red;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 /*# sourceMappingURL=main.css.map */
