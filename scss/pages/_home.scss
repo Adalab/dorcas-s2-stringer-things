@@ -1,3 +1,44 @@
 * {
   border: 1px solid red;
 }
+
+.design-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-colors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paletas {
+  display: flex;
+  flex-direction: column;
+}
+
+.paleta1 {
+  display: flex;
+}
+
+.palet1-color2::before {
+  width: 30px;
+  height: 25px;
+  background-color: $color-palette-11;
+  content: '';
+}
+
+.palet1-color2 {
+  width: 90px;
+  height: 25px;
+  background-color: $color-palette-12;
+  display: flex;
+  justify-content: space-between;
+}
+
+.palet1-color2::after {
+  width: 30px;
+  height: 25px;
+  background-color: $color-palette-13;
+  content: '';
+}
