@@ -1,7 +1,70 @@
+
 @charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check *//* Tipo de fuente *//* Tamaño fuente */.cover-main__text--title {
   color: #e17334;
   font-family: "Merriweather";
   font-size: 19px;
 }
+
+.section-collapsible__fill {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.section-collapsible__fill--title {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.icon-title {
+  padding-right: 10px;
+}
+
+.section-collapsible__fill--form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.section-collapsible__share--title {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.section-collapsible__share--end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+
+/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check */
+
+@charset "UTF-8";/* colores de pagina *//* Tipo de fuente *//* Tamaño fuente */
+
+
 
 /*# sourceMappingURL=main.css.map */
