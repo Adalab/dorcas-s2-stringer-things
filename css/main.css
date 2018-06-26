@@ -53,6 +53,19 @@
   flex-direction: column;
 }
 
+.section-card {
+  background: -webkit-gradient(linear, left top, left bottom, from(lightblue), to(pink));
+  background: linear-gradient(lightblue, pink);
+}
+
+.resetbutton {
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px #ffffff;
+  background: none;
+}
+
 .cover-main__text--title {
   color: #e17334;
   font-family: "Merriweather";
@@ -61,18 +74,56 @@
 
 .cover-main__text--p {
   color: #114e4e;
-  font-family: "Open Sans, sans-serif";
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
 }
 
 .cover-main__list {
   color: #54585a;
-  font-family: "Open Sans, sans-serif";
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
-* {
-  border: 1px solid red;
+.footer--credit {
+  color: #6b6b6b;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.design-legend {
+  color: #54585a;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.skill {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+}
+
+.fill-legend {
+  color: #54585a;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.share-legend {
+  color: #54585a;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.title-div-design {
+  color: #54585a;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.section-collapsible__fill--form {
+  color: #114e4e;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
 .wrapper {
