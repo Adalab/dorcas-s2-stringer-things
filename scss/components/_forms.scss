@@ -70,27 +70,9 @@
   height: 30px;
 }
 
-.button-abilities__mas {
-  font-size: $font-size-hecta;
-  color: $color-orange-monkey;
-  background-color: transparent;
-  border: 1px solid $color-orange-monkey;
-  border-radius: 15px;
-  width: 30px;
-  height: 30px;
-}
-
-.select-first {
+.select-abilities {
   margin-top: 5px;
   margin-bottom: 21px;
-  background: none;
-  border: 1px solid $color-green-fish;
-  border-radius: 4px;
-  width: 165px;
-  height: 30px;
-}
-
-.select-second {
   background: none;
   border: 1px solid $color-green-fish;
   border-radius: 4px;
