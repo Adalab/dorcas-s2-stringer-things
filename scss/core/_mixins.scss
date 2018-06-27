@@ -1,0 +1,10 @@
+@mixin flexBetween() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin boxPalette($width, $colorPalette) {
+  width: $width;
+  height: 25px;
+  background-color: $colorPalette;
+}

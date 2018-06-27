@@ -3,42 +3,64 @@
 }
 
 .design-title {
-  display: flex;
-  justify-content: space-between;
+  @include flexBetween();
 }
 
 .div-colors {
-  display: flex;
-  justify-content: space-between;
+  @include flexBetween();
 }
 
-.paletas {
+.palettes {
   display: flex;
   flex-direction: column;
 }
 
-.paleta1 {
+.pallete {
   display: flex;
+  align-items: center;
 }
 
-.palet1-color2::before {
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-11;
+.box-palette1-color2::before {
   content: '';
+  @include boxPalette(30px, $color-palette-11);
 }
 
-.palet1-color2 {
-  width: 90px;
-  height: 25px;
-  background-color: $color-palette-12;
-  display: flex;
-  justify-content: space-between;
+.box-palette1-color2 {
+  @include boxPalette(90px, $color-palette-12);
+  @include flexBetween();
 }
 
-.palet1-color2::after {
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-13;
+.box-palette1-color2::after {
   content: '';
+  @include boxPalette(30px, $color-palette-13);
+}
+
+.box-palette2-color2::before {
+  content: '';
+  @include boxPalette(30px, $color-palette-21);
+}
+
+.box-palette2-color2 {
+  @include boxPalette(90px, $color-palette-22);
+  @include flexBetween();
+}
+
+.box-palette2-color2::after {
+  content: '';
+  @include boxPalette(30px, $color-palette-23);
+}
+
+.box-palette3-color2::before {
+  content: '';
+  @include boxPalette(30px, $color-palette-31);
+}
+
+.box-palette3-color2 {
+  @include boxPalette(90px, $color-palette-32);
+  @include flexBetween();
+}
+
+.box-palette3-color2::after {
+  content: '';
+  @include boxPalette(30px, $color-palette-33);
 }
