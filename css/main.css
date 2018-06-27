@@ -226,6 +226,123 @@
   border: 1px solid red;
 }
 
+<<<<<<< HEAD
+=======
+.design-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.div-colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.pallete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.box-palette1-color2::before {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #114e4e;
+}
+
+.box-palette1-color2 {
+  width: 90px;
+  height: 25px;
+  background-color: #438792;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.box-palette1-color2::after {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #a2deaf;
+}
+
+.box-palette2-color2::before {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #420101;
+}
+
+.box-palette2-color2 {
+  width: 90px;
+  height: 25px;
+  background-color: #bd1010;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.box-palette2-color2::after {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #e95626;
+}
+
+.box-palette3-color2::before {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #3e5b65;
+}
+
+.box-palette3-color2 {
+  width: 90px;
+  height: 25px;
+  background-color: #dfe5eb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.box-palette3-color2::after {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #a0c0cf;
+}
+
+.div-fonts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+>>>>>>> a6969946547eaa1c272d6d4b5b876204945da89d
 .wrapper {
   width: 100%;
   height: 100vh;
