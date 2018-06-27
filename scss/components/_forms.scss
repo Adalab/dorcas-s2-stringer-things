@@ -1,9 +1,29 @@
+.icon-title {
+  color: $color-orange-monkey;
+}
+
 .section-collapsible__fill {
   border: none;
 }
 
+.section-collapsible__fill--title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .fill-legend {
   text-transform: uppercase;
+  color: $color-grey-gorilla;
+}
+
+.icon-down {
+  margin-left: auto;
+  color: $color-grey-gorilla;
+  width: 16px;
+  height: 18px;
+  font-size: $font-size-hecta;
 }
 
 .fill-input {
@@ -38,4 +58,42 @@
 
 .fill-input__placeholder {
   border: 1px solid $color-green-fish;
+}
+
+.button-abilities__menos {
+  font-size: $font-size-hecta;
+  color: $color-orange-monkey;
+  background-color: transparent;
+  border: 1px solid $color-orange-monkey;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.button-abilities__mas {
+  font-size: $font-size-hecta;
+  color: $color-orange-monkey;
+  background-color: transparent;
+  border: 1px solid $color-orange-monkey;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.select-first {
+  margin-top: 5px;
+  margin-bottom: 21px;
+  background: none;
+  border: 1px solid $color-green-fish;
+  border-radius: 4px;
+  width: 165px;
+  height: 30px;
+}
+
+.select-second {
+  background: none;
+  border: 1px solid $color-green-fish;
+  border-radius: 4px;
+  width: 165px;
+  height: 30px;
 }

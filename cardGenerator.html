@@ -21,43 +21,43 @@
 
   <main>
 
- <!-- SECCION LAURA -->
+    <!-- SECCION LAURA -->
     <section class="section-card">
       <button type="button" name="Reset" alt="reset button" class= "resetbutton"><i class="far fa-trash-alt"></i>
 
-RESET</button>
-      <div class="card">
-        <div class="section-card__top">
-          <p>Nombre apellido</p>
-          <p>Profesión</p>
+        RESET</button>
+        <div class="card">
+          <div class="section-card__top">
+            <p>Nombre apellido</p>
+            <p>Profesión</p>
+          </div>
+          <div class="section-card__image">
+            <img src="images/image-card.png" alt="user-photo">
+          </div>
+          <div class="section-card__social">
+            <ul>
+              <li> <button type="button" name="mobile" alt="button mobile" class= "button button--mobile"></button> </li>
+              <li> <button type="button" name="mail" alt="button mail" class= "button button--mail"></button> </li>
+              <li> <button type="button" name="linkedin" alt= "button linkedin" class= "button button--linkedin"></button> </li>
+              <li> <button type="button" name="github" alt="buttonbgithub" class="button button--github"></button> </li>
+            </ul>
+          </div>
+          <div class="section-card__skills">
+            <ul>
+              <li class= "skill">habilidad 1</li>
+              <li class= "skill">habilidad 2</li>
+              <li class= "skill">habilidad 3</li>
+            </ul>
+          </div>
         </div>
-        <div class="section-card__image">
-          <img src="images/image-card.png" alt="user-photo">
-        </div>
-        <div class="section-card__social">
-          <ul>
-            <li> <button type="button" name="mobile" alt="button mobile" class= "button button--mobile"></button> </li>
-            <li> <button type="button" name="mail" alt="button mail" class= "button button--mail"></button> </li>
-            <li> <button type="button" name="linkedin" alt= "button linkedin" class= "button button--linkedin"></button> </li>
-            <li> <button type="button" name="github" alt="buttonbgithub" class="button button--github"></button> </li>
-          </ul>
-        </div>
-        <div class="section-card__skills">
-          <ul>
-            <li class= "skill">habilidad 1</li>
-            <li class= "skill">habilidad 2</li>
-            <li class= "skill">habilidad 3</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-<!-- FIN SECCION -->
+      </section>
+      <!-- FIN SECCION -->
 
 <!--SECCIÓN RAQUEL-->
 
-    <section class="section-collapsible">
+      <section class="section-collapsible">
 
-      <form class="form" action="cardGenerator.html" method="post">
+        <form class="form" action="cardGenerator.html" method="post">
 
         <fieldset class="design">
           <div class="design-title">
@@ -133,11 +133,14 @@ RESET</button>
 
         <!--SECCIÓN OLATZ-->
 
+          <!--SECCIÓN OLATZ-->
 
-        <fieldset class="section-collapsible__fill">
-          <div class="section-collapsible__fill--title">
-            <span class="icon-title"><i class="far fa-keyboard"></i></span>
-            <legend class="fill-legend">rellena</legend>                     </div>
+          <fieldset class="section-collapsible__fill">
+            <div class="section-collapsible__fill--title">
+              <span class="icon-title"><i class="far fa-keyboard"></i></span>
+              <legend class="fill-legend">rellena</legend>
+              <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
+            </div>
 
             <div class="section-collapsible__fill--form">
               <label class="fill-input" for="nmb ">Nombre completo</label>
@@ -150,9 +153,9 @@ RESET</button>
               <div class="fill-input__image__square">
 
 
-              <input class="fill-input__image" id="add-image" type="submit" value="Añadir imagen">
+                <input class="fill-input__image" id="add-image" type="submit" value="Añadir imagen">
 
-              <div class="square__white"></div>
+                <div class="square__white"></div>
               </div>
               <label class="fill-input" for="emailaddress">Email</label>
               <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="text" name="" value="">
@@ -169,10 +172,11 @@ RESET</button>
               <div class="abilities-fill">
                 <label class="fill-input" for="">Habilidades (máximo 3)</label>
                 <select class="select-first" name="abilities">
-                  <option value="value1">HTML</option>
-                  <option value="value2">CSS</option>
-                  <option value="value3">JAVASCRIPT</option>
-                  <option value="value4">SASS</option>
+                  <option class="abilities-selection" value="value1">HTML <i class="fas fa-chevron-down"></i></option>
+                  <option class="abilities-selection" value="value2">CSS <i class="fas fa-chevron-down"></i></option>
+                  <option class="abilities-selection" value="value3">JAVASCRIPT <i class="fas fa-chevron-down"></i></option>
+                  <option class="abilities-selection" value="value4">SASS <i class="fas fa-chevron-down"></i></option>
+                  <button class="button-abilities__menos" type="button" name="button">-</button>
                 </select>
 
                 <select class="select-second" name="abilities">
@@ -181,8 +185,8 @@ RESET</button>
                   <option value="value3">SASS</option>
                 </select>
 
+
                 <button class="button-abilities__mas" type="button" name="button">+</button>
-                <button class="button-abilities__menos" type="button" name="button">-</button>
               </div>
 
             </div>
@@ -216,23 +220,23 @@ RESET</button>
               </div>
             </fieldset>
 
-      </form>
-    </section>
+          </form>
+        </section>
 
-  </main>
-  <footer class="footer">
-    <p class=footer--credit>Awesome profile-cards@2018</p>
-    <a href="http://adalab.es/">
-    <img src="images/logo-adalab-80px.png" alt="Logo Adalab">
-    </a>
-  </footer>
-
-
+      </main>
+      <footer class="footer">
+        <p class="footer--credit">Awesome profile-cards@2018</p>
+        <a href="http://adalab.es/">
+          <img src="images/logo-adalab-80px.png" alt="Logo Adalab">
+        </a>
+      </footer>
 
 
 
-  <!-- Como toques aquí te matamos -->
-  <script type="text/javascript" src="js/main.js"></script>
 
-</body>
-</html>
+
+      <!-- Como toques aquí te matamos -->
+      <script type="text/javascript" src="js/main.js"></script>
+
+    </body>
+    </html>
