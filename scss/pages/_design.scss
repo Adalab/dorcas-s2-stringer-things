@@ -2,17 +2,40 @@
 //   border: 1px solid red;
 // }
 
+.design {
+  border: none;
+  margin: 0;
+  padding: 30px 20px;
+  border-bottom: 1px solid $color-line;
+}
+
+.design-legend {
+  padding: 0;
+}
+
 .design-title {
+  align-items: center;
   @include flexBetween();
 }
 
 .div-colors {
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 33px;
   @include flexBetween();
 }
 
 .pallete {
   display: flex;
   align-items: center;
+  padding: 10px 0;
+}
+
+.check-radio {
+  margin: 0;
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
 }
 
 .box-palette1-color2::before {
@@ -61,5 +84,14 @@
 }
 
 .div-fonts {
+  align-items: center;
   @include flexBetween();
+}
+
+.letter-type {
+  width: 117px;
+}
+
+.type {
+  padding: 7px 0;
 }
