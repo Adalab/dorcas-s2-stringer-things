@@ -1,0 +1,65 @@
+* {
+  border: 1px solid red;
+}
+
+.design-title {
+  @include flexBetween();
+}
+
+.div-colors {
+  @include flexBetween();
+}
+
+.pallete {
+  display: flex;
+  align-items: center;
+}
+
+.box-palette1-color2::before {
+  content: '';
+  @include boxPalette(30px, $color-palette-11);
+}
+
+.box-palette1-color2 {
+  @include boxPalette(90px, $color-palette-12);
+  @include flexBetween();
+}
+
+.box-palette1-color2::after {
+  content: '';
+  @include boxPalette(30px, $color-palette-13);
+}
+
+.box-palette2-color2::before {
+  content: '';
+  @include boxPalette(30px, $color-palette-21);
+}
+
+.box-palette2-color2 {
+  @include boxPalette(90px, $color-palette-22);
+  @include flexBetween();
+}
+
+.box-palette2-color2::after {
+  content: '';
+  @include boxPalette(30px, $color-palette-23);
+}
+
+.box-palette3-color2::before {
+  content: '';
+  @include boxPalette(30px, $color-palette-31);
+}
+
+.box-palette3-color2 {
+  @include boxPalette(90px, $color-palette-32);
+  @include flexBetween();
+}
+
+.box-palette3-color2::after {
+  content: '';
+  @include boxPalette(30px, $color-palette-33);
+}
+
+.div-fonts {
+  @include flexBetween();
+}
