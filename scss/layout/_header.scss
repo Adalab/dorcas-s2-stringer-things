@@ -1,3 +1,8 @@
+.cardGenerator__header {
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+}
 
 .cardGenerator__image {
   height: 51px;
@@ -5,5 +10,10 @@
   background-image: url("../images/awesome-profile-cards.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 30px auto 30px 40px;
+}
+
+.index__link {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
