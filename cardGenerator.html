@@ -129,7 +129,6 @@
 
                 </div>
               </div>
-
             </div>
           </fieldset>
 
@@ -173,23 +172,24 @@
               <input class="fill-input__placeholder" placeholder="Ej: @sally-hill" id="GH" type="email" name="mail" value="">
 
               <div class="abilities-fill">
-                <label class="fill-input" for="">Habilidades (máximo 3)</label>
-                <select class="select-abilities" name="abilities">
-                  <option class="abilities-selection" value="value1">HTML <i class="fas fa-chevron-down"></i></option>
-                  <option class="abilities-selection" value="value2">CSS <i class="fas fa-chevron-down"></i></option>
-                  <option class="abilities-selection" value="value3">JAVASCRIPT <i class="fas fa-chevron-down"></i></option>
-                  <option class="abilities-selection" value="value4">SASS <i class="fas fa-chevron-down"></i></option>
-                </select>
-                <button class="button-abilities" type="button" name="button"><i class="fas fa-minus"></i></button>
-
-                <select class="select-abilities" name="abilities">
-                  <option value="value1">CSS</option>
-                  <option value="value2">JAVASCRIPT</option>
-                  <option value="value3">SASS</option>
-                </select>
-
-
-                <button class="button-abilities" type="button" name="button"><i class="fas fa-plus"></i></button>
+                <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
+                <div class="ability-box">
+                  <select class="select-abilities" name="abilities">
+                    <option class="abilities-selection" value="value1">HTML <i class="fas fa-chevron-down"></i></option>
+                    <option class="abilities-selection" value="value2">CSS <i class="fas fa-chevron-down"></i></option>
+                    <option class="abilities-selection" value="value3">JAVASCRIPT <i class="fas fa-chevron-down"></i></option>
+                    <option class="abilities-selection" value="value4">SASS <i class="fas fa-chevron-down"></i></option>
+                  </select>
+                  <button class="button-abilities" type="button" name="button"><i class="fas fa-minus"></i></button>
+                </div>
+                <div class="ability-box">
+                  <select class="select-abilities" name="abilities">
+                    <option value="value1">CSS</option>
+                    <option value="value2">JAVASCRIPT</option>
+                    <option value="value3">SASS</option>
+                  </select>
+                  <button class="button-abilities" type="button" name="button"><i class="fas fa-plus"></i></button>
+                </div>
               </div>
 
             </div>
@@ -213,12 +213,9 @@
 
               <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a>
 
-
-              <a class="link-twitter" href="#">
-                <button class="btn-create-card" type="button" name="button">
+                <button class="btn-share" type="button" name="button">
                   <span><i class="fab fa-twitter" style="font-size: 15px;"></i>
                   </span>Compartir en twitter</button>
-                </a>
 
               </div>
             </fieldset>
