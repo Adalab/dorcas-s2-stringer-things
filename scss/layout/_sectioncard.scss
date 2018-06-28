@@ -1,11 +1,31 @@
 .section-card {
   background: linear-gradient(lightblue, pink);
+  width: 320px;
+  height: 457px;
 }
 
-.resetbutton {
-  width: 75px;
-  height: 30px;
-  border-radius: 15px;
-  border: solid 1px #ffffff;
-  background: none;
+.card {
+  background-color: $background-terciary;
+  width: 240px;
+  height: 367px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.section-card__top--rectangle {
+  background-color: $color-quaternary;
+  width: 5px;
+  height: 42px;
+}
+
+.section-card__top--name {
+  font-family: $font-family-tertiary;
+  font-weight: 700px;
+  font-size: $font-size-hecta;
+  color: $color-primary;
+}
+
+.section-card__top--career {
+  font-family: $font-family-tertiary;
+  font-size: $font-size-deca;
+  color: $color-terciary;
 }

@@ -60,8 +60,8 @@ $color-grey-cat: #6b6b6b;
 /* Tipo de fuente */
 
 $font-family-open: 'Open Sans', sans-serif;
-$font-family-merri: "Merriweather";
-$font-family-comic: "ComicSansMS";
+$font-family-merri: "Merriweather", serif;
+$font-family-comic: "Comic Sans MS", "Comic Sans", sans-serif;
 
 $font-family-primary: $font-family-open;
 $font-family-secondary: $font-family-merri;

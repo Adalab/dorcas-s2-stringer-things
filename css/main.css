@@ -52,6 +52,95 @@
   -ms-flex-direction: column;
   flex-direction: column;
 }
+
+.section-card {
+  background: -webkit-gradient(linear, left top, left bottom, from(lightblue), to(pink));
+  background: linear-gradient(lightblue, pink);
+  width: 320px;
+  height: 457px;
+}
+
+.card {
+  background-color: #fff;
+  width: 240px;
+  height: 367px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.section-card__top--rectangle {
+  background-color: #a2deaf;
+  width: 5px;
+  height: 42px;
+}
+
+.section-card__top--name {
+  font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+  font-weight: 700px;
+  font-size: 18px;
+  color: #114e4e;
+}
+
+.section-card__top--career {
+  font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+  font-size: 16px;
+  color: #54585a;
+}
+
+.resetbutton {
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px #fff;
+  background: none;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #54585a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fa-trash-alt {
+  padding-left: 5px;
+}
+
+.resetbutton--text {
+  padding-left: 5px;
+}
+
+.section-card__social {
+  text-decoration: none;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.button-card {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 2px #a2deaf;
+  background: none;
+  color: #114e4e;
+  margin: 10px;
+}
+
 .section-collapsible__fill {
   border: none;
 }
@@ -62,7 +151,7 @@
 
 .fill-input {
   font-size: 14px;
-  font-family: "Open Sans, sans-serif";
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   margin-top: 20px;
   margin-bottom: 5px;
@@ -101,37 +190,7 @@
 
 .cover-main__text--title {
   color: #e17334;
-  font-family: "Merriweather";
-  font-size: 19px;
-}
-
-.cover-main__text--p {
-  color: #114e4e;
-  font-family: "Open Sans, sans-serif";
-  font-size: 13px;
-}
-
-.cover-main__list {
-  color: #54585a;
-  font-family: "Open Sans, sans-serif";
-  font-size: 16px;
-  
-.section-card {
-  background: -webkit-gradient(linear, left top, left bottom, from(lightblue), to(pink));
-  background: linear-gradient(lightblue, pink);
-}
-
-.resetbutton {
-  width: 75px;
-  height: 30px;
-  border-radius: 15px;
-  border: solid 1px #ffffff;
-  background: none;
-}
-
-.cover-main__text--title {
-  color: #e17334;
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-size: 19px;
 }
 

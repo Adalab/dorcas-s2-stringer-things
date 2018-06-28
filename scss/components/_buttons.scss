@@ -1,0 +1,43 @@
+//Section card buttons
+
+.resetbutton {
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px #fff;
+  background: none;
+  font-size: $font-size-mili;
+  font-family: $font-family-open;
+  color: $color-terciary;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fa-trash-alt {
+  padding-left: 5px;
+}
+
+.resetbutton--text {
+  padding-left: 5px;
+}
+
+.section-card__social {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.button-card {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 2px #a2deaf;
+  background: none;
+  color: $color-primary;
+  margin: 10px;
+}
+
+//End Section card buttons
