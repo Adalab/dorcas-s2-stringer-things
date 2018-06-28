@@ -22,10 +22,11 @@
   font-size: $font-size-deci;
 }
 
-.design-legend {
+.legend__title {
   color: $color-terciary;
   font-family: $font-family-primary;
   font-size: $font-size-hecta;
+  text-transform: uppercase;
 }
 
 .skill {
@@ -34,22 +35,33 @@
   font-size: $font-size-centi;
 }
 
-.fill-legend {
-  color: $color-terciary;
-  font-family: $font-family-primary;
-  font-size: $font-size-hecta;
-}
-
-.share-legend {
-  color: $color-terciary;
-  font-family: $font-family-primary;
-  font-size: $font-size-hecta;
-}
-
-.title-div-design {
+.design__text {
   color: $color-terciary;
   font-family: $font-family-primary;
   font-size: $font-size-deci;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.font1 {
+  font-family: $font-family-open;
+  font-size: $font-size-deca;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.font2 {
+  font-family: $font-family-comic;
+  font-size: $font-size-deca;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.font3 {
+  font-family: $font-family-merri;
+  font-size: $font-size-deca;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 
 .section-collapsible__fill--form {

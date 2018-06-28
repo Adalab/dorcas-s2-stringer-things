@@ -1,0 +1,97 @@
+// * {
+//   border: 1px solid red;
+// }
+
+.design__container {
+  border: none;
+  margin: 0;
+  padding: 30px 20px;
+  border-bottom: 1px solid $color-line;
+}
+
+.design__legend {
+  padding: 0;
+}
+
+.design__title {
+  align-items: center;
+  @include flexBetween();
+}
+
+.design__form-colors {
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 33px;
+  @include flexBetween();
+}
+
+.design__palette {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.design__check-radio {
+  margin: 0;
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+.palette1__color2::before {
+  content: '';
+  @include boxPalette(30px, $color-palette-11);
+}
+
+.palette1__color2 {
+  @include boxPalette(90px, $color-palette-12);
+  @include flexBetween();
+}
+
+.palette1__color2::after {
+  content: '';
+  @include boxPalette(30px, $color-palette-13);
+}
+
+.palette2__color2::before {
+  content: '';
+  @include boxPalette(30px, $color-palette-21);
+}
+
+.palette2__color2 {
+  @include boxPalette(90px, $color-palette-22);
+  @include flexBetween();
+}
+
+.palette2__color2::after {
+  content: '';
+  @include boxPalette(30px, $color-palette-23);
+}
+
+.palette3__color2::before {
+  content: '';
+  @include boxPalette(30px, $color-palette-31);
+}
+
+.palette3__color2 {
+  @include boxPalette(90px, $color-palette-32);
+  @include flexBetween();
+}
+
+.palette3__color2::after {
+  content: '';
+  @include boxPalette(30px, $color-palette-33);
+}
+
+.design__form-fonts {
+  align-items: center;
+  @include flexBetween();
+}
+
+.design__letter-type {
+  width: 117px;
+}
+
+.design__type {
+  padding: 7px 0;
+}

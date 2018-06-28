@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
   <title>Awesome profile-cards</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -15,13 +16,15 @@
   <a href="index.html">Landing Page</a>
 
 
-  <header class="header">
+  <header class="cardGenerator__header">
+    <div class="cardGenerator__image">
 
+    </div>
   </header>
 
   <main>
 
- <!-- SECCION LAURA -->
+    <!-- SECCION LAURA -->
     <section class="section-card">
       <button type="button" name="Reset" alt="reset button" class= "resetbutton">
         <i class="far fa-trash-alt"></i>
@@ -33,7 +36,6 @@
           <p class= "section-card__top--career">Profesión</p>
         </div>
         <div class="section-card__top--rectangle">
-
         </div>
         <div class="section-card__image">
           <img src="images/image-card.png" alt="user-photo">
@@ -44,20 +46,20 @@
               <button type="button" name="mobile" alt="button mobile" class= "button-card button--mobile">
                 <i class="fas fa-mobile-alt"></i>
               </button> </li>
-            <li>
-              <button type="button" name="mail" alt="button mail" class= "button-card button--mail">
-                <i class="far fa-envelope"></i>
+              <li>
+                <button type="button" name="mail" alt="button mail" class= "button-card button--mail">
+                  <i class="far fa-envelope"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" name="linkedin" alt= "button linkedin" class= "button-card button--linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                </button>
+              </li>
+              <li> <button type="button" name="github" alt="buttonbgithub" class="button-card button--github">
+                <i class="fab fa-github-alt"></i>
               </button>
             </li>
-            <li>
-              <button type="button" name="linkedin" alt= "button linkedin" class= "button-card button--linkedin">
-                <i class="fab fa-linkedin-in"></i>
-              </button>
-            </li>
-            <li> <button type="button" name="github" alt="buttonbgithub" class="button-card button--github">
-              <i class="fab fa-github-alt"></i>
-            </button>
-          </li>
           </ul>
         </div>
         <div class="section-card__skills">
@@ -69,68 +71,96 @@
         </div>
       </div>
     </section>
-<!-- FIN SECCION -->
+      <!-- FIN SECCION -->
 
-<!--SECCIÓN RAQUEL-->
+      <!--SECCIÓN RAQUEL-->
 
-    <section class="section-collapsible">
+      <section class="section-collapsible">
 
-      <form class="form" action="cardGenerator.html" method="post">
+        <form class="form" action="cardGenerator.html" method="post">
 
-        <fieldset class="design">
-          <div class="design-title">
-            <legend class="design-legend">
-              DISEÑA
-            </legend>
-          </div>
-          <div class="design-form">
-            <div class="div-colors">
-              <p class="title-div-design">colores</p>
-              <div class="paletas">
-                <input id="palet1-color2" type="radio" name="colors" value="palet1" checked>
-                <label for="palet1-color2">
-
-                </label>
-                <input id="palet2-color2" type="radio" name="colors" value="palet2">
-                <label for="palet2-color2">
-
-                </label>
-                <input id="palet3-color2" type="radio" name="colors" value="palet3">
-                <label for="palet3-color2">
-
-                </label>
-              </div>
+          <fieldset class="design__container">
+            <div class="design__title">
+              <legend class="legend__title design__legend">
+                <i class="icon-title far fa-object-ungroup"></i>
+                diseña
+              </legend>
+              <span>
+                <i class="icono fas fa-chevron-down"></i>
+              </span>
             </div>
-            <div class="div-fonts">
-              <p class="title-div-design">fuentes</p>
-              <div class="">
-                <input id="font1" type="radio" name="fonts" value="font1">
-                <label for="font1">
-                  ubuntu
-                </label>
-                <input id="font2" type="radio" name="fonts" value="font2" checked>
-                <label for="font2">
-                  comic sans
-                </label>
-                <input id="font2" type="radio" name="fonts" value="font3">
-                <label for="font3">
-                  monserrat
-                </label>
+            <div class="design__form">
+
+              <div class="design__form-colors">
+                <p class="design__text">colores</p>
+                <div class="design__palettes">
+
+                  <div class="design__palette design__palette1">
+                    <input class="design__check-radio" id="palette1" type="radio" name="colors" value="palette1" checked>
+                    <label class="palette1__color2" for="palette1">
+
+                    </label>
+                  </div>
+
+                  <div class="design__palette design__palette2">
+                    <input class="design__check-radio" id="palette2" type="radio" name="colors" value="palette2">
+                    <label class="palette2__color2" for="palette2">
+
+                    </label>
+                  </div>
+
+                  <div class="design__palette design__palette3">
+                    <input class="design__check-radio" id="palette3" type="radio" name="colors" value="palette3">
+                    <label class="palette3__color2" for="palette3">
+
+                    </label>
+                  </div>
+
+                </div>
               </div>
+
+              <div class="design__form-fonts">
+                <p class="design__text">fuentes</p>
+                <div class="design__letter-type">
+
+                  <div class="design__type design__type1">
+                    <input class="design__check-radio" id="font1" type="radio" name="fonts" value="font1">
+                    <label class="font1" for="font1">
+                      ubuntu
+                    </label>
+                  </div>
+
+                  <div class="design__type design__type2">
+                    <input class="design__check-radio" id="font2" type="radio" name="fonts" value="font2" checked>
+                    <label class="font2" for="font2">
+                      comic sans
+                    </label>
+                  </div>
+
+                  <div class="design__type design__type3">
+                    <input class="design__check-radio" id="font3" type="radio" name="fonts" value="font3">
+                    <label class="font3" for="font3">
+                      monserrat
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
-          </div>
-        </fieldset>
+          </fieldset>
 
 
-<!-- FIN SECCION -->
+          <!-- FIN SECCION -->
 
-        <!--SECCIÓN OLATZ-->
+          <!--SECCIÓN OLATZ-->
 
-
-        <fieldset class="section-collapsible__fill">
-          <div class="section-collapsible__fill--title">
-            <span class="icon-title"><i class="far fa-keyboard"></i></span>
-            <legend class="fill-legend">rellena</legend>                     </div>
+          <fieldset class="section-collapsible__fill">
+            <div class="section-collapsible__fill--title">
+              <span class="icon-title"><i class="far fa-keyboard"></i></span>
+              <legend class="legend__title fill-legend">rellena</legend>
+              <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
+            </div>
 
             <div class="section-collapsible__fill--form">
               <label class="fill-input" for="nmb ">Nombre completo</label>
@@ -143,9 +173,9 @@
               <div class="fill-input__image__square">
 
 
-              <input class="fill-input__image" id="add-image" type="submit" value="Añadir imagen">
+                <input class="fill-input__image" id="add-image" type="submit" value="Añadir imagen">
 
-              <div class="square__white"></div>
+                <div class="square__white"></div>
               </div>
               <label class="fill-input" for="emailaddress">Email</label>
               <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="text" name="" value="">
@@ -161,21 +191,22 @@
 
               <div class="abilities-fill">
                 <label class="fill-input" for="">Habilidades (máximo 3)</label>
-                <select class="select-first" name="abilities">
-                  <option value="value1">HTML</option>
-                  <option value="value2">CSS</option>
-                  <option value="value3">JAVASCRIPT</option>
-                  <option value="value4">SASS</option>
+                <select class="select-abilities" name="abilities">
+                  <option class="abilities-selection" value="value1">HTML <i class="fas fa-chevron-down"></i></option>
+                  <option class="abilities-selection" value="value2">CSS <i class="fas fa-chevron-down"></i></option>
+                  <option class="abilities-selection" value="value3">JAVASCRIPT <i class="fas fa-chevron-down"></i></option>
+                  <option class="abilities-selection" value="value4">SASS <i class="fas fa-chevron-down"></i></option>
                 </select>
+                <button class="button-abilities" type="button" name="button"><i class="fas fa-minus"></i></button>
 
-                <select class="select-second" name="abilities">
+                <select class="select-abilities" name="abilities">
                   <option value="value1">CSS</option>
                   <option value="value2">JAVASCRIPT</option>
                   <option value="value3">SASS</option>
                 </select>
 
-                <button class="button-abilities__mas" type="button" name="button">+</button>
-                <button class="button-abilities__menos" type="button" name="button">-</button>
+
+                <button class="button-abilities" type="button" name="button"><i class="fas fa-plus"></i></button>
               </div>
 
             </div>
@@ -185,7 +216,7 @@
           <fieldset class="section-collapsible__share">
             <div class="section-collapsible__share--title">
               <span class="icon-title"><i class="fas fa-share-alt"></i></span>
-              <legend class="share-legend">COMPARTE</legend>
+              <legend class="legend__title share-legend">comparte</legend>
             </div>
 
             <div class="section-collapsible__share--button">
@@ -209,23 +240,23 @@
               </div>
             </fieldset>
 
-      </form>
-    </section>
+          </form>
+        </section>
 
-  </main>
-  <footer class="footer">
-    <p class=footer--credit>Awesome profile-cards@2018</p>
-    <a href="http://adalab.es/">
-    <img src="images/logo-adalab-80px.png" alt="Logo Adalab">
-    </a>
-  </footer>
-
-
+      </main>
+      <footer class="footer">
+        <p class="footer--credit">Awesome profile-cards@2018</p>
+        <a href="http://adalab.es/">
+          <img src="images/logo-adalab-80px.png" alt="Logo Adalab">
+        </a>
+      </footer>
 
 
 
-  <!-- Como toques aquí te matamos -->
-  <script type="text/javascript" src="js/main.js"></script>
 
-</body>
-</html>
+
+      <!-- Como toques aquí te matamos -->
+      <script type="text/javascript" src="js/main.js"></script>
+
+    </body>
+    </html>
