@@ -56,90 +56,92 @@
       </section>
       <!-- FIN SECCION -->
 
-<!--SECCIÓN RAQUEL-->
+      <!--SECCIÓN RAQUEL-->
 
       <section class="section-collapsible">
 
         <form class="form" action="cardGenerator.html" method="post">
 
-        <fieldset class="design">
-          <div class="design-title">
-            <legend class="title-legend design-legend">
-              <i class="icon-title far fa-object-ungroup"></i>
-              diseña
-            </legend>
-            <i class="icono fas fa-chevron-down"></i>
-          </div>
-          <div class="design-form">
-
-            <div class="div-colors">
-              <p class="title-div-design">colores</p>
-              <div class="palettes">
-
-                <div class="pallete palette1">
-                  <input class="check-radio" id="palette1-color2" type="radio" name="colors" value="palette1" checked>
-                  <label class="box-palette1-color2" for="palette1-color2">
-
-                  </label>
-                </div>
-
-                <div class="pallete palette2">
-                  <input class="check-radio" id="palette2-color2" type="radio" name="colors" value="palette2">
-                  <label class="box-palette2-color2" for="palette2-color2">
-
-                  </label>
-                </div>
-
-                <div class="pallete palette3">
-                  <input class="check-radio" id="palette3-color2" type="radio" name="colors" value="palette3">
-                  <label class="box-palette3-color2" for="palette3-color2">
-
-                  </label>
-                </div>
-
-              </div>
+          <fieldset class="design__container">
+            <div class="design__title">
+              <legend class="legend__title design__legend">
+                <i class="icon-title far fa-object-ungroup"></i>
+                diseña
+              </legend>
+              <span>
+                <i class="icono fas fa-chevron-down"></i>
+              </span>
             </div>
+            <div class="design__form">
 
-            <div class="div-fonts">
-              <p class="title-div-design">fuentes</p>
-              <div class="letter-type">
+              <div class="design__form-colors">
+                <p class="design__text">colores</p>
+                <div class="design__palettes">
 
-                <div class="type type1">
-                  <input class="check-radio" id="font1" type="radio" name="fonts" value="font1">
-                  <label class="font1" for="font1">
-                    ubuntu
-                  </label>
+                  <div class="design__palette design__palette1">
+                    <input class="design__check-radio" id="palette1" type="radio" name="colors" value="palette1" checked>
+                    <label class="palette1__color2" for="palette1">
+
+                    </label>
+                  </div>
+
+                  <div class="design__palette design__palette2">
+                    <input class="design__check-radio" id="palette2" type="radio" name="colors" value="palette2">
+                    <label class="palette2__color2" for="palette2">
+
+                    </label>
+                  </div>
+
+                  <div class="design__palette design__palette3">
+                    <input class="design__check-radio" id="palette3" type="radio" name="colors" value="palette3">
+                    <label class="palette3__color2" for="palette3">
+
+                    </label>
+                  </div>
+
                 </div>
-
-                <div class="type type2">
-                  <input class="check-radio" id="font2" type="radio" name="fonts" value="font2" checked>
-                  <label class="font2" for="font2">
-                    comic sans
-                  </label>
-                </div>
-
-                <div class="type type3">
-                  <input class="check-radio" id="font3" type="radio" name="fonts" value="font3">
-                  <label class="font3" for="font3">
-                    monserrat
-                  </label>
-                </div>
-
               </div>
+
+              <div class="design__form-fonts">
+                <p class="design__text">fuentes</p>
+                <div class="design__letter-type">
+
+                  <div class="design__type design__type1">
+                    <input class="design__check-radio" id="font1" type="radio" name="fonts" value="font1">
+                    <label class="font1" for="font1">
+                      ubuntu
+                    </label>
+                  </div>
+
+                  <div class="design__type design__type2">
+                    <input class="design__check-radio" id="font2" type="radio" name="fonts" value="font2" checked>
+                    <label class="font2" for="font2">
+                      comic sans
+                    </label>
+                  </div>
+
+                  <div class="design__type design__type3">
+                    <input class="design__check-radio" id="font3" type="radio" name="fonts" value="font3">
+                    <label class="font3" for="font3">
+                      monserrat
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
-
-          </div>
-        </fieldset>
+          </fieldset>
 
 
-<!-- FIN SECCION -->
+          <!-- FIN SECCION -->
 
           <!--SECCIÓN OLATZ-->
 
           <fieldset class="section-collapsible__fill">
             <div class="section-collapsible__fill--title">
               <span class="icon-title"><i class="far fa-keyboard"></i></span>
-              <legend class="title-legend fill-legend">rellena</legend>
+              <legend class="legend__title fill-legend">rellena</legend>
               <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
             </div>
 
@@ -178,7 +180,7 @@
                   <option class="abilities-selection" value="value3">JAVASCRIPT <i class="fas fa-chevron-down"></i></option>
                   <option class="abilities-selection" value="value4">SASS <i class="fas fa-chevron-down"></i></option>
                 </select>
-                      <button class="button-abilities" type="button" name="button"><i class="fas fa-minus"></i></button>
+                <button class="button-abilities" type="button" name="button"><i class="fas fa-minus"></i></button>
 
                 <select class="select-abilities" name="abilities">
                   <option value="value1">CSS</option>
@@ -197,7 +199,7 @@
           <fieldset class="section-collapsible__share">
             <div class="section-collapsible__share--title">
               <span class="icon-title"><i class="fas fa-share-alt"></i></span>
-              <legend class="title-legend share-legend">comparte</legend>
+              <legend class="legend__title share-legend">comparte</legend>
             </div>
 
             <div class="section-collapsible__share--button">
