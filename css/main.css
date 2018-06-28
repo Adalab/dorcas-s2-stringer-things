@@ -1,4 +1,13 @@
-@charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check *//* Tipo de fuente *//* Tamaño fuente */.section-collapsible__fill {
+@charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check *//* Tipo de fuente *//* Tamaño fuente */.cardGenerator__image {
+  height: 51px;
+  width: 201px;
+  background-image: url("../images/awesome-profile-cards.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30px auto 30px 40px;
+}
+
+.section-collapsible__fill {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100vh;
@@ -286,10 +295,11 @@
   font-size: 14px;
 }
 
-.design-legend {
+.legend__title {
   color: #54585a;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 .skill {
@@ -298,22 +308,33 @@
   font-size: 13px;
 }
 
-.fill-legend {
-  color: #54585a;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-}
-
-.share-legend {
-  color: #54585a;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-}
-
-.title-div-design {
+.design__text {
   color: #54585a;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.font1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.font2 {
+  font-family: "ComicSansMS";
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.font3 {
+  font-family: "Merriweather";
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 
 .section-collapsible__fill--form {
@@ -322,7 +343,25 @@
   font-size: 14px;
 }
 
+<<<<<<< HEAD
 .design-title {
+=======
+.design__container {
+  border: none;
+  margin: 0;
+  padding: 30px 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.design__legend {
+  padding: 0;
+}
+
+.design__title {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+>>>>>>> 52d51050ad8ae4cb9166c33208864de7cf6c3b0d
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,7 +370,12 @@
   justify-content: space-between;
 }
 
-.div-colors {
+.design__form-colors {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,23 +384,31 @@
   justify-content: space-between;
 }
 
-.pallete {
+.design__palette {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 10px 0;
 }
 
-.box-palette1-color2::before {
+.design__check-radio {
+  margin: 0;
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+.palette1__color2::before {
   content: '';
   width: 30px;
   height: 25px;
   background-color: #114e4e;
 }
 
-.box-palette1-color2 {
+.palette1__color2 {
   width: 90px;
   height: 25px;
   background-color: #438792;
@@ -368,21 +420,21 @@
   justify-content: space-between;
 }
 
-.box-palette1-color2::after {
+.palette1__color2::after {
   content: '';
   width: 30px;
   height: 25px;
   background-color: #a2deaf;
 }
 
-.box-palette2-color2::before {
+.palette2__color2::before {
   content: '';
   width: 30px;
   height: 25px;
   background-color: #420101;
 }
 
-.box-palette2-color2 {
+.palette2__color2 {
   width: 90px;
   height: 25px;
   background-color: #bd1010;
@@ -394,21 +446,21 @@
   justify-content: space-between;
 }
 
-.box-palette2-color2::after {
+.palette2__color2::after {
   content: '';
   width: 30px;
   height: 25px;
   background-color: #e95626;
 }
 
-.box-palette3-color2::before {
+.palette3__color2::before {
   content: '';
   width: 30px;
   height: 25px;
   background-color: #3e5b65;
 }
 
-.box-palette3-color2 {
+.palette3__color2 {
   width: 90px;
   height: 25px;
   background-color: #dfe5eb;
@@ -420,14 +472,17 @@
   justify-content: space-between;
 }
 
-.box-palette3-color2::after {
+.palette3__color2::after {
   content: '';
   width: 30px;
   height: 25px;
   background-color: #a0c0cf;
 }
 
-.div-fonts {
+.design__form-fonts {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,6 +491,17 @@
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
+=======
+.design__letter-type {
+  width: 117px;
+}
+
+.design__type {
+  padding: 7px 0;
+}
+
+>>>>>>> 52d51050ad8ae4cb9166c33208864de7cf6c3b0d
 .wrapper {
   width: 100%;
   height: 100vh;
