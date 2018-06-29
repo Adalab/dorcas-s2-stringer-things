@@ -128,7 +128,7 @@
 }
 
 .card__top--name {
-  font-family: "Chilanka", "Comic Sans", sans-serif;
+  font-family: "Chilanka", "Comic Sans MS", sans-serif;
   font-weight: 700px;
   font-size: 18px;
   color: #114e4e;
@@ -137,7 +137,7 @@
 }
 
 .card__top--career {
-  font-family: "Chilanka", "Comic Sans", sans-serif;
+  font-family: "Chilanka", "Comic Sans MS", sans-serif;
   font-size: 16px;
   color: #54585a;
   margin-bottom: 10px;
@@ -642,7 +642,7 @@
 }
 
 .font2 {
-  font-family: "Chilanka", "Comic Sans", sans-serif;
+  font-family: "Chilanka", "Comic Sans MS", sans-serif;
   font-size: 16px;
   font-weight: normal;
   text-transform: capitalize;
@@ -663,6 +663,10 @@
 
 body {
   margin: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 .wrapper {
