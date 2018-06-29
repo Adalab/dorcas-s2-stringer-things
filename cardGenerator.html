@@ -10,19 +10,16 @@
   <title>Awesome profile-cards</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-
-
-  <a href="index.html">Landing Page</a>
+<body class="cardGenerator__wrapper">
 
 
   <header class="cardGenerator__header">
     <div class="cardGenerator__image">
-
+      <a class="index__link" href="index.html"></a>
     </div>
   </header>
 
-  <main>
+  <main class="cardGenerator__main">
 
     <!-- SECCION LAURA -->
     <section class="section-card">
@@ -81,12 +78,12 @@
 
           <fieldset class="design__container">
             <div class="design__title">
-              <legend class="legend__title design__legend">
+              <legend class="legend__title design-title__legend">
                 <i class="icon-title far fa-object-ungroup"></i>
                 diseña
               </legend>
               <span>
-                <i class="icono fas fa-chevron-down"></i>
+                <i class="design__icon-legend fas fa-chevron-down"></i>
               </span>
             </div>
             <div class="design__form">
@@ -97,21 +94,21 @@
 
                   <div class="design__palette design__palette1">
                     <input class="design__check-radio" id="palette1" type="radio" name="colors" value="palette1" checked>
-                    <label class="palette1__color2" for="palette1">
+                    <label class="palette1__greens" for="palette1">
 
                     </label>
                   </div>
 
                   <div class="design__palette design__palette2">
                     <input class="design__check-radio" id="palette2" type="radio" name="colors" value="palette2">
-                    <label class="palette2__color2" for="palette2">
+                    <label class="palette2__reds" for="palette2">
 
                     </label>
                   </div>
 
                   <div class="design__palette design__palette3">
                     <input class="design__check-radio" id="palette3" type="radio" name="colors" value="palette3">
-                    <label class="palette3__color2" for="palette3">
+                    <label class="palette3__blues" for="palette3">
 
                     </label>
                   </div>
@@ -123,21 +120,21 @@
                 <p class="design__text">fuentes</p>
                 <div class="design__letter-type">
 
-                  <div class="design__type design__type1">
+                  <div class="design__type--common design__type--font1">
                     <input class="design__check-radio" id="font1" type="radio" name="fonts" value="font1">
                     <label class="font1" for="font1">
                       ubuntu
                     </label>
                   </div>
 
-                  <div class="design__type design__type2">
+                  <div class="design__type--common design__type--font2">
                     <input class="design__check-radio" id="font2" type="radio" name="fonts" value="font2" checked>
                     <label class="font2" for="font2">
                       comic sans
                     </label>
                   </div>
 
-                  <div class="design__type design__type3">
+                  <div class="design__type--common design__type--font3">
                     <input class="design__check-radio" id="font3" type="radio" name="fonts" value="font3">
                     <label class="font3" for="font3">
                       monserrat
@@ -146,7 +143,6 @@
 
                 </div>
               </div>
-
             </div>
           </fieldset>
 
@@ -190,23 +186,24 @@
               <input class="fill-input__placeholder" placeholder="Ej: @sally-hill" id="GH" type="email" name="mail" value="">
 
               <div class="abilities-fill">
-                <label class="fill-input" for="">Habilidades (máximo 3)</label>
-                <select class="select-abilities" name="abilities">
-                  <option class="abilities-selection" value="value1">HTML <i class="fas fa-chevron-down"></i></option>
-                  <option class="abilities-selection" value="value2">CSS <i class="fas fa-chevron-down"></i></option>
-                  <option class="abilities-selection" value="value3">JAVASCRIPT <i class="fas fa-chevron-down"></i></option>
-                  <option class="abilities-selection" value="value4">SASS <i class="fas fa-chevron-down"></i></option>
-                </select>
-                <button class="button-abilities" type="button" name="button"><i class="fas fa-minus"></i></button>
-
-                <select class="select-abilities" name="abilities">
-                  <option value="value1">CSS</option>
-                  <option value="value2">JAVASCRIPT</option>
-                  <option value="value3">SASS</option>
-                </select>
-
-
-                <button class="button-abilities" type="button" name="button"><i class="fas fa-plus"></i></button>
+                <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
+                <div class="ability-box">
+                  <select class="select-abilities" name="abilities">
+                    <option class="abilities-selection" value="value1">HTML <i class="fas fa-chevron-down"></i></option>
+                    <option class="abilities-selection" value="value2">CSS <i class="fas fa-chevron-down"></i></option>
+                    <option class="abilities-selection" value="value3">JAVASCRIPT <i class="fas fa-chevron-down"></i></option>
+                    <option class="abilities-selection" value="value4">SASS <i class="fas fa-chevron-down"></i></option>
+                  </select>
+                  <button class="button-abilities" type="button" name="button"><i class="fas fa-minus"></i></button>
+                </div>
+                <div class="ability-box">
+                  <select class="select-abilities" name="abilities">
+                    <option value="value1">CSS</option>
+                    <option value="value2">JAVASCRIPT</option>
+                    <option value="value3">SASS</option>
+                  </select>
+                  <button class="button-abilities" type="button" name="button"><i class="fas fa-plus"></i></button>
+                </div>
               </div>
 
             </div>
@@ -230,12 +227,9 @@
 
               <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a>
 
-
-              <a class="link-twitter" href="#">
-                <button class="btn-create-card" type="button" name="button">
+                <button class="btn-share" type="button" name="button">
                   <span><i class="fab fa-twitter" style="font-size: 15px;"></i>
                   </span>Compartir en twitter</button>
-                </a>
 
               </div>
             </fieldset>

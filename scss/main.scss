@@ -9,6 +9,8 @@
 @import 'layout/grid';
 @import 'layout/section-collapsible__fill';
 @import 'layout/sectioncard';
+@import 'layout/mediaqueries';
+@import 'layout/design';
 
 // Components
 @import 'components/buttons';
@@ -18,7 +20,6 @@
 @import 'components/typography';
 
 // Pages
-@import 'pages/design';
 @import 'pages/home';
 @import 'pages/landing';
 

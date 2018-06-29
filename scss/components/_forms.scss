@@ -4,6 +4,7 @@
 
 .section-collapsible__fill {
   border: none;
+  height: auto;
 }
 
 .section-collapsible__fill--title {
@@ -30,7 +31,7 @@
   font-size: $font-size-deci;
   font-family: $font-family-open;
   font-weight: normal;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 5px;
 }
 
@@ -60,7 +61,14 @@
   border: 1px solid $color-green-fish;
 }
 
-.button-abilities__menos {
+.fill-input__abilities {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.button-abilities {
+  display: flex;
   font-size: $font-size-hecta;
   color: $color-orange-monkey;
   background-color: transparent;
@@ -68,14 +76,77 @@
   border-radius: 15px;
   width: 30px;
   height: 30px;
+  margin-left: 20px;
 }
 
 .select-abilities {
-  margin-top: 5px;
-  margin-bottom: 21px;
   background: none;
   border: 1px solid $color-green-fish;
   border-radius: 4px;
   width: 165px;
   height: 30px;
+}
+
+.ability-box {
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.section-collapsible__share {
+  border: none;
+}
+
+.section-collapsible__share--title {
+  display: flex;
+  align-items: center;
+}
+
+.section-collapsible__share--button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.fa-address-card {
+  margin-right: 10.5px;
+}
+
+.btn-create-card {
+  font-size: $font-size-hecta;
+  font-weight: 600;
+  color: $color-white-horse;
+  width: 199px;
+  height: 50px;
+  border-radius: 12px;
+  border-style: none;
+  background-color: $color-orange-monkey;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
+
+.link-awesome {
+  color: $color-orange-monkey;
+  text-decoration: none;
+  font-size: $font-size-mili;
+}
+
+.section-collapsible__share--end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-share {
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  border-style: none;
+  color: $color-white-horse;
+  background-color: $color-blue-peacock;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
 }
