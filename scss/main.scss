@@ -9,6 +9,8 @@
 @import 'layout/grid';
 @import 'layout/section-collapsible__fill';
 @import 'layout/sectioncard';
+@import 'layout/mediaqueries';
+@import 'layout/design';
 
 // Components
 @import 'components/buttons';
@@ -18,53 +20,5 @@
 @import 'components/typography';
 
 // Pages
-@import 'pages/design';
 @import 'pages/home';
 @import 'pages/landing';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .box {
-//   height: 25px;
-//   width: 30px;
-//   border: 1px solid red;
-// }
-//
-// .big-box {
-//   display: flex;
-//   flex-direction: row;
-// }
-//
-// .prueba {
-//   display: flex;
-// }
-//
-// .div-colors {
-//   display: flex;
-//   justify-content: space-between;
-// }
-//
-// .esto {
-//   display: flex;
-//   flex-direction: column;
-// }

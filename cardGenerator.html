@@ -10,50 +10,64 @@
   <title>Awesome profile-cards</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-
-
-  <a href="index.html">Landing Page</a>
+<body class="cardGenerator__wrapper">
 
 
   <header class="cardGenerator__header">
     <div class="cardGenerator__image">
-
+      <a class="index__link" href="index.html"></a>
     </div>
   </header>
 
-  <main>
+  <main class="cardGenerator__main">
 
     <!-- SECCION LAURA -->
     <section class="section-card">
-      <button type="button" name="Reset" alt="reset button" class= "resetbutton"><i class="far fa-trash-alt"></i>
-
-        RESET</button>
-        <div class="card">
-          <div class="section-card__top">
-            <p>Nombre apellido</p>
-            <p>Profesión</p>
-          </div>
-          <div class="section-card__image">
-            <img src="images/image-card.png" alt="user-photo">
-          </div>
-          <div class="section-card__social">
-            <ul>
-              <li> <button type="button" name="mobile" alt="button mobile" class= "button button--mobile"></button> </li>
-              <li> <button type="button" name="mail" alt="button mail" class= "button button--mail"></button> </li>
-              <li> <button type="button" name="linkedin" alt= "button linkedin" class= "button button--linkedin"></button> </li>
-              <li> <button type="button" name="github" alt="buttonbgithub" class="button button--github"></button> </li>
-            </ul>
-          </div>
-          <div class="section-card__skills">
-            <ul>
-              <li class= "skill">habilidad 1</li>
-              <li class= "skill">habilidad 2</li>
-              <li class= "skill">habilidad 3</li>
-            </ul>
+      <button type="button" name="Reset" alt="reset button" class= "resetbutton">
+        <i class="far fa-trash-alt"></i>
+        <div class="resetbutton--text">RESET</div>
+      </button>
+      <div class="card">
+        <div class="card__top">
+          <div class= "card-info">
+            <p class= "card__top--name" >Nombre apellido</p>
+            <p class= "card__top--career">Profesión</p>
           </div>
         </div>
-      </section>
+        <div class="card__image">
+          <img src="images/image-card.png" alt="user-photo">
+        </div>
+        <div >
+          <ul class= "card__social">
+            <li class= "card__social--li">
+              <button type="button" name="mobile" alt="button mobile" class= "button-card button--mobile">
+                <i class="fas fa-mobile-alt"></i>
+              </button> </li>
+              <li class= "card__social--li">
+                <button type="button" name="mail" alt="button mail" class= "button-card button--mail">
+                  <i class="far fa-envelope"></i>
+                </button>
+              </li>
+              <li class= "card__social--li">
+                <button type="button" name="linkedin" alt= "button linkedin" class= "button-card button--linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                </button>
+              </li>
+              <li class= "card__social--li"> <button type="button" name="github" alt="buttonbgithub" class="button-card button--github">
+                <i class="fab fa-github-alt"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="card__skills">
+          <ul class="card_skills--list">
+            <li class= "skill">HTML</li>
+            <li class= "skill">CSS</li>
+            <li class= "skill">GULP</li>
+          </ul>
+        </div>
+      </div>
+    </section>
       <!-- FIN SECCION -->
 
       <!--SECCIÓN RAQUEL-->
@@ -64,12 +78,12 @@
 
           <fieldset class="design__container">
             <div class="design__title">
-              <legend class="legend__title design__legend">
+              <legend class="legend__title design-title__legend">
                 <i class="icon-title far fa-object-ungroup"></i>
                 diseña
               </legend>
               <span>
-                <i class="icono fas fa-chevron-down"></i>
+                <i class="design__icon-legend fas fa-chevron-down"></i>
               </span>
             </div>
             <div class="design__form">
@@ -80,21 +94,21 @@
 
                   <div class="design__palette design__palette1">
                     <input class="design__check-radio" id="palette1" type="radio" name="colors" value="palette1" checked>
-                    <label class="palette1__color2" for="palette1">
+                    <label class="palette1__greens" for="palette1">
 
                     </label>
                   </div>
 
                   <div class="design__palette design__palette2">
                     <input class="design__check-radio" id="palette2" type="radio" name="colors" value="palette2">
-                    <label class="palette2__color2" for="palette2">
+                    <label class="palette2__reds" for="palette2">
 
                     </label>
                   </div>
 
                   <div class="design__palette design__palette3">
                     <input class="design__check-radio" id="palette3" type="radio" name="colors" value="palette3">
-                    <label class="palette3__color2" for="palette3">
+                    <label class="palette3__blues" for="palette3">
 
                     </label>
                   </div>
@@ -106,21 +120,21 @@
                 <p class="design__text">fuentes</p>
                 <div class="design__letter-type">
 
-                  <div class="design__type design__type1">
+                  <div class="design__type--common design__type--font1">
                     <input class="design__check-radio" id="font1" type="radio" name="fonts" value="font1">
                     <label class="font1" for="font1">
                       ubuntu
                     </label>
                   </div>
 
-                  <div class="design__type design__type2">
+                  <div class="design__type--common design__type--font2">
                     <input class="design__check-radio" id="font2" type="radio" name="fonts" value="font2" checked>
                     <label class="font2" for="font2">
                       comic sans
                     </label>
                   </div>
 
-                  <div class="design__type design__type3">
+                  <div class="design__type--common design__type--font3">
                     <input class="design__check-radio" id="font3" type="radio" name="fonts" value="font3">
                     <label class="font3" for="font3">
                       monserrat
@@ -144,9 +158,9 @@
               <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
             </div>
 
-            <div class="section-collapsible__fill--form">
+            <div class="section-collapsible__fill--form hidden">
               <label class="fill-input" for="nmb ">Nombre completo</label>
-              <input class="fill-input__placeholder" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
+              <input class="fill-input__placeholder personal-name" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
 
               <label class="fill-input" for="job ">Puesto</label>
               <input class="fill-input__placeholder" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="">
@@ -202,7 +216,7 @@
               <legend class="legend__title share-legend">comparte</legend>
             </div>
 
-            <div class="section-collapsible__share--button">
+            <div class="section-collapsible__share--button hidden">
 
               <button class="btn-create-card" type="button" name="button"><span><i class="far fa-address-card" style="font-size: 15px;"></i></span>CREAR TARJETA</button>
 

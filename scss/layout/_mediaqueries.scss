@@ -1,0 +1,18 @@
+.cardGenerator__main {
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.section-collapsible {
+  @media all and (min-width: 768px) {
+    width: 399px;
+  }
+}
+
+.section-card {
+  @media all and (min-width: 768px) {
+    flex-grow: 1;
+  }
+}
