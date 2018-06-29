@@ -15,6 +15,7 @@
 
 .design__title {
   align-items: center;
+
   @include flexBetween();
 }
 
@@ -22,6 +23,7 @@
   align-items: center;
   padding-top: 28px;
   padding-bottom: 33px;
+
   @include flexBetween();
 }
 
@@ -40,6 +42,7 @@
 
 .palette1__greens::before {
   content: '';
+
   @include boxPalette(30px, $color-palette-11);
 }
 
@@ -50,11 +53,13 @@
 
 .palette1__greens::after {
   content: '';
+
   @include boxPalette(30px, $color-palette-13);
 }
 
 .palette2__reds::before {
   content: '';
+
   @include boxPalette(30px, $color-palette-21);
 }
 
@@ -65,11 +70,13 @@
 
 .palette2__reds::after {
   content: '';
+
   @include boxPalette(30px, $color-palette-23);
 }
 
 .palette3__blues::before {
   content: '';
+
   @include boxPalette(30px, $color-palette-31);
 }
 
@@ -80,11 +87,13 @@
 
 .palette3__blues::after {
   content: '';
+
   @include boxPalette(30px, $color-palette-33);
 }
 
 .design__form-fonts {
   align-items: center;
+
   @include flexBetween();
 }
 
