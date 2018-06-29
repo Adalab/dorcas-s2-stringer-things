@@ -1,10 +1,16 @@
 .icon-title {
   color: $color-orange-monkey;
+  padding-right: 10px;
 }
 
 .section-collapsible__fill {
   border: none;
   height: auto;
+  box-sizing: border-box;
+  // height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
 }
 
 .section-collapsible__fill--title {
@@ -12,6 +18,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  margin: 0;
+  border-bottom: 1px solid $color-grey-koala;
 }
 
 .fill-legend {
@@ -95,11 +105,18 @@
 
 .section-collapsible__share {
   border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-grey-koala;
 }
 
 .section-collapsible__share--title {
   display: flex;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  margin: 0;
 }
 
 .section-collapsible__share--button {
@@ -129,11 +146,14 @@
 }
 
 .phrase {
+  margin-bottom: 0;
   font-size: $font-size-hecta;
   color: $color-grey-gorilla;
 }
 
 .link-awesome {
+  margin-top: 5px;
+  margin-bottom: 10px;
   color: $color-orange-monkey;
   text-decoration: none;
   font-size: $font-size-mili;
@@ -144,6 +164,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-grey-koala;
 }
 
 .btn-share {
