@@ -134,7 +134,7 @@
 
 .design__container {
   border: none;
-  padding: 30px 0;
+  padding: 0;
   margin: 0 20px;
   border-bottom: 1px solid #d8d8d8;
 }
@@ -147,6 +147,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,10 +158,10 @@
 }
 
 .design__form-colors {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 28px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 18px;
   padding-bottom: 33px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,9 +267,10 @@
 }
 
 .design__form-fonts {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,13 +663,7 @@ body {
   }
 
   .section-collapsible {
-    width: 399px;
-  }
-
-  .section-card {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+    min-width: 399px;
   }
 }
 
