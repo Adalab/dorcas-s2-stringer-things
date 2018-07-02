@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @mixin flex() {
   display: flex;
   flex-direction: column;
@@ -8,10 +8,11 @@
 
 @mixin icontext() {
   font-family: $font-family-open;
-  font-size: $font-size3-deca;
+  font-size: $font-size-deca;
   font-weight: 400;
   text-decoration: none;
-=======
+}
+
 @mixin flexBetween() {
   display: flex;
   justify-content: space-between;
@@ -21,5 +22,4 @@
   width: $width;
   height: 25px;
   background-color: $colorPalette;
->>>>>>> e6574e9a32b93d3cd35c2e5324b3b333ac535f92
 }

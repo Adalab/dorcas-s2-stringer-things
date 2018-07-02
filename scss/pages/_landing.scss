@@ -21,7 +21,7 @@
 .cover-header {
   width: 250px;
   height: 64px;
-  background-image: url("../../images/logo-awesome-profile-cards.svg");
+  background-image: url("../../../images/logo-awesome-profile-cards.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,11 +42,10 @@
   font-weight: 900;
 }
 
-<<<<<<< HEAD
 .cover-main__text--p {
   width: 265px;
   font-family: $font-family-open;
-  font-size: $font-size2-centi;
+  font-size: $font-size-centi;
   color: $color-primary;
   font-weight: 400;
   margin: 4px auto 14px auto;
@@ -81,7 +80,7 @@
     @include flex();
 }
 
-.far, .fas{
+.iconLanding {
   color: $color-secondary;
   font-size: $font-size-mega;
 }
@@ -99,13 +98,3 @@
   line-height: 42px;
   margin: 0 auto 30px auto;
 }
-=======
-// .cover{
-//   background-color:
-// }
-//
-//
-// .footer{
-//   background-color:
-// }
->>>>>>> e6574e9a32b93d3cd35c2e5324b3b333ac535f92
