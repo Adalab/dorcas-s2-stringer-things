@@ -7,7 +7,6 @@
 .wrapper {
   width: 100%;
   min-height: 100vh;
-
 }
 
 .cover {
@@ -15,7 +14,6 @@
   text-align: center;
   @include flex();
   position: relative;
-
 }
 
 .cover-header {
@@ -30,23 +28,24 @@
 }
 
 .cover-main {
-    @include flex();
+  @include flex();
 }
+
 .cover-main__text {
   text-align: center;
   position: relative;
 }
+
 .cover-main__text--title {
   font-family: $font-family-secondary;
   font-size: $font-size-kilo;
   font-weight: 900;
 }
 
-<<<<<<< HEAD
 .cover-main__text--p {
   width: 265px;
   font-family: $font-family-open;
-  font-size: $font-size2-centi;
+  font-size: $font-size-centi;
   color: $color-primary;
   font-weight: 400;
   margin: 4px auto 14px auto;
@@ -66,25 +65,25 @@
 }
 
 .cover-main__list--design {
-    @include icontext();
-    @include flex();
-
-
+  @include icontext();
+  @include flex();
 }
+
 .cover-main__list--fill{
-    @include icontext();
-    @include flex();
-
+  @include icontext();
+  @include flex();
 }
+
 .cover-main__list--share{
-    @include icontext();
-    @include flex();
+  @include icontext();
+  @include flex();
 }
 
 .far, .fas{
   color: $color-secondary;
   font-size: $font-size-mega;
 }
+
 .btn-chubby {
   display: block;
   width: 129px;
@@ -99,7 +98,6 @@
   line-height: 42px;
   margin: 0 auto 30px auto;
 }
-=======
 // .cover{
 //   background-color:
 // }
@@ -108,4 +106,3 @@
 // .footer{
 //   background-color:
 // }
->>>>>>> e6574e9a32b93d3cd35c2e5324b3b333ac535f92
