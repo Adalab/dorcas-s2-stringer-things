@@ -19,9 +19,14 @@
   justify-content: flex-start;
   align-items: center;
   padding-top: 10px;
-  padding-bottom: 7px;
+  padding-bottom: 10px;
   margin: 0;
   border-bottom: 1px solid $color-grey-koala;
+}
+
+.section-collapsible__fill--form {
+  display: flex;
+  flex-direction: column;
 }
 
 .fill-legend {
@@ -41,7 +46,7 @@
   font-size: $font-size-deci;
   font-family: $font-family-open;
   font-weight: normal;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 5px;
 }
 
@@ -79,6 +84,8 @@
 
 .button-abilities {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: $font-size-hecta;
   color: $color-orange-monkey;
   background-color: transparent;
@@ -131,6 +138,7 @@
 }
 
 .btn-create-card {
+  font-family: $font-family-primary;
   font-size: $font-size-hecta;
   font-weight: 600;
   color: $color-white-horse;
