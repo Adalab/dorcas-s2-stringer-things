@@ -1,0 +1,37 @@
+.cardGenerator__main {
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 852px;
+    background-image: linear-gradient(to bottom, $background-primary, $background-terciary);
+    padding-right: 40px;
+    padding-top: 20px;
+  }
+}
+
+.section-collapsible {
+  @media all and (min-width: 768px) {
+    min-width: 399px;
+  }
+}
+
+.section-card {
+  @media all and (min-width: 768px) {
+    min-width: 329px;
+    border-radius: 6px;
+    height: 639px;
+    padding-top: 173px;
+  }
+}
+
+.footer {
+  @media all and (min-width: 768px) {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: solid 1px $color-grey-koala;
+  }
+}

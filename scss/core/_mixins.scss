@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @mixin flex() {
   display: flex;
   flex-direction: column;
@@ -10,4 +11,15 @@
   font-size: $font-size3-deca;
   font-weight: 400;
   text-decoration: none;
+=======
+@mixin flexBetween() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin boxPalette($width, $colorPalette) {
+  width: $width;
+  height: 25px;
+  background-color: $colorPalette;
+>>>>>>> e6574e9a32b93d3cd35c2e5324b3b333ac535f92
 }

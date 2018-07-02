@@ -1,0 +1,109 @@
+// * {
+//   border: 1px solid red;
+// }
+
+.design__container {
+  border: none;
+  padding: 0;
+  margin: 0 20px;
+  border-bottom: 1px solid $color-line;
+}
+
+.design-title__legend {
+  padding: 0;
+}
+
+.design__title {
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  @include flexBetween();
+}
+
+.design__form-colors {
+  align-items: flex-start;
+  padding-top: 18px;
+  padding-bottom: 33px;
+
+  @include flexBetween();
+}
+
+.design__palette {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.design__check-radio {
+  margin: 0;
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+.palette1__greens::before {
+  content: '';
+
+  @include boxPalette(30px, $color-palette-11);
+}
+
+.palette1__greens {
+  @include boxPalette(90px, $color-palette-12);
+  @include flexBetween();
+}
+
+.palette1__greens::after {
+  content: '';
+
+  @include boxPalette(30px, $color-palette-13);
+}
+
+.palette2__reds::before {
+  content: '';
+
+  @include boxPalette(30px, $color-palette-21);
+}
+
+.palette2__reds {
+  @include boxPalette(90px, $color-palette-22);
+  @include flexBetween();
+}
+
+.palette2__reds::after {
+  content: '';
+
+  @include boxPalette(30px, $color-palette-23);
+}
+
+.palette3__blues::before {
+  content: '';
+
+  @include boxPalette(30px, $color-palette-31);
+}
+
+.palette3__blues {
+  @include boxPalette(90px, $color-palette-32);
+  @include flexBetween();
+}
+
+.palette3__blues::after {
+  content: '';
+
+  @include boxPalette(30px, $color-palette-33);
+}
+
+.design__form-fonts {
+  align-items: flex-start;
+  padding-bottom: 30px;
+
+  @include flexBetween();
+}
+
+.design__letter-type {
+  width: 117px;
+}
+
+.design__type--common {
+  padding: 7px 0;
+}
