@@ -7,31 +7,40 @@
 .wrapper {
   width: 100%;
   min-height: 100vh;
+  @include flex();
 
 }
 
 .cover {
+  width: 100%;
   background-color: $background-primary;
   text-align: center;
   @include flex();
-  position: relative;
+  flex-grow: 1;
 
 }
 
 .cover-header {
   width: 250px;
   height: 64px;
-  background-image: url("../../../images/logo-awesome-profile-cards.svg");
+  background-image: url("../images/Awesome-profile-cards.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   margin: 94px auto 14px auto;
+
+  @media all and (min-width: 768px) {
+    width: 420px;
+    height: 107px;
+    margin: 350px auto 30px auto;
+    }
 }
 
 .cover-main {
     @include flex();
+    flex-grow: 1;
 }
+
 .cover-main__text {
   text-align: center;
   position: relative;
@@ -40,6 +49,10 @@
   font-family: $font-family-secondary;
   font-size: $font-size-kilo;
   font-weight: 900;
+
+  @media all and (min-width: 768px) {
+    font-size: $font-size-kilo-mega;
+    }
 }
 
 .cover-main__text--p {
@@ -49,6 +62,13 @@
   color: $color-primary;
   font-weight: 400;
   margin: 4px auto 14px auto;
+
+  @media all and (min-width: 768px) {
+    width: 331px;
+    font-size: $font-size-deca;
+    margin: 4px auto 21px auto;
+
+    }
 }
 
 .cover-main__list {
@@ -62,6 +82,11 @@
   flex-flow: row wrap;
   justify-content: space-around;
   margin: 0 auto 40px auto;
+
+  @media all and (min-width: 768px) {
+    width: 325px;
+    height: 86px;
+    }
 }
 
 .cover-main__list--design {
@@ -84,17 +109,11 @@
   color: $color-secondary;
   font-size: $font-size-mega;
 }
-.btn-chubby {
-  display: block;
-  width: 129px;
-  height: 42px;
-  border-radius: 21px;
-  background-color: $color-green-sirena;
-  border: solid 1px $color-grey-babygorilla;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $color-white-horse;
-  text-align: center;
-  line-height: 42px;
-  margin: 0 auto 30px auto;
+
+.cover_main__btn {
+  @include flex();
+  @media all and (min-width:768px) {
+  margin: auto auto 60px auto;
+    }
+
 }
