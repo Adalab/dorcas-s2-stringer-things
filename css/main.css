@@ -860,11 +860,14 @@ body {
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
-    height: 852px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#fff));
     background-image: linear-gradient(to bottom, #f5f5f5, #fff);
     padding-right: 40px;
     padding-top: 20px;
+    margin-bottom: 20px;
   }
 
   .section-collapsible {
@@ -875,7 +878,7 @@ body {
     min-width: 329px;
     border-radius: 6px;
     height: 639px;
-    padding-top: 173px;
+    padding-top: 100px;
   }
 
   .footer {
