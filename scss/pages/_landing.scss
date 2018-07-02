@@ -19,7 +19,7 @@
 .cover-header {
   width: 250px;
   height: 64px;
-  background-image: url("../../images/logo-awesome-profile-cards.svg");
+  background-image: url("../../../images/logo-awesome-profile-cards.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,7 +79,7 @@
   @include flex();
 }
 
-.far, .fas{
+.iconLanding {
   color: $color-secondary;
   font-size: $font-size-mega;
 }
@@ -98,11 +98,3 @@
   line-height: 42px;
   margin: 0 auto 30px auto;
 }
-// .cover{
-//   background-color:
-// }
-//
-//
-// .footer{
-//   background-color:
-// }

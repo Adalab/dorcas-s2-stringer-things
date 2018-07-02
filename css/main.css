@@ -676,7 +676,7 @@ body {
 .cover-header {
   width: 250px;
   height: 64px;
-  background-image: url("../../images/logo-awesome-profile-cards.svg");
+  background-image: url("../../../images/logo-awesome-profile-cards.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -799,7 +799,7 @@ body {
   justify-content: center;
 }
 
-.far,.fas {
+.iconLanding {
   color: #e17334;
   font-size: 28px;
 }
