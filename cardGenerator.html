@@ -30,7 +30,7 @@
       <div class="card">
         <div class="card__top">
           <div class= "card-info">
-            <p class= "card__top--name" >Nombre apellido</p>
+            <p class= "card__top--name js-card__top--name" >Nombre apellido</p>
             <p class= "card__top--career">Profesión</p>
           </div>
         </div>
@@ -77,7 +77,7 @@
         <form class="form" action="cardGenerator.html" method="post">
 
           <fieldset class="design__container">
-            <div class="design__title">
+            <div class="design__title js-collapsible-title">
               <legend class="legend__title design-title__legend">
                 <i class="icon-title far fa-object-ungroup"></i>
                 diseña
@@ -86,7 +86,7 @@
                 <i class="design__icon-legend fas fa-chevron-down"></i>
               </span>
             </div>
-            <div class="design__form">
+            <div class="design__form js-collapsible-form">
 
               <div class="design__form-colors">
                 <p class="design__text">colores</p>
@@ -152,15 +152,15 @@
           <!--SECCIÓN OLATZ-->
 
           <fieldset class="section-collapsible__fill">
-            <div class="section-collapsible__fill--title">
+            <div class="section-collapsible__fill--title js-collapsible-title">
               <span class="icon-title"><i class="far fa-keyboard"></i></span>
               <legend class="legend__title fill-legend">rellena</legend>
               <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
             </div>
 
-            <div class="section-collapsible__fill--form hidden">
+            <div class="section-collapsible__fill--form hidden js-collapsible-form">
               <label class="fill-input" for="nmb ">Nombre completo</label>
-              <input class="fill-input__placeholder personal-name" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
+              <input class="fill-input__placeholder js-personal-name " placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
 
               <label class="fill-input" for="job ">Puesto</label>
               <input class="fill-input__placeholder" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="">
@@ -211,12 +211,12 @@
 
 
           <fieldset class="section-collapsible__share">
-            <div class="section-collapsible__share--title">
+            <div class="section-collapsible__share--title js-collapsible-title">
               <span class="icon-title"><i class="fas fa-share-alt"></i></span>
               <legend class="legend__title share-legend">comparte</legend>
             </div>
 
-            <div class="section-collapsible__share--button hidden">
+            <div class="section-collapsible__share--button hidden js-collapsible-form">
 
               <button class="btn-create-card" type="button" name="button"><span><i class="far fa-address-card" style="font-size: 15px;"></i></span>CREAR TARJETA</button>
 
