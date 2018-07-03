@@ -972,6 +972,7 @@ body {
 
   .footer {
     height: 60px;
+    padding: 0 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -979,21 +980,17 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0;
   }
 
   .credit {
-    margin: 10px auto 20px auto;
+    margin: 10px 0 20px auto;
   }
 
   .logoAdalab {
-    margin: 11px auto 10px auto;
+    margin: 11px 0 10px auto;
   }
 }
 
