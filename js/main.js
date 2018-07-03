@@ -4,6 +4,8 @@ var inputName = document.querySelector('.personal-name');
 var cardName = document.querySelector('.card__top--name');
 var inputJobTitle = document.querySelector('.job-title');
 var cardJobTitle = document.querySelector('.card__top--career');
+var inputPhoto = document.querySelector('.fill-input__image');
+var cardPhoto = document.querySelector('.card__image');
 var activableSectionDesign = document.querySelector('.design__title');
 var SectionHiddenDesign = document.querySelector('.design__form');
 var valueFillInput;
@@ -22,6 +24,13 @@ function reWriteJob() {
 }
 
 inputJobTitle.addEventListener('change', reWriteJob);
+
+function addCardPhoto(){
+  addPhoto = inputPhoto.value;
+  cardPhoto.innerHTML = addPhoto;
+}
+
+inputPhoto.addEventListener()
 
 function collapsibleDesign() {
   // Si contiene la clase hidden la elimina y sino la añade
