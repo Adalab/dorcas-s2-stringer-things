@@ -1,3 +1,22 @@
+//Section Landing buttons
+
+.btn-chubby {
+  display: block;
+  width: 129px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: $color-green-sirena;
+  border: solid 1px $color-grey-babygorilla;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $font-family-open;
+  font-size: $font-size-deca;
+  font-weight: 600;
+  color: $color-white-horse;
+  text-align: center;
+  line-height: 42px;
+  margin: 0 auto 30px auto;
+}
 //Section card buttons
 
 .resetbutton {
