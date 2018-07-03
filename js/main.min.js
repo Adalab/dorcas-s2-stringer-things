@@ -11,26 +11,45 @@ var SectionHiddenDesign = document.querySelector('.design__form');
 var valueFillInput;
 var valueJobTitle;
 
-function reWriteName() {
-  valueFillInput = inputName.value;
-  cardName.innerHTML = valueFillInput;
+//lo que quiere Nasiba
+//var fill = document.querySelectorAll('.fill-input__placeholder');
+var fill = document.querySelectorAll('.fill-input__placeholder');
+var card__top = document.querySelectorAll('card__top');
+
+function fillfunction (e){
+  card__top.value = e.currentTarget.innerHTML;
 }
 
-inputName.addEventListener('change', reWriteName);
-
-function reWriteJob() {
-  valueJobTitle = inputJobTitle.value;
-  cardJobTitle.innerHTML = valueJobTitle;
+for (var i = 0; i <fill.length; i++) {
+   fill[i].addEventListener ('change', fillfunction);
 }
 
-inputJobTitle.addEventListener('change', reWriteJob);
+
+// function reWriteName() {
+//   valueFillInput = inputName.value;
+//   cardName.innerHTML = valueFillInput;
+// }
+//
+// inputName.addEventListener('change', reWriteName);
+//
+// function reWriteJob() {
+//   valueJobTitle = inputJobTitle.value;
+//   cardJobTitle.innerHTML = valueJobTitle;
+// }
+
+//inputJobTitle.addEventListener('change', reWriteJob);
+
+
+// Cargar fonto
+var fr = new FileReader ();
+var inputPhoto = document.querySelector('.fill-input__image');
 
 function addCardPhoto(){
   addPhoto = inputPhoto.value;
   cardPhoto.innerHTML = addPhoto;
 }
 
-inputPhoto.addEventListener()
+inputPhoto.addEventListener("click", addCardPhoto);
 
 function collapsibleDesign() {
   // Si contiene la clase hidden la elimina y sino la añade
