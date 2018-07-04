@@ -7,11 +7,7 @@
 .wrapper {
   width: 100%;
   min-height: 100vh;
-<<<<<<< HEAD
-=======
   @include flex();
-
->>>>>>> 50502e34316a6857ecef809c84eb16bd3ba923fd
 }
 
 .cover {
@@ -19,12 +15,8 @@
   background-color: $background-primary;
   text-align: center;
   @include flex();
-<<<<<<< HEAD
   position: relative;
-=======
   flex-grow: 1;
-
->>>>>>> 50502e34316a6857ecef809c84eb16bd3ba923fd
 }
 
 .cover-header {
@@ -44,12 +36,8 @@
 }
 
 .cover-main {
-<<<<<<< HEAD
-  @include flex();
-=======
     @include flex();
     flex-grow: 1;
->>>>>>> 50502e34316a6857ecef809c84eb16bd3ba923fd
 }
 
 .cover-main__text {
@@ -63,7 +51,7 @@
   font-weight: 900;
 
   @media all and (min-width: 768px) {
-    font-size: $font-size-kilo-mega;
+    font-size: $font-size-mega;
     }
 }
 
@@ -79,8 +67,7 @@
     width: 331px;
     font-size: $font-size-deca;
     margin: 4px auto 21px auto;
-
-    }
+  }
 }
 
 .cover-main__list {
@@ -98,7 +85,7 @@
   @media all and (min-width: 768px) {
     width: 325px;
     height: 86px;
-    }
+  }
 }
 
 .cover-main__list--design {
@@ -121,7 +108,6 @@
   font-size: $font-size-mega;
 }
 
-<<<<<<< HEAD
 .btn-chubby {
   display: block;
   width: 129px;
@@ -135,12 +121,19 @@
   text-align: center;
   line-height: 42px;
   margin: 0 auto 30px auto;
-=======
+}
+
+.cover_main__btn {
+  @include flex();
+  @media all and (min-width: 768px) {
+    margin: auto auto 60px auto;
+  }
+}
+
 .cover_main__btn {
   @include flex();
   @media all and (min-width:768px) {
-  margin: auto auto 60px auto;
-    }
+    margin: auto auto 60px auto;
+  }
 
->>>>>>> 50502e34316a6857ecef809c84eb16bd3ba923fd
 }

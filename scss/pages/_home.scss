@@ -6,6 +6,12 @@ body {
   margin: 0;
 }
 
-// .hidden {
-//   display: none;
-// }
+.js-collapsible-visible {
+  .js-collapsible-form {
+    display: block;
+  }
+}
+
+.hidden {
+  display: none;
+}
