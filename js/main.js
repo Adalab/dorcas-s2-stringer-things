@@ -1,29 +1,42 @@
 'use strict';
 
 var inputName = document.querySelector('.personal-name');
-var cardName = document.querySelector('.card__top--name');
 var inputJobTitle = document.querySelector('.job-title');
-var cardJobTitle = document.querySelector('.card__top--career');
-var inputPhoto = document.querySelector('.fill-input__image');
-var cardPhoto = document.querySelector('.card__image');
-var activableSectionDesign = document.querySelector('.design__title');
-var SectionHiddenDesign = document.querySelector('.design__form');
-var valueFillInput;
-var valueJobTitle;
 
-function reWriteName() {
-  valueFillInput = inputName.value;
-  cardName.innerHTML = valueFillInput;
+// var inputPhoto = document.querySelector('.fill-input__image');
+// var cardPhoto = document.querySelector('.card__image');
+// var activableSectionDesign = document.querySelector('.design__title');
+// var SectionHiddenDesign = document.querySelector('.design__form');
+
+// variables rrss
+var mobile = document.querySelector('#phone');
+var mail = document.querySelector('#emailaddress');
+var linkedin = document.querySelector('#lkdn');
+var github = document.querySelector('#gh');
+
+function linkSM(e){
+  var fillLink = e.currentTarget;
+  var targetLink = fillLink.getAttribute('data-things');
+  document.querySelector('#' + targetLink).innerHTML = 'paco';
 }
 
-inputName.addEventListener('change', reWriteName);
+mobile.addEventListener('keyup', linkSM);
 
-function reWriteJob() {
-  valueJobTitle = inputJobTitle.value;
-  cardJobTitle.innerHTML = valueJobTitle;
+
+// cubrir nombre y puesto trabajo
+function reWriteData(e) {
+  var fillInput = e.currentTarget;
+  var targetID = fillInput.getAttribute('data-stringer');
+  document.querySelector('#' + targetID).innerHTML = fillInput.value;
 }
 
-inputJobTitle.addEventListener('change', reWriteJob);
+inputName.addEventListener('keyup', reWriteData);
+inputJobTitle.addEventListener('keyup', reWriteData);
+
+// cubrir redes sociales
+
+
+
 
 function addCardPhoto(){
   addPhoto = inputPhoto.value;
