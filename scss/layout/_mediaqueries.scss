@@ -2,10 +2,12 @@
   @media all and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
-    height: 852px;
+    // height: 852px;
+    flex-grow: 1;
     background-image: linear-gradient(to bottom, $background-primary, $background-terciary);
     padding-right: 40px;
     padding-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -20,7 +22,7 @@
     min-width: 329px;
     border-radius: 6px;
     height: 639px;
-    padding-top: 173px;
+    padding-top: 100px;
   }
 }
 

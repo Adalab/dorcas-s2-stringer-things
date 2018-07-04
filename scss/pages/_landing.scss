@@ -8,7 +8,6 @@
   width: 100%;
   min-height: 100vh;
   @include flex();
-
 }
 
 .cover {
@@ -16,8 +15,8 @@
   background-color: $background-primary;
   text-align: center;
   @include flex();
+  position: relative;
   flex-grow: 1;
-
 }
 
 .cover-header {
@@ -45,13 +44,14 @@
   text-align: center;
   position: relative;
 }
+
 .cover-main__text--title {
   font-family: $font-family-secondary;
   font-size: $font-size-kilo;
   font-weight: 900;
 
   @media all and (min-width: 768px) {
-    font-size: $font-size-kilo-mega;
+    font-size: $font-size-mega;
     }
 }
 
@@ -67,8 +67,7 @@
     width: 331px;
     font-size: $font-size-deca;
     margin: 4px auto 21px auto;
-
-    }
+  }
 }
 
 .cover-main__list {
@@ -86,23 +85,22 @@
   @media all and (min-width: 768px) {
     width: 325px;
     height: 86px;
-    }
+  }
 }
 
 .cover-main__list--design {
-    @include icontext();
-    @include flex();
-
-
+  @include icontext();
+  @include flex();
 }
+
 .cover-main__list--fill{
-    @include icontext();
-    @include flex();
-
+  @include icontext();
+  @include flex();
 }
+
 .cover-main__list--share{
-    @include icontext();
-    @include flex();
+  @include icontext();
+  @include flex();
 }
 
 .iconLanding {
@@ -110,10 +108,32 @@
   font-size: $font-size-mega;
 }
 
+.btn-chubby {
+  display: block;
+  width: 129px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: $color-green-sirena;
+  border: solid 1px $color-grey-babygorilla;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-white-horse;
+  text-align: center;
+  line-height: 42px;
+  margin: 0 auto 30px auto;
+}
+
+.cover_main__btn {
+  @include flex();
+  @media all and (min-width: 768px) {
+    margin: auto auto 60px auto;
+  }
+}
+
 .cover_main__btn {
   @include flex();
   @media all and (min-width:768px) {
-  margin: auto auto 60px auto;
-    }
+    margin: auto auto 60px auto;
+  }
 
 }

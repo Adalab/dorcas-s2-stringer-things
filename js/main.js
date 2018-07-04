@@ -1,21 +1,30 @@
 'use strict';
 
-var inputName = document.querySelector('.personal-name');
-var cardName = document.querySelector('.card__top--name');
-var activableSectionDesign = document.querySelector('.design__title');
-var SectionHiddenDesign = document.querySelector('.design__form');
-var valueFillInput;
+var activableSection = document.querySelectorAll('.js-collapsible-title');
+var parent;
+var fieldset = document.querySelectorAll('.js-collapsible-visible');
 
-function reWriteName() {
-  valueFillInput = inputName.value;
-  cardName.innerHTML = valueFillInput;
-}
+//abre y cierra colapsables
+console.log(activableSection);
 
-inputName.addEventListener('change', reWriteName);
-
-function collapsibleDesign() {
+function collapsibleDesign(event) {
+  parent = event.currentTarget.parentElement;
+  console.log(parent);
+  closeCollapsibles();
   // Si contiene la clase hidden la elimina y sino la añade
-  SectionHiddenDesign.classList.toggle('hidden');
+  parent.classList.toggle('js-collapsible-visible');
+
 }
 
-activableSectionDesign.addEventListener('click', collapsibleDesign);
+for (var i = 0; i < activableSection.length; i++) {
+  activableSection[i].addEventListener('click', collapsibleDesign);
+  console.log(activableSection[i]);
+}
+// un colapsable abierto cada vez
+
+function closeCollapsibles() {
+  for (var i = 0; i < fieldset.length; i++) {
+    console.log(activableSection.length);
+    fieldset[i].classList.remove('js-collapsible-visible');
+  }
+}
