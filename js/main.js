@@ -43,7 +43,7 @@ function addCardPhoto(){
   cardPhoto.innerHTML = addPhoto;
 }
 
-inputPhoto.addEventListener()
+inputPhoto.addEventListener("click", addCardPhoto);
 
 function collapsibleDesign() {
   // Si contiene la clase hidden la elimina y sino la añade
