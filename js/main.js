@@ -4,23 +4,32 @@ var inputName = document.querySelector('.personal-name');
 var inputJobTitle = document.querySelector('.job-title');
 
 // var inputPhoto = document.querySelector('.fill-input__image');
-// var cardPhoto = document.querySelector('.card__image');
+// var cardPhoto = document.querySelectSor('.card__image');
 // var activableSectionDesign = document.querySelector('.design__title');
 // var SectionHiddenDesign = document.querySelector('.design__form');
 
 // variables rrss
-var mobile = document.querySelector('#phone');
-var mail = document.querySelector('#emailaddress');
-var linkedin = document.querySelector('#lkdn');
-var github = document.querySelector('#gh');
+// var mobile = document.querySelector('#phone');s
+// var mail = document.querySelector('#emailaddress');
+// var linkedin = document.querySelector('#lkdn');
+// var github = document.querySelector('#gh');
+
 
 function linkSM(e){
   var fillLink = e.currentTarget;
   var targetLink = fillLink.getAttribute('data-things');
-  document.querySelector('#' + targetLink).innerHTML = 'paco';
+  var hrefNasi = "";
+  if ()
+  document.querySelector('#' + targetLink).href = "mailto:"+fillLink.value;
+  //linkedin.setAttribute("href", (fdocument.querySelector('#' + targetLink));
 }
 
-mobile.addEventListener('keyup', linkSM);
+
+
+var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
+for (var i=0; i<itemsSocialMedia.length; i++){
+  itemsSocialMedia[i].addEventListener('keyup', linkSM);
+}
 
 
 // cubrir nombre y puesto trabajo
