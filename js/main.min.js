@@ -1,6 +1,4 @@
 'use strict';
-
-//Cubrir datos TARJETA
 var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
 var uploadBtn = document.querySelector('.fill-input__image');
 var uploadInput = document.querySelector('.fill-input__input');
