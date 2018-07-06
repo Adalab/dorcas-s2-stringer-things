@@ -19,7 +19,12 @@ function linkSM(e){
   var fillLink = e.currentTarget;
   var targetLink = fillLink.getAttribute('data-things');
   var hrefNasi = "";
-  if ()
+  if (fillLink.type===email){
+    "mailto:"
+  } else if(fillLink.type===number){
+    "tel:"
+  }
+
   document.querySelector('#' + targetLink).href = "mailto:"+fillLink.value;
   //linkedin.setAttribute("href", (fdocument.querySelector('#' + targetLink));
 }
