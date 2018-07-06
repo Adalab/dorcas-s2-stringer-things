@@ -2,7 +2,7 @@
 var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
 var uploadBtn = document.querySelector('.fill-input__image');
 var uploadInput = document.querySelector('.fill-input__input');
-var uploadPhoto = document.querySelector('.card__image-img');
+var uploadPhoto = document.querySelector('.card__image');
 var fr = new FileReader();
 
 function reWriteData(e){
