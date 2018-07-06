@@ -10,6 +10,7 @@ function reWriteData(e){
   var targetInput = fillInput.getAttribute('data-stringer');
   var sendCont = document.querySelector('#' + targetInput);
   for (var i =0; i <itemsSocialMedia.length; i++) {
+    console.log(itemsSocialMedia.type);
     if (itemsSocialMedia.type === 'number'){
       sendCont.href += fillInput.value;
     } else if (itemsSocialMedia.type === 'email'){
@@ -37,7 +38,11 @@ function mostrarImagen(e){
 }
 
 function writeImage() {
-  uploadPhoto.src= fr.result;
+  alert('hola');
+  console.log(fr.result);
+  //uploadPhoto.style.backgroundImage = 'url(' +'"' + fr.result + '"' +');';
+  uploadPhoto.style.backgroundImage = 'url(' +'"' + fr.result + '"' +');';
+
 }
 function clickInput () {
   uploadInput.click();
