@@ -18,18 +18,16 @@ var inputJobTitle = document.querySelector('.job-title');
 function linkSM(e){
   var fillLink = e.currentTarget;
   var targetLink = fillLink.getAttribute('data-things');
-  var hrefNasi = "";
-  if (fillLink.type===email){
-    "mailto:"
+  var hrefNasi = '';
+  if (fillLink.type===email.type){
+    document.querySelector('#' + targetLink).href = 'mailto:'+fillLink.value;
   } else if(fillLink.type===number){
-    "tel:"
+    document.querySelector('#' + targetLink).href = 'tel:'+fillLink.value;
+  } else {
+    document.querySelector('#' + targetLink).href += fillLink.value;
+    //linkedin.setAttribute("href", (fdocument.querySelector('#' + targetLink));
   }
-
-  document.querySelector('#' + targetLink).href = "mailto:"+fillLink.value;
-  //linkedin.setAttribute("href", (fdocument.querySelector('#' + targetLink));
 }
-
-
 
 var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
 for (var i=0; i<itemsSocialMedia.length; i++){
