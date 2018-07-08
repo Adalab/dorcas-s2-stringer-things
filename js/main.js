@@ -30,36 +30,53 @@ function linkSM(e){
 }
 
 var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
-for (var i=0; i<itemsSocialMedia.length; i++){
-  itemsSocialMedia[i].addEventListener('keyup', linkSM);
-}
+var uploadBtn = document.querySelector('.fill-input__image');
+var uploadInput = document.querySelector('.fill-input__input');
+var uploadPhoto = document.querySelector('.card__image');
+var fr = new FileReader();
 
-
-// cubrir nombre y puesto trabajo
-function reWriteData(e) {
+function reWriteData(e){
   var fillInput = e.currentTarget;
-  var targetID = fillInput.getAttribute('data-stringer');
-  document.querySelector('#' + targetID).innerHTML = fillInput.value;
+  var targetInput = fillInput.getAttribute('data-stringer');
+  var sendCont = document.querySelector('#' + targetInput);
+  for (var i =0; i <itemsSocialMedia.length; i++) {
+    console.log(itemsSocialMedia.type);
+    if (itemsSocialMedia.type === 'number'){
+      sendCont.href += fillInput.value;
+    } else if (itemsSocialMedia.type === 'email'){
+      sendCont.href += fillInput.value;
+    } else if (itemsSocialMedia.type === 'url'){
+      sendCont.href += fillInput.value;
+    } else {
+      sendCont.innerHTML = fillInput.value;
+    }
+}
 }
 
-inputName.addEventListener('keyup', reWriteData);
-inputJobTitle.addEventListener('keyup', reWriteData);
 
-// cubrir redes sociales
-
-
-
-
-function addCardPhoto(){
-  addPhoto = inputPhoto.value;
-  cardPhoto.innerHTML = addPhoto;
+for (var i=0; i<itemsSocialMedia.length; i++){
+  itemsSocialMedia[i].addEventListener('keyup', reWriteData);
 }
 
-inputPhoto.addEventListener("click", addCardPhoto);
 
-function collapsibleDesign() {
-  // Si contiene la clase hidden la elimina y sino la añade
-  SectionHiddenDesign.classList.toggle('hidden');
+//Cargar Imagen
+
+function mostrarImagen(e){
+  var myFile = e.currentTarget.files[0];
+  fr.addEventListener('load', writeImage);
+  fr.readAsDataURL(myFile);
 }
 
-activableSectionDesign.addEventListener('click', collapsibleDesign);
+function writeImage() {
+  alert('hola');
+  console.log(fr.result);
+  //uploadPhoto.style.backgroundImage = 'url(' +'"' + fr.result + '"' +');';
+  uploadPhoto.style.backgroundImage = 'url(' +'"' + fr.result + '"' +');';
+
+}
+function clickInput () {
+  uploadInput.click();
+}
+
+uploadInput.addEventListener('change', mostrarImagen);
+uploadBtn.addEventListener('click', clickInput);
