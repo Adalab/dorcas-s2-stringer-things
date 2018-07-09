@@ -4,18 +4,21 @@ var uploadBtn = document.querySelector('.fill-input__image');
 var uploadInput = document.querySelector('.fill-input__input');
 var uploadPhoto = document.querySelector('.card__image');
 var fr = new FileReader();
+//console.log(itemsSocialMedia);
 
 function reWriteData(e){
   var fillInput = e.currentTarget;
   var targetInput = fillInput.getAttribute('data-stringer');
   var sendCont = document.querySelector('#' + targetInput);
+
   for (var i =0; i <itemsSocialMedia.length; i++) {
-    console.log(itemsSocialMedia.type);
-    if (itemsSocialMedia.type === 'number'){
+    var itemAttribute = itemsSocialMedia.getAttribute('type');
+    console.log(itemAttribute);
+    if (itemAttribute === 'number'){
       sendCont.href += fillInput.value;
-    } else if (itemsSocialMedia.type === 'email'){
+    } else if (itemAttribute=== 'email'){
       sendCont.href += fillInput.value;
-    } else if (itemsSocialMedia.type === 'url'){
+    } else if (itemAttribute === 'url'){
       sendCont.href += fillInput.value;
     } else {
       sendCont.innerHTML = fillInput.value;
