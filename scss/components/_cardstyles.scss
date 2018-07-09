@@ -81,32 +81,32 @@
 //fuente 1
 .ubuntu-card {
   .js-card__top--name {
-    color: $font-family-primary;
+    font-family: $font-family-primary;
   }
 
   .js-card__top--career {
-    color: $font-family-primary;
+    font-family: $font-family-primary;
   }
 }
 
 //fuente2
 .comic-card {
   .js-card__top--name {
-    color: $font-family-tertiary;
+    font-family: $font-family-tertiary;
   }
 
   .js-card__top--career {
-    color: $font-family-tertiary;
+    font-family: $font-family-tertiary;
   }
 }
 
 //fuente3
 .montse-card {
   .js-card__top--name {
-    color: $font-family-secondary;
+    font-family: $font-family-secondary;
   }
 
   .js-card__top--career {
-    color: $font-family-secondary;
+    font-family: $font-family-secondary;
   }
 }

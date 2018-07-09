@@ -29,6 +29,7 @@ function closeCollapsibles() {
   }
 }
 
+
 //actualizar colores
 var radioButtonColor = document.querySelectorAll('.color-check');
 var card = document.querySelector('.jsCard');

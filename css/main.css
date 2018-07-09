@@ -1,4 +1,4 @@
-@charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check *//* Tipo de fuente *//* Tamaño fuente */.cardGenerator__header {
+@charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check *//* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* Tipo de fuente *//* Tamaño fuente */.cardGenerator__header {
   padding-top: 30px;
   padding-left: 40px;
   padding-bottom: 30px;
@@ -743,27 +743,27 @@
 }
 
 .ubuntu-card .js-card__top--name {
-  color: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .ubuntu-card .js-card__top--career {
-  color: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .comic-card .js-card__top--name {
-  color: "Chilanka", "Comic Sans MS", sans-serif;
+  font-family: "Chilanka", "Comic Sans MS", sans-serif;
 }
 
 .comic-card .js-card__top--career {
-  color: "Chilanka", "Comic Sans MS", sans-serif;
+  font-family: "Chilanka", "Comic Sans MS", sans-serif;
 }
 
 .montse-card .js-card__top--name {
-  color: "Merriweather", serif;
+  font-family: "Merriweather", serif;
 }
 
 .montse-card .js-card__top--career {
-  color: "Merriweather", serif;
+  font-family: "Merriweather", serif;
 }
 
 body {
