@@ -24,7 +24,7 @@ function reWriteData(e){
     } else {
       sendCont.innerHTML = fillInput.value;
     }
-}
+  }
 }
 
 
@@ -67,4 +67,19 @@ function selectSkills(){
   skillContainer.innerHTML +=newSkill;
   //document.querySelector('.skill').innerHTML = x;
 }
-var skillsBtn = document.querySelector('.button-abilities')
+// var skillsBtn = document.querySelector('.button-abilities');
+
+
+var buttonSkills = document.querySelectorAll('.js-button-abilities');
+var boxSkills = document.querySelector('.js-ability-box');
+
+function createSkill(event){
+
+
+}
+
+
+for(var i = 0; i < buttonSkills.length; i++){
+  buttonSkills[i].addEventListener('click', createSkill);
+}
+

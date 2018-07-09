@@ -186,13 +186,29 @@
 
               <div class="abilities-fill">
                 <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
+                <div class="ability-box js-ability-box">
+                  <select class="select-abilities" name="abilities" onchange="selectSkills()">
+                    <option value="CSS">CSS</option>
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="SASS">SASS</option>
+                  </select>
+                  <button class="button-abilities js-button-abilities" type="button" name="button" data-type="plus"><i class="fas fa-plus"></i></button>
+                </div>
                 <div class="ability-box">
                   <select class="select-abilities" name="abilities" onchange="selectSkills()">
                     <option value="CSS">CSS</option>
                     <option value="JAVASCRIPT">JAVASCRIPT</option>
                     <option value="SASS">SASS</option>
                   </select>
-                  <button class="button-abilities" type="button" name="button"><i class="fas fa-plus"></i></button>
+                  <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden"><i class="fas fa-minus"></i></button>
+                </div>
+                <div class="ability-box">
+                  <select class="select-abilities" name="abilities" onchange="selectSkills()">
+                    <option value="CSS">CSS</option>
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="SASS">SASS</option>
+                  </select>
+                  <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden"><i class="fas fa-minus"></i></button>
                 </div>
               </div>
 
