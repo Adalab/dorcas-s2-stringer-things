@@ -30,20 +30,36 @@ function closeCollapsibles() {
 }
 
 //actualizar colores
-var radioButton = document.querySelectorAll('.color-check');
-var cardColor = document.querySelector('.jsCard');
+var radioButtonColor = document.querySelectorAll('.color-check');
+var card = document.querySelector('.jsCard');
+var attri;
 
 function selectColorCard(event) {
-  //DEFINIR QUE SE PONEN LOS COLORES QUE TU QUIERES EN LA CARTA
-  // parent = event.currentTarget.parentElement;
-  // console.log(parent);
-  // closeCollapsibles();
-  // Si contiene la clase hidden la elimina y sino la añade
-  cardColor.classList.add('red-card');
-
+  console.log('que hay en radiobut', radioButtonColor);
+  card.classList.remove('green-card', 'red-card', 'blue-card');
+  attri = event.currentTarget.getAttribute('data-dest');
+  card.classList.add(attri);
 }
 
-for (var i = 0; i < radioButton.length; i++) {
-  radioButton[i].addEventListener('click', selectColorCard);
-  console.log(radioButton[i]);
+for (var j = 0; j < radioButtonColor.length; j++) {
+  radioButtonColor[j].addEventListener('click', selectColorCard);
+  console.log(radioButtonColor[j]);
+}
+
+//actualizar fuentes
+
+
+var radioButtonFont = document.querySelectorAll('.font-check');
+var attriFont;
+
+function selectFontCard(event) {
+  console.log('que hay en radiobut', radioButtonFont);
+  card.classList.remove('ubuntu-card', 'comic-card', 'montse-card');
+  attriFont = event.currentTarget.getAttribute('data-font');
+  card.classList.add(attriFont);
+}
+
+for (var h = 0; h < radioButtonFont.length; h++) {
+  radioButtonFont[h].addEventListener('click', selectFontCard);
+  console.log(radioButtonFont[h]);
 }

@@ -1,3 +1,4 @@
+//paleta 1
 .green-card {
   .js-card-info {
     border-left: 5px solid $color-palette-13;
@@ -23,7 +24,7 @@
     background-color: $color-palette-12;
   }
 }
-
+//paleta 2
 .red-card {
   .js-card-info {
     border-left: 5px solid $color-palette-23;
@@ -46,11 +47,11 @@
   }
 
   .js-skill {
-    background-color: $color-palette-32;
+    background-color: $color-palette-22;
   }
 }
-
-.grey-card {
+//paleta 3
+.blue-card {
   .js-card-info {
     border-left: 5px solid $color-palette-33;
   }
@@ -73,5 +74,39 @@
 
   .js-skill {
     background-color: $color-palette-32;
+  }
+}
+
+//tipografia
+//fuente 1
+.ubuntu-card {
+  .js-card__top--name {
+    color: $font-family-primary;
+  }
+
+  .js-card__top--career {
+    color: $font-family-primary;
+  }
+}
+
+//fuente2
+.comic-card {
+  .js-card__top--name {
+    color: $font-family-tertiary;
+  }
+
+  .js-card__top--career {
+    color: $font-family-tertiary;
+  }
+}
+
+//fuente3
+.montse-card {
+  .js-card__top--name {
+    color: $font-family-secondary;
+  }
+
+  .js-card__top--career {
+    color: $font-family-secondary;
   }
 }

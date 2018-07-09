@@ -715,31 +715,55 @@
 }
 
 .red-card .js-skill {
-  background-color: #dfe5eb;
+  background-color: #bd1010;
 }
 
-.grey-card .js-card-info {
+.blue-card .js-card-info {
   border-left: 5px solid #a0c0cf;
 }
 
-.grey-card .js-card__top--name {
+.blue-card .js-card__top--name {
   color: #3e5b65;
 }
 
-.grey-card .js-card__top--career {
+.blue-card .js-card__top--career {
   color: #3e5b65;
 }
 
-.grey-card .js-social {
+.blue-card .js-social {
   border: solid 2px #a0c0cf;
 }
 
-.grey-card .js-icon {
+.blue-card .js-icon {
   color: #3e5b65;
 }
 
-.grey-card .js-skill {
+.blue-card .js-skill {
   background-color: #dfe5eb;
+}
+
+.ubuntu-card .js-card__top--name {
+  color: "Open Sans", sans-serif;
+}
+
+.ubuntu-card .js-card__top--career {
+  color: "Open Sans", sans-serif;
+}
+
+.comic-card .js-card__top--name {
+  color: "Chilanka", "Comic Sans MS", sans-serif;
+}
+
+.comic-card .js-card__top--career {
+  color: "Chilanka", "Comic Sans MS", sans-serif;
+}
+
+.montse-card .js-card__top--name {
+  color: "Merriweather", serif;
+}
+
+.montse-card .js-card__top--career {
+  color: "Merriweather", serif;
 }
 
 body {
