@@ -60,3 +60,8 @@ En el JSON de configuración especificamos los archivos JS que utilizamos y en e
 
 ## Falta algo?
 Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de los Issues o si te animas a mejorarlo mándanos un PR :)
+
+
+### Apuntes de Loreto
+- Comentar la función del formulario: al margen del input que sea, se utiliza siempre la misma función de manera que se insertamos algo nuevo en la tarjeta sea lo que sea no tendremos que modificar la función.
+- Dos eventos diferentes en el formulario, si type es url el evento es change, si no es keyup, de manera que el usuario puede ver como se modifica la tarjeta en tiempo real.

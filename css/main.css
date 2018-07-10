@@ -430,6 +430,7 @@
   height: 30px;
   border: 1px solid #a2deaf;
   margin-left: 20px;
+  background-size: cover;
 }
 
 .fill-input__image__square {
