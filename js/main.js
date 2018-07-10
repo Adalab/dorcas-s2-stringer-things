@@ -70,12 +70,18 @@ function selectSkills(){
 // var skillsBtn = document.querySelector('.button-abilities');
 
 
+// create box skills
 var buttonSkills = document.querySelectorAll('.js-button-abilities');
-var boxSkills = document.querySelector('.js-ability-box');
+var boxSkills = document.querySelectorAll('.js-ability-box');
 
 function createSkill(event){
-
-
+  var dataType = event.currentTarget.getAttribute('data-type');
+  var dataIndex = event.currentTarget.getAttribute('data-index');
+  boxSkills[dataIndex].classList.add(dataType);
+  // console.log(dataType);
+  // for (var i = 0; i < boxSkills.length; i++){
+  //   boxSkills[i].classList.add(dataType);
+  // }
 }
 
 

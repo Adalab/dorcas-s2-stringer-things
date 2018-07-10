@@ -158,8 +158,8 @@
               <legend class="legend__title fill-legend">rellena</legend>
               <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
             </div>
-
-            <div class="section-collapsible__fill--form hidden">
+            <!-- hay que poner clase hidden en el div justo denajo de este comentario -->
+            <div class="section-collapsible__fill--form">
               <label class="fill-input" for="nmb ">Nombre completo</label>
               <input class="fill-input__placeholder personal-name" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="" data-stringer="fullname">
 
@@ -188,7 +188,7 @@
                 <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
                 <div class="ability-box js-ability-box">
                   <select class="select-abilities" name="abilities" onchange="selectSkills()">
-                    <option value="CSS">CSS</option>
+                    <option value="CSS" selected>CSS</option>
                     <option value="JAVASCRIPT">JAVASCRIPT</option>
                     <option value="SASS">SASS</option>
                   </select>
@@ -197,7 +197,7 @@
                 <div class="ability-box">
                   <select class="select-abilities" name="abilities" onchange="selectSkills()">
                     <option value="CSS">CSS</option>
-                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="JAVASCRIPT" selected>JAVASCRIPT</option>
                     <option value="SASS">SASS</option>
                   </select>
                   <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden"><i class="fas fa-minus"></i></button>
@@ -206,7 +206,7 @@
                   <select class="select-abilities" name="abilities" onchange="selectSkills()">
                     <option value="CSS">CSS</option>
                     <option value="JAVASCRIPT">JAVASCRIPT</option>
-                    <option value="SASS">SASS</option>
+                    <option value="SASS" selected>SASS</option>
                   </select>
                   <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden"><i class="fas fa-minus"></i></button>
                 </div>
