@@ -71,17 +71,25 @@ selectInputSkills.addEventListener('click', selectSkills);
 // create box skills
 var buttonSkills = document.querySelectorAll('.js-button-abilities');
 var boxSkills = document.querySelectorAll('.js-ability-box');
+var dataType;
+var dataIndex = 0;
 
 function createSkill(event){
-  var dataType = event.currentTarget.getAttribute('data-type');
-  var dataIndex = event.currentTarget.getAttribute('data-index');
-  boxSkills[dataIndex].classList.add(dataType);
-  // console.log(dataType);
-  // for (var i = 0; i < boxSkills.length; i++){
-  //   boxSkills[i].classList.add(dataType);
-  // }
+  for (var i = 0; i < boxSkills.length; i++){
+    dataType = event.currentTarget.getAttribute('data-type');
+    dataIndex = event.currentTarget.getAttribute('data-index');
+    dataIndex = parseInt(dataIndex);
+    console.log('dataType' ,dataType);
+    console.log('dataIndex type' ,typeof dataIndex);
+    if(dataType === 'hidden') {
+      boxSkills[dataIndex].classList.add(dataType);
+    } else if (dataType === 'plus'){
+      console.log('dataIndex' ,dataIndex);
+      dataIndex = dataIndex + 1;
+      boxSkills[dataIndex].classList.add(dataType);
+    }
+  }
 }
-
 
 for(var i = 0; i < buttonSkills.length; i++){
   buttonSkills[i].addEventListener('click', createSkill);

@@ -666,6 +666,12 @@ body {
   display: none;
 }
 
+.plus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 * {
   margin: 0;
   padding: 0;
