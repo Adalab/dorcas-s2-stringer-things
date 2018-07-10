@@ -88,6 +88,10 @@
 
 .button-abilities {
   display: flex;
+<<<<<<< HEAD
+=======
+  align-items: center;
+>>>>>>> f0a9748ab3f61f1d15671574aac910e30acdbd75
   justify-content: center;
   font-size: $font-size-hecta;
   color: $color-orange-monkey;
@@ -141,7 +145,7 @@
 }
 
 .btn-create-card {
-  font-style: $font-family-primary;
+  font-family: $font-family-primary;
   font-size: $font-size-hecta;
   font-weight: 600;
   color: $color-white-horse;
