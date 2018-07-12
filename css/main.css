@@ -448,6 +448,7 @@
   height: 30px;
   border: 1px solid #a2deaf;
   margin-left: 20px;
+  background-size: cover;
 }
 
 .fill-input__image__square {
@@ -474,12 +475,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-=======
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
->>>>>>> f0a9748ab3f61f1d15671574aac910e30acdbd75
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -693,6 +691,12 @@ body {
 
 .hidden {
   display: none;
+}
+
+.plus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 * {
