@@ -10,6 +10,17 @@ body {
   display: none;
 }
 
+.skills-hidden {
+  display: none;
+}
+
 .plus {
   display: flex;
 }
+
+.js-collapsible-visible {
+  .js-collapsible-form {
+    display: block;
+  }
+}
+
