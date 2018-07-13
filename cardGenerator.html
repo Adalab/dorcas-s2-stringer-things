@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="es" dir="ltr">
     <head>
       <meta charset="utf-8">
@@ -30,42 +30,44 @@
           <div class="card">
             <div class="card__top">
               <div class= "card-info">
-                <p class= "card__top--name js-card__top--name" >Nombre apellido</p>
-                <p class= "card__top--career">Profesión</p>
+                <p class= "card__top--name js-card__top--name" id="fullname" >Nombre apellido</p>
+                <p class= "card__top--career" id="profesion">Profesión</p>
               </div>
             </div>
             <div class="card__image">
-              <img src="images/image-card.png" alt="user-photo">
+              <!-- <img src="images/image-card.png" alt="user-photo"> -->
             </div>
             <div >
-              <ul class= "card__social">
-                <li class= "card__social--li">
-                  <button type="button" name="mobile" alt="button mobile" class= "button-card button--mobile">
-                    <i class="fas fa-mobile-alt"></i>
-                  </button> </li>
-                  <li class= "card__social--li">
-                    <button type="button" name="mail" alt="button mail" class= "button-card button--mail">
-                      <i class="far fa-envelope"></i>
-                    </button>
-                  </li>
-                  <li class= "card__social--li">
-                    <button type="button" name="linkedin" alt= "button linkedin" class= "button-card button--linkedin">
-                      <i class="fab fa-linkedin-in"></i>
-                    </button>
-                  </li>
-                  <li class= "card__social--li"> <button type="button" name="github" alt="buttonbgithub" class="button-card button--github">
-                    <i class="fab fa-github-alt"></i>
-                  </button>
-                </li>
-              </ul>
+                <ul class="card__social">
+                    <li class="card__social--li">
+                      <a class="button-card button--mobile" id="mobile-link" href="tel:" title="número de teléfono" target="_blank">
+                        <i class="fas fa-mobile-alt"></i>
+                      </a>
+                    </li>
+                    <li class="card__social--li">
+                      <a class="button-card button--mail" id="mail-link" href="mailto:" title="correo electrónico">
+                          <i class="far fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="card__social--li">
+                      <a class="button-card button--linkedin" id="linkedin-link" href="https://www.linkedin.com/in/" title="Linkedin" target="_blank">
+                          <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li class="card__social--li">
+                      <a class="button-card button--github" id="github-link" href="https://github.com/" title="Github" target="_blank">
+                        <i class="fab fa-github-alt"></i>
+                      </a>
+                    </li>
+                  </ul>
             </div>
-            <div class="card__skills">
+            <!-- <div class="card__skills">
               <ul class="card_skills--list">
                 <li class= "skill">HTML</li>
                 <li class= "skill">CSS</li>
                 <li class= "skill">GULP</li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </section>
           <!-- FIN SECCION -->
@@ -160,30 +162,41 @@
 
                 <div class="section-collapsible__fill--form hidden js-collapsible-form">
                   <label class="fill-input" for="nmb ">Nombre completo</label>
-                  <input class="fill-input__placeholder js-personal-name " placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="">
+                  <input class="fill-input__placeholder js-personal-name " placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="" data-stringer = "fullname">
 
                   <label class="fill-input" for="job ">Puesto</label>
-                  <input class="fill-input__placeholder" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="">
+                  <input class="fill-input__placeholder" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="" data-stringer = "profesion">
 
-                  <label class="fill-input" for="add-image">Imagen de perfil</label>
+                  <label type = "file" class="fill-input" for="add-image">Imagen de perfil</label>
                   <div class="fill-input__image__square">
 
-
-                    <input class="fill-input__image" id="add-image" type="submit" value="Añadir imagen">
+                      <button type="button" class="fill-input__image" name="button">Añadir imagen</button>
+                      <input class="fill-input__input" id="add-image" type="file" value="Añadir imagen">
 
                     <div class="square__white"></div>
                   </div>
+
                   <label class="fill-input" for="emailaddress">Email</label>
-                  <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="text" name="" value="">
+                 <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value="" data-stringer="mail-link">
+            <label class="fill-input" for="phone">Teléfono</label>
+            <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value="" data-stringer="mobile-link">
+            <label class="fill-input" for="lkdn">Linkedin</label>
+            <input class="fill-input__placeholder" placeholder="Ej:sally-hill" id="lkdn" type="url" name="linkedin" value="" data-stringer="linkedin-link">
+            <label class="fill-input" for="GH">Github</label>
+            <input class="fill-input__placeholder" placeholder="Ej: sally-hill" id="GH" type="url" name="github" value="" data-stringer="github-link">
+
+
+                  <!-- <label class="fill-input" for="emailaddress">Email</label>
+                  <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value="" data-stringer = "mail-link">
 
                   <label class="fill-input" for="phone">Teléfono</label>
-                  <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="tel" name="telephone" value="">
+                  <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value="" data-stringer = "mobile-link" >
 
                   <label class="fill-input" for="lkdn">Linkedin</label>
-                  <input class="fill-input__placeholder" placeholder="Ej: linkedin.com/in/sally.hill" id="lkdn" type="email" name="mail" value="">
+                  <input class="fill-input__placeholder" placeholder="Ej: linkedin.com/in/sally.hill" id="lkdn" type="url" name="mail" value="" data-stringer = "linkedin-link">
 
                   <label class="fill-input" for="GH">Github</label>
-                  <input class="fill-input__placeholder" placeholder="Ej: @sally-hill" id="GH" type="email" name="mail" value="">
+                  <input class="fill-input__placeholder" placeholder="Ej: @sally-hill" id="GH" type="url" name="mail" value="" data-stringer = "github-link"> -->
 
                   <div class="abilities-fill">
                     <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
