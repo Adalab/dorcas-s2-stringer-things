@@ -27,11 +27,11 @@
         <i class="far fa-trash-alt"></i>
         <div class="resetbutton--text">RESET</div>
       </button>
-      <div class="card">
+      <div class="card jsCard">
         <div class="card__top">
-          <div class= "card-info">
+          <div class= "card-info js-card-info">
             <p class= "card__top--name js-card__top--name" >Nombre apellido</p>
-            <p class= "card__top--career">Profesión</p>
+            <p class= "card__top--career js-card__top--career">Profesión</p>
           </div>
         </div>
         <div class="card__image">
@@ -40,30 +40,30 @@
         <div >
           <ul class= "card__social">
             <li class= "card__social--li">
-              <button type="button" name="mobile" alt="button mobile" class= "button-card button--mobile">
-                <i class="fas fa-mobile-alt"></i>
+              <button type="button" name="mobile" alt="button mobile" class= "button-card button--mobile js-social">
+                <i class="fas fa-mobile-alt js-icon"></i>
               </button> </li>
               <li class= "card__social--li">
-                <button type="button" name="mail" alt="button mail" class= "button-card button--mail">
-                  <i class="far fa-envelope"></i>
+                <button type="button" name="mail" alt="button mail" class= "button-card button--mail js-social">
+                  <i class="far fa-envelope js-icon"></i>
                 </button>
               </li>
               <li class= "card__social--li">
-                <button type="button" name="linkedin" alt= "button linkedin" class= "button-card button--linkedin">
-                  <i class="fab fa-linkedin-in"></i>
+                <button type="button" name="linkedin" alt= "button linkedin" class= "button-card button--linkedin js-social">
+                  <i class="fab fa-linkedin-in js-icon"></i>
                 </button>
               </li>
-              <li class= "card__social--li"> <button type="button" name="github" alt="buttonbgithub" class="button-card button--github">
-                <i class="fab fa-github-alt"></i>
+              <li class= "card__social--li"> <button type="button" name="github" alt="buttonbgithub" class="button-card button--github js-social">
+                <i class="fab fa-github-alt js-icon"></i>
               </button>
             </li>
           </ul>
         </div>
         <div class="card__skills">
           <ul class="card_skills--list">
-            <li class= "skill">HTML</li>
-            <li class= "skill">CSS</li>
-            <li class= "skill">GULP</li>
+            <li class= "skill js-skill">HTML</li>
+            <li class= "skill js-skill">CSS</li>
+            <li class= "skill js-skill">GULP</li>
           </ul>
         </div>
       </div>
@@ -93,21 +93,22 @@
                 <div class="design__palettes">
 
                   <div class="design__palette design__palette1">
-                    <input class="design__check-radio" id="palette1" type="radio" name="colors" value="palette1" checked>
+                    <input class="design__check-radio color-check" id="palette1" type="radio" name="colors" value="palette1" checked data-dest="green-card">
                     <label class="palette1__greens" for="palette1">
 
                     </label>
                   </div>
 
                   <div class="design__palette design__palette2">
-                    <input class="design__check-radio" id="palette2" type="radio" name="colors" value="palette2">
+                    <input class="design__check-radio color-check" id="palette2" type="radio" name="colors" value="palette2" data-dest="red-card">
                     <label class="palette2__reds" for="palette2">
 
                     </label>
                   </div>
 
                   <div class="design__palette design__palette3">
-                    <input class="design__check-radio" id="palette3" type="radio" name="colors" value="palette3">
+                    <input class="design__check-radio color-check" id="palette3" type="radio" name="colors" value="palette3"
+                    data-dest="blue-card">
                     <label class="palette3__blues" for="palette3">
 
                     </label>
@@ -121,21 +122,21 @@
                 <div class="design__letter-type">
 
                   <div class="design__type--common design__type--font1">
-                    <input class="design__check-radio" id="font1" type="radio" name="fonts" value="font1">
+                    <input class="design__check-radio font-check" id="font1" type="radio" name="fonts" value="font1"  data-font="ubuntu-card">
                     <label class="font1" for="font1">
                       ubuntu
                     </label>
                   </div>
 
                   <div class="design__type--common design__type--font2">
-                    <input class="design__check-radio" id="font2" type="radio" name="fonts" value="font2" checked>
+                    <input class="design__check-radio font-check" id="font2" type="radio" name="fonts" value="font2" data-font="comic-card" checked>
                     <label class="font2" for="font2">
                       comic sans
                     </label>
                   </div>
 
                   <div class="design__type--common design__type--font3">
-                    <input class="design__check-radio" id="font3" type="radio" name="fonts" value="font3">
+                    <input class="design__check-radio font-check" id="font3" type="radio" name="fonts" value="font3" data-font="montse-card">
                     <label class="font3" for="font3">
                       monserrat
                     </label>
