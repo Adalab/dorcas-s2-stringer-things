@@ -1,0 +1,112 @@
+//paleta 1
+.green-card {
+  .js-card-info {
+    border-left: 5px solid $color-palette-13;
+  }
+
+  .js-card__top--name {
+    color: $color-palette-11;
+  }
+
+  .js-card__top--career {
+    color: $color-palette-11;
+  }
+
+  .js-social {
+    border: solid 2px $color-palette-13;
+  }
+
+  .js-icon {
+    color: $color-palette-11;
+  }
+
+  .js-skill {
+    background-color: $color-palette-12;
+  }
+}
+//paleta 2
+.red-card {
+  .js-card-info {
+    border-left: 5px solid $color-palette-23;
+  }
+
+  .js-card__top--name {
+    color: $color-palette-21;
+  }
+
+  .js-card__top--career {
+    color: $color-palette-21;
+  }
+
+  .js-social {
+    border: solid 2px $color-palette-23;
+  }
+
+  .js-icon {
+    color: $color-palette-21;
+  }
+
+  .js-skill {
+    background-color: $color-palette-22;
+  }
+}
+//paleta 3
+.blue-card {
+  .js-card-info {
+    border-left: 5px solid $color-palette-33;
+  }
+
+  .js-card__top--name {
+    color: $color-palette-31;
+  }
+
+  .js-card__top--career {
+    color: $color-palette-31;
+  }
+
+  .js-social {
+    border: solid 2px $color-palette-33;
+  }
+
+  .js-icon {
+    color: $color-palette-31;
+  }
+
+  .js-skill {
+    background-color: $color-palette-32;
+  }
+}
+
+//tipografia
+//fuente 1
+.ubuntu-card {
+  .js-card__top--name {
+    font-family: $font-family-primary;
+  }
+
+  .js-card__top--career {
+    font-family: $font-family-primary;
+  }
+}
+
+//fuente2
+.comic-card {
+  .js-card__top--name {
+    font-family: $font-family-tertiary;
+  }
+
+  .js-card__top--career {
+    font-family: $font-family-tertiary;
+  }
+}
+
+//fuente3
+.montse-card {
+  .js-card__top--name {
+    font-family: $font-family-secondary;
+  }
+
+  .js-card__top--career {
+    font-family: $font-family-secondary;
+  }
+}
