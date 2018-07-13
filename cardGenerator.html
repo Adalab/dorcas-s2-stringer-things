@@ -14,7 +14,6 @@
 
 <body class="cardGenerator__wrapper">
 
-
   <header class="cardGenerator__header">
     <div class="cardGenerator__image">
       <a class="index__link" href="index.html"></a>
@@ -29,43 +28,34 @@
             <div class="abilities-fill">
               <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
               <div class="ability-box js-ability-box">
-                <select class="select-abilities" name="abilities" onchange="selectSkills()">
-                  <option value="CSS" selected>CSS</option>
-                  <option value="JAVASCRIPT">JAVASCRIPT</option>
-                  <option value="SASS">SASS</option>
+                <select class="select-abilities js-select-abilities" name="abilities" onchange="selectSkills()">
+
                 </select>
                 <button class="button-abilities js-button-abilitiesPlus" type="button" name="button" data-type="plus" data-index="0">
                   <i class="fas fa-plus"></i>
                 </button>
               </div>
               <div class="ability-box js-ability-box hidden">
-                <select class="select-abilities" name="abilities" onchange="selectSkills()">
-                  <option value="CSS">CSS</option>
-                  <option value="JAVASCRIPT" selected>JAVASCRIPT</option>
-                  <option value="SASS">SASS</option>
+                <select class="select-abilities js-select-abilities" name="abilities" onchange="selectSkills()">
+
                 </select>
                 <button class="button-abilities js-button-abilitiesMinus" type="button" name="button" data-type="hidden" data-index="1">
                   <i class="fas fa-minus"></i>
                 </button>
               </div>
               <div class="ability-box js-ability-box hidden">
-                <select class="select-abilities" name="abilities">
-                  <option value="CSS">CSS</option>
-                  <option value="JAVASCRIPT">JAVASCRIPT</option>
-                  <option value="SASS" selected>SASS</option>
+                <select class="select-abilities js-select-abilities" name="abilities">
+
                 </select>
                 <button class="button-abilities js-button-abilitiesMinus" type="button" name="button" data-type="hidden" data-index="2">
                   <i class="fas fa-minus"></i>
                 </button>
               </div>
             </div>
-
           </div>
         </fieldset>
-
       </form>
     </section>
-
   </main>
 
 
