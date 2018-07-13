@@ -76,17 +76,17 @@
 
 var buttonAdd = document.querySelector('.js-button-abilitiesPlus');
 var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
+var boxSkills = document.querySelectorAll('.js-ability-box');
 
 
 function addSkill(){
   console.log('edu');
+  boxSkills[1].classList.remove('hidden');
 }
 
 function removeSkill(){
   console.log('raquel');
 }
-
-
 
 buttonAdd.addEventListener('click', addSkill);
 buttonRemove[0].addEventListener('click', removeSkill);
