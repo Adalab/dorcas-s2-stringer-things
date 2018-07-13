@@ -10,6 +10,7 @@
   <title>Awesome profile-cards</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body class="cardGenerator__wrapper">
 
 
@@ -23,37 +24,37 @@
 
     <!-- SECCION LAURA -->
     <section class="section-card">
-      <button type="button" name="Reset" alt="reset button" class= "resetbutton">
+      <button type="button" name="Reset" alt="reset button" class="resetbutton">
         <i class="far fa-trash-alt"></i>
         <div class="resetbutton--text">RESET</div>
       </button>
       <div class="card">
         <div class="card__top">
-          <div class= "card-info">
-            <p class= "card__top--name" id="fullname" >Nombre apellido</p>
-            <p class= "card__top--career" id="profesion">Profesión</p>
+          <div class="card-info">
+            <p class="card__top--name" id="fullname">Nombre apellido</p>
+            <p class="card__top--career" id="profesion">Profesión</p>
           </div>
         </div>
         <div class="card__image" style="">
 
         </div>
-        <div >
-          <ul class= "card__social">
-            <li class= "card__social--li">
-              <a  class= "button-card button--mobile" id="mobile-link" href="tel:" title="número de teléfono" target="_blank">
+        <div>
+          <ul class="card__social">
+            <li class="card__social--li">
+              <a class="button-card button--mobile" id="mobile-link" href="tel:" title="número de teléfono" target="_blank">
                 <i class="fas fa-mobile-alt"></i>
               </a> </li>
-              <li class= "card__social--li">
-                <a class= "button-card button--mail" id="mail-link" href="mailto:" title="correo electrónico">
+              <li class="card__social--li">
+                <a class="button-card button--mail" id="mail-link" href="mailto:" title="correo electrónico">
                   <i class="far fa-envelope"></i>
                 </a>
               </li>
-              <li class= "card__social--li">
-                <a class= "button-card button--linkedin" id="linkedin-link" href="https://www.linkedin.com/in/" title="Linkedin" target="_blank">
+              <li class="card__social--li">
+                <a class="button-card button--linkedin" id="linkedin-link" href="https://www.linkedin.com/in/" title="Linkedin" target="_blank">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
-              <li class= "card__social--li">
+              <li class="card__social--li">
                 <a class="button-card button--github" id="github-link" href="https://github.com/" title="Github" target="_blank">
                   <i class="fab fa-github-alt"></i>
                 </a>
@@ -61,7 +62,7 @@
             </ul>
           </div>
           <div class="card__skills">
-            <ul class="card_skills--list">
+            <ul class="card_skills--list js-card_skills--list">
             </ul>
           </div>
         </div>
@@ -72,7 +73,7 @@
 
       <section class="section-collapsible">
 
-        <form class="form" action="cardGenerator.html" method="post">
+        <form class="form formjs" action="cardGenerator.html" method="post">
 
           <fieldset class="design__container js-collapsible-visible">
             <div class="design__title js-collapsible-title">
@@ -149,111 +150,157 @@
 
           <!--SECCIÓN OLATZ-->
 
-          <fieldset class="section-collapsible__fill js-collapsible-visible">
-            <div class="section-collapsible__fill--title js-collapsible-title">
+          <fieldset class="section-collapsible__fill">
+            <div class="section-collapsible__fill--title">
               <span class="icon-title"><i class="far fa-keyboard"></i></span>
               <legend class="legend__title fill-legend">rellena</legend>
               <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
             </div>
-
-            <div class="section-collapsible__fill--form hidden js-collapsible-form">
+            <!-- hay que poner clase hidden en el div justo denajo de este comentario -->
+            <div class="section-collapsible__fill--form">
               <label class="fill-input" for="nmb ">Nombre completo</label>
-              <input class="fill-input__placeholder personal-name js-personal-name" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="" data-stringer="fullname">
+              <input class="fill-input__placeholder personal-name" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="" data-stringer="fullname">
 
               <label class="fill-input" for="job ">Puesto</label>
               <input class="fill-input__placeholder job-title" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="" data-stringer="profesion">
 
-              <label type="file" class="fill-input" for="add-image">Imagen de perfil</label>
-              <div class="fill-input__image__square">
-                <button type="button" class="fill-input__image" name="button">Añadir imagen</button>
-                <input class="fill-input__input" id="add-image" type="file" value="Añadir imagen">
-
-                <div class="square__white"></div>
-              </div>
-              <label class="fill-input" for="emailaddress">Email</label>
-              <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value="" data-stringer="mail-link">
-
-              <label class="fill-input" for="phone">Teléfono</label>
-              <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value="" data-stringer="mobile-link">
-
-              <label class="fill-input" for="lkdn">Linkedin</label>
-              <input class="fill-input__placeholder" placeholder="Ej:sally-hill" id="lkdn" type="url" name="linkedin" value="" data-stringer="linkedin-link">
-              <label class="fill-input" for="GH">Github</label>
-              <input class="fill-input__placeholder" placeholder="Ej: sally-hill" id="GH" type="url" name="github" value="" data-stringer="github-link">
-
-              <div class="abilities-fill">
-                <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
-                <div class="ability-box js-ability-box">
-                  <select class="select-abilities" name="abilities" onchange="selectSkills()">
-                    <option value="CSS">CSS</option>
-                    <option value="JAVASCRIPT">JAVASCRIPT</option>
-                    <option value="SASS">SASS</option>
-                  </select>
-                  <button class="button-abilities js-button-abilities" type="button" name="button" data-type="plus"><i class="fas fa-plus"></i></button>
+              <fieldset class="section-collapsible__fill js-collapsible-visible">
+                <div class="section-collapsible__fill--title js-collapsible-title">
+                  <span class="icon-title"><i class="far fa-keyboard"></i></span>
+                  <legend class="legend__title fill-legend">rellena</legend>
+                  <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
                 </div>
-                <div class="ability-box">
-                  <select class="select-abilities" name="abilities" onchange="selectSkills()">
+
+                <div class="section-collapsible__fill--form hidden js-collapsible-form">
+                  <label class="fill-input" for="nmb ">Nombre completo</label>
+                  <input class="fill-input__placeholder personal-name js-personal-name" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="" data-stringer="fullname">
+
+                  <label type="file" class="fill-input" for="add-image">Imagen de perfil</label>
+                  <div class="fill-input__image__square">
+                    <button type="button" class="fill-input__image" name="button">Añadir imagen</button>
+                    <input class="fill-input__input" id="add-image" type="file" value="Añadir imagen">
+
+                    <div class="square__white"></div>
+                  </div>
+                  <label class="fill-input" for="emailaddress">Email</label>
+                  <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value="" data-stringer="mail-link">
+
+                  <label class="fill-input" for="phone">Teléfono</label>
+                  <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value="" data-stringer="mobile-link">
+
+                  <label class="fill-input" for="lkdn">Linkedin</label>
+                  <input class="fill-input__placeholder" placeholder="Ej:sally-hill" id="lkdn" type="url" name="linkedin" value="" data-stringer="linkedin-link">
+                  <label class="fill-input" for="GH">Github</label>
+                  <input class="fill-input__placeholder" placeholder="Ej: sally-hill" id="GH" type="url" name="github" value="" data-stringer="github-link">
+
+                  <div class="square__white"></div>
+                </div>
+                <label class="fill-input" for="emailaddress">Email</label>
+                <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value="" data-stringer="mail-link">
+
+                <label class="fill-input" for="phone">Teléfono</label>
+                <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value="" data-stringer="mobile-link">
+
+                <label class="fill-input" for="lkdn">Linkedin</label>
+                <input class="fill-input__placeholder" placeholder="Ej:sally-hill" id="lkdn" type="url" name="linkedin" value="" data-stringer="linkedin-link">
+                <label class="fill-input" for="GH">Github</label>
+                <input class="fill-input__placeholder" placeholder="Ej: sally-hill" id="GH" type="url" name="github" value="" data-stringer="github-link">
+
+                <div class="abilities-fill">
+                  <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
+                  <div class="ability-box js-ability-box">
+
+
+                    <button class="button-abilities js-button-abilities" type="button" name="button" data-type="plus"><i class="fas fa-plus"></i></button>
+                  </div>
+
+                  <div class="ability-box">
+
+                    <!-- <div class="ability-box js-ability-box hidden">
+
+                    <select class="select-abilities" name="abilities" onchange="selectSkills()">
                     <option value="CSS">CSS</option>
                     <option value="JAVASCRIPT">JAVASCRIPT</option>
                     <option value="SASS">SASS</option>
                   </select>
                   <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden"><i class="fas fa-minus"></i></button>
-                </div>
-                <div class="ability-box">
-                  <select class="select-abilities" name="abilities" >
-                    <option value="CSS">CSS</option>
-                    <option value="JAVASCRIPT">JAVASCRIPT</option>
-                    <option value="SASS">SASS</option>
-                  </select>
-                  <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-
-            </div>
-          </fieldset>
-
-
-          <fieldset class="section-collapsible__share js-collapsible-visible">
-            <div class="section-collapsible__share--title js-collapsible-title">
-              <span class="icon-title"><i class="fas fa-share-alt"></i></span>
-              <legend class="legend__title share-legend">comparte</legend>
+                </div> -->
+                <!-- <div class="ability-box">
+                <select class="select-abilities" name="abilities" >
+                <option value="CSS">CSS</option>
+                <option value="JAVASCRIPT">JAVASCRIPT</option>
+                <option value="SASS">SASS</option>
+              </select>
+              <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden"><i class="fas fa-minus"></i></button>
             </div>
 
-            <div class="section-collapsible__share--button hidden js-collapsible-form">
+            <div class="ability-box js-ability-box hidden">
+            <select class="select-abilities" name="abilities" >
+            <option value="CSS">CSS</option>
+            <option value="JAVASCRIPT">JAVASCRIPT</option>
+            <option value="SASS" selected>SASS</option>
 
-              <button class="btn-create-card" type="button" name="button"><span><i class="far fa-address-card"></i></span>CREAR TARJETA</button>
+            <div class="abilities-fill">
+            <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
+            <div class="ability-box js-ability-box">
+            <select class="select-abilities js-select-abilities" name="abilities">
 
-            </div>
+          </select> -->
+          <!-- <button class="button-abilities js-button-abilities" type="button" name="button" data-type="plus" data-index="0"><i class="fas fa-plus"></i></button>
+        </div> -->
+        <!-- <div class="ability-box js-ability-box">
+        <select class="select-abilities js-select-abilities" name="abilities">
+      </select>
+      <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden" data-index="1"><i class="fas fa-minus"></i></button>
+    </div>
+    <div class="ability-box js-ability-box">
+    <select class="select-abilities" name="abilities">
+  </select>
+  <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden" data-index="2"><i class="fas fa-minus"></i></button>
+</div> -->
+</div>
 
-            <div class="section-collapsible__share--end">
-              <p class="phrase">La tarjeta ha sido creada:</p>
-
-              <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a>
-
-              <button class="btn-share" type="button" name="button">
-                <span><i class="fab fa-twitter" style="font-size: 15px;"></i>
-                </span>Compartir en twitter</button>
-
-              </div>
-            </fieldset>
-
-          </form>
-        </section>
-
-      </main>
-      <footer class="footer">
-        <p class="footer--credit">Awesome profile-cards@2018</p>
-        <a href="http://adalab.es/">
-          <img src="images/logo-adalab.png" alt="Logo Adalab" class="footer--image">
-        </a>
-      </footer>
-
-
+</div>
+</fieldset>
 
 
+<fieldset class="section-collapsible__share js-collapsible-visible">
+  <div class="section-collapsible__share--title js-collapsible-title">
+    <span class="icon-title"><i class="fas fa-share-alt"></i></span>
+    <legend class="legend__title share-legend">comparte</legend>
+  </div>
 
-      <!-- Como toques aquí te matamos -->
-      <script type="text/javascript" src="js/main.js"></script>
+  <div class="section-collapsible__share--button hidden js-collapsible-form">
 
-    </body>
-    </html>
+    <button class="btn-create-card" type="button" name="button"><span><i class="far fa-address-card"></i></span>CREAR TARJETA</button>
+
+  </div>
+
+  <div class="section-collapsible__share--end">
+    <p class="phrase">La tarjeta ha sido creada:</p>
+
+    <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a>
+
+    <button class="btn-share" type="button" name="button">
+      <span><i class="fab fa-twitter" style="font-size: 15px;"></i>
+      </span>Compartir en twitter</button>
+
+    </div>
+  </fieldset>
+</form>
+</section>
+
+</main>
+<footer class="footer">
+  <p class="footer--credit">Awesome profile-cards@2018</p>
+  <a href="http://adalab.es/">
+    <img src="images/logo-adalab.png" alt="Logo Adalab" class="footer--image">
+  </a>
+</footer>
+
+<!-- Como toques aquí te matamos -->
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
