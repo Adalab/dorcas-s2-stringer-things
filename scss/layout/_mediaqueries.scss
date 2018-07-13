@@ -19,7 +19,7 @@
 
 .section-card {
   @media all and (min-width: 768px) {
-    min-width: 329px;
+    //min-width: 329px;
     border-radius: 6px;
     height: 639px;
     padding-top: 100px;
@@ -35,5 +35,12 @@
     padding-left: 40px;
     padding-right: 40px;
     border: solid 1px $color-grey-koala;
+  }
+}
+
+.form {
+  @media all and (min-width: 768px) {
+    max-width: 399px;
+    margin: 0 40px 0 30px;
   }
 }

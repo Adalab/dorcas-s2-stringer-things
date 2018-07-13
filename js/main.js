@@ -140,9 +140,9 @@ fillSelect();
 // //   }
 // }
 
-for (var i = 0; i < selectSkills.length; i++) {
-  selectSkills[i].addEventListener('change', addSelectSkills);
-}
+// for (var i = 0; i < selectSkills.length; i++) {
+//   selectSkills[i].addEventListener('change', addSelectSkills);
+// }
 
 //colapsables
 var activableSection = document.querySelectorAll(".js-collapsible-title");
