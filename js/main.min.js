@@ -72,16 +72,20 @@
 
 
 
-
-
 var buttonAdd = document.querySelector('.js-button-abilitiesPlus');
 var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
 var boxSkills = document.querySelectorAll('.js-ability-box');
 
-
 function addSkill(){
-  console.log('edu');
-  boxSkills[1].classList.remove('hidden');
+  var boxHidden = document.querySelectorAll('.hidden');
+
+  if(boxHidden.length === 2 ){
+    boxSkills[1].classList.remove('hidden');
+  } else if (boxHidden.length === 1 ) {
+    boxSkills[2].classList.remove('hidden');
+  } else {
+    console.log('no hay mas habilidades que desplegar');
+  }
 }
 
 function removeSkill(){
