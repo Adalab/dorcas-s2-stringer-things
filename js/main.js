@@ -9,6 +9,7 @@ var uploadPhoto = document.querySelector(".card__image");
 var uploadMiniPhoto = document.querySelector(".square__white");
 var fr = new FileReader();
 
+
 function reWriteData(e) {
   var fillInput = e.currentTarget;
   var targetInput = fillInput.getAttribute("data-stringer");
@@ -89,11 +90,13 @@ function fillSelect() {
     });
 }
 
+var pseudoBoxCardSkill;
 
+var skillContainer = document.querySelector(".js-card_skills--list");
 
 function addSkill() {
+  var boxCardSkill = document.querySelectorAll('.skill');
   var boxHidden = document.querySelectorAll('.skills-hidden');
-
   if (boxHidden.length === 2) {
     boxSkills[1].classList.remove('skills-hidden');
   } else if (boxHidden.length === 1) {
@@ -101,11 +104,31 @@ function addSkill() {
   } else {
     console.log("no hay mas habilidades que desplegar");
   }
+
+  if (boxCardSkill.length === 1) {
+    pseudoBoxCardSkill = document.createElement('li');
+    console.log(pseudoBoxCardSkill);
+    pseudoBoxCardSkill.setAttribute('class','skill remove');
+  } else if (boxCardSkill.length === 2) {
+    pseudoBoxCardSkill = document.createElement('li');
+    pseudoBoxCardSkill.setAttribute('class', 'skill remove');
+  } else {
+    console.log("no hay mas habilidades que añadir");
+  }
+  skillContainer.appendChild(pseudoBoxCardSkill);
 }
 
+
 function removeSkill(event) {
+  var sizePseudoBoxCardSkill = document.querySelectorAll('.remove');
   var parentBox = event.currentTarget.parentElement;
   parentBox.classList.add("skills-hidden");
+
+  if(sizePseudoBoxCardSkill.length === 2){
+    sizePseudoBoxCardSkill[1].remove();
+  } else if(sizePseudoBoxCardSkill.length === 1){
+    sizePseudoBoxCardSkill[0].remove();
+  }
 }
 
 buttonAdd.addEventListener("click", addSkill);
@@ -114,45 +137,32 @@ buttonRemove[1].addEventListener("click", removeSkill);
 fillSelect();
 
 //HABILIDADES DE LA TARJETA
-// var skillContainer = document.querySelector(".js-card_skills--list");
-// var boxCardSkill = document.querySelectorAll('.skills');
 
-//  function addSelectSkills() {
 
-//   if (boxHidden.length === 2) {
-//     boxSkills[1].classList.remove('skills-hidden');
-//   } else if (boxHidden.length === 1) {
-//     boxSkills[2].classList.remove("skills-hidden");
-//   } else {
-//     console.log("no hay mas habilidades que desplegar");
-//   }
-//   //skillContainer.innerHTML = '';
-//   console.log('contenedor',skillContainer);
-//   console.log('tamaño contenedor',selectSkills.length);
-//   for (var i = 0; i < selectSkills.length; i++) {
-//     console.dir(selectSkills[i]);
-//     console.log(selectSkills[i].value);
-//     skillContainer.innerHTML += '<li class="skill">' + selectSkills[i].value + '</li>';
-//   }
+function addSelectSkills() {
+  var newContentSkill;
+  var newBoxSkill = document.querySelectorAll('.skill');
+  console.log('newBoxSkill',newBoxSkill);
+  console.log('contenedor',skillContainer);
 
-// //   var currentSkill = e.currentTarget.value;
-// //   //for (var i=0; i<selectSkills.length; i++) {
-// //   // console.log(selectSkills);
-// //   // var x = selectSkills[i].value;
-// //   // console.dir(selectSkills.value);
-// //   //}
-// //   var boxCardSkill = document.querySelectorAll('.skill');
-// //   console.log('cuantas cajas de habiliadades hay en la tarjeta?',boxCardSkill.length);
-// //   if (boxCardSkill.length < 3){
-// //     skillContainer.innerHTML += '<li class="skill">' + currentSkill + '</li>';
-// //   } else {
-// //     console.log('No tienes tantas habilidades tio!!');
-// //   }
-//}
+  if(newBoxSkill.length === 1){
+    newContentSkill = document.createTextNode(selectSkills[0].value);
+    newBoxSkill[0].innerHTML = '';
+    newBoxSkill[0].appendChild(newContentSkill);
+  } else if (newBoxSkill.length === 2){
+    newBoxSkill[1].innerHTML = '';
+    newContentSkill = document.createTextNode(selectSkills[1].value);
+    newBoxSkill[1].appendChild(newContentSkill);
+  } else if (newBoxSkill.length === 3){
+    newBoxSkill[2].innerHTML = '';
+    newContentSkill = document.createTextNode(selectSkills[2].value);
+    newBoxSkill[2].appendChild(newContentSkill);
+  }
+}
 
-// for (var i = 0; i < selectSkills.length; i++) {
-//   selectSkills[i].addEventListener('change', addSelectSkills);
-// }
+for (var i = 0; i < selectSkills.length; i++) {
+  selectSkills[i].addEventListener('change', addSelectSkills);
+}
 
 //colapsables
 var activableSection = document.querySelectorAll(".js-collapsible-title");
