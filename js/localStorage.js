@@ -11,6 +11,20 @@ var lSgit = document.querySelector('#GH');
 var dataCard = {};
 
 function saveLocalStorage() {
+  if (!localStorage.getItem('Business-Card')) {
+  dataCard = {
+    'name': '',
+    'occupation': '',
+    'image': '',
+    'email': '',
+    'telephone': '',
+    'linkedin': '',
+    'gitHub': '',
+  }
+} else {
+  infoTarjeta = JSON.parse(localStorage.getItem('Business-Card'));
+  }
+
   dataCard.name = lSname.value;
   dataCard.occupation = lSjob.value;
   dataCard.image = lSimg.value;
@@ -36,4 +50,4 @@ function recoverLocalStorage () {
 
 
 btnCreateCard.addEventListener('click', saveLocalStorage);
-recoverLocalStorage();
+//recoverLocalStorage();

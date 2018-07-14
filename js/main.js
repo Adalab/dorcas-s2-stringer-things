@@ -62,7 +62,6 @@ var buttonRemove = document.querySelectorAll(".js-button-abilitiesMinus");
 var boxSkills = document.querySelectorAll(".js-ability-box");
 var selectSkills = document.querySelectorAll(".js-select-abilities");
 
-//console.log(buttonAdd);
 
 function createOption(text) {
   var option = document.createElement("option");
