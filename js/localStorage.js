@@ -20,21 +20,6 @@ function saveLocalStorage() {
   dataCard.gitHub = lSgit.value;
 
   localStorage.setItem('Business-Card', JSON.stringify(dataCard));
-
-  // if (!localStorage.getItem('Business-Card')) {
-  //   dataCard = {
-  //     'name': '',
-  //     'occupation': '',
-  //     'image': '',
-  //     'email': '',
-  //     'telephone': '',
-  //     'linkedin': '',
-  //     'gitHub': ''
-  //   }
-  // } else {
-  //   dataCard = JSON.parse(localStorage.getItem('Business-Card'));
-  // }
-
 }
 
 function recoverLocalStorage () {
