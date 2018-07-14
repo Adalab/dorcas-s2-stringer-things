@@ -72,14 +72,14 @@ function createOption(text) {
 }
 
 function fillSelect() {
-  var url =
-    "https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json";
+  var url = "https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json";
   fetch(url)
     .then(function(response) {
       return response.json();
     })
     .then(function(json) {
       var skillList = json.skills;
+      skillList.unshift('Selecciona una habilidad');
       for (var i = 0; i < selectSkills.length; i++) {
         for (var j = 0; j < skillList.length; j++) {
           var newSkillsOption = createOption(skillList[j]);
@@ -89,11 +89,13 @@ function fillSelect() {
     });
 }
 
+
+
 function addSkill() {
-  var boxHidden = document.querySelectorAll(".skills-hidden");
+  var boxHidden = document.querySelectorAll('.skills-hidden');
 
   if (boxHidden.length === 2) {
-    boxSkills[1].classList.remove("skills-hidden");
+    boxSkills[1].classList.remove('skills-hidden');
   } else if (boxHidden.length === 1) {
     boxSkills[2].classList.remove("skills-hidden");
   } else {
@@ -113,13 +115,21 @@ fillSelect();
 
 //HABILIDADES DE LA TARJETA
 // var skillContainer = document.querySelector(".js-card_skills--list");
+// var boxCardSkill = document.querySelectorAll('.skills');
 
-// function addSelectSkills() {
-//   skillContainer.innerHTML = '';
+//  function addSelectSkills() {
+
+//   if (boxHidden.length === 2) {
+//     boxSkills[1].classList.remove('skills-hidden');
+//   } else if (boxHidden.length === 1) {
+//     boxSkills[2].classList.remove("skills-hidden");
+//   } else {
+//     console.log("no hay mas habilidades que desplegar");
+//   }
+//   //skillContainer.innerHTML = '';
 //   console.log('contenedor',skillContainer);
 //   console.log('tamaño contenedor',selectSkills.length);
 //   for (var i = 0; i < selectSkills.length; i++) {
-//     // if()
 //     console.dir(selectSkills[i]);
 //     console.log(selectSkills[i].value);
 //     skillContainer.innerHTML += '<li class="skill">' + selectSkills[i].value + '</li>';
@@ -138,11 +148,11 @@ fillSelect();
 // //   } else {
 // //     console.log('No tienes tantas habilidades tio!!');
 // //   }
-// }
+//}
 
-for (var i = 0; i < selectSkills.length; i++) {
-  selectSkills[i].addEventListener('change', addSelectSkills);
-}
+// for (var i = 0; i < selectSkills.length; i++) {
+//   selectSkills[i].addEventListener('change', addSelectSkills);
+// }
 
 //colapsables
 var activableSection = document.querySelectorAll(".js-collapsible-title");
