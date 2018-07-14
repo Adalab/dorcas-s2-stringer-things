@@ -8,9 +8,7 @@ var responseURL = document.querySelector('.link-awesome');
 
 
 function getJSONFromInputs(inputs) {
-  console.log(inputs);
   return inputs.reduce(function (acc, val) {
-    console.log(val.nodeName);
     if (val.type==='radio' && val.checked===true) {
       acc[val.name] = val.value;
     }
@@ -28,12 +26,10 @@ function sendData() {
   json.skills = ['Javascript', ' React'];
   json.photo = photoFileReader.result;
   delete json[''];
-  console.log(json);
   sendRequest(json);
 }
 
 function loadPhoto() {
-  console.log(btnCreateCard);
   var addedPhoto = document.querySelector('#add-image').files[0];
   photoFileReader.addEventListener('load', sendData);
   photoFileReader.readAsDataURL(addedPhoto);
@@ -66,7 +62,6 @@ function showURL(result) {
     responseURL.innerHTML = 'ERROR:' + result.error;
   }
   tweet = result.cardURL;
-  console.log(tweet);
 }
 
 btnCreateCard.addEventListener('click', loadPhoto);
@@ -77,10 +72,9 @@ var btnShareTwitter = document.querySelector('.btn-sharejs');
 var btnToTwitter = document.querySelector('.link-awesome');
 var linkToTwitter = document.querySelector('.linkTwitter');
 function shareTwitter () {
-  console.dir(btnShareTwitter);
   linkToTwitter.href = 'https://twitter.com/intent/tweet?url=' + tweet + '&text=Tarjeta%20de%20de%20presentacion%20con%20Awesome%20profile-cards%20(StringerThings%20-%20Sprint2%20de%20Adalab)&hashtags=WomenInTech';
 }
-console.dir(btnShareTwitter);
+
 function clickA () {
   linkToTwitter.click();
 }

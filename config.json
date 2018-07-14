@@ -6,7 +6,8 @@
 	"js": {
 		"src": [
 			"js/main.js",
-			"js/shareTwitter.js"
+			"js/shareTwitter.js",
+			"js/localStorage.js"
 		],
 		"dest": "js/"
 	},
