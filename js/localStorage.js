@@ -22,7 +22,7 @@ function saveLocalStorage() {
     'gitHub': '',
   }
 } else {
-  infoTarjeta = JSON.parse(localStorage.getItem('Business-Card'));
+  dataCard = JSON.parse(localStorage.getItem('Business-Card'));
   }
 
   dataCard.name = lSname.value;
