@@ -26,6 +26,7 @@ function reWriteData(e) {
 
 //Cargar Imagen
 
+
 function mostrarImagen(e) {
   var myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
@@ -300,26 +301,7 @@ for (var j = 0; j < radioButtonColor.length; j++) {
   radioButtonColor[j].addEventListener('click', selectColorCard);
   //console.log(radioButtonColor[j]);
 }
-// var resetbtn =document.querySelector('.resetbutton');
-// function resetInfo () {
-//   var nameInCard = document.querySelector('.card__top--name');
-//   var careerInCard = document.querySelector('.card__top--career');
-//   var squareWhite = document.querySelector('.js-square__white');
-//   var cardImage = document.querySelector('.card__image');
-//   var buttonCard = document.querySelectorAll('.card__social');
-//   // reseteando formulario
-//   document.querySelector('.form').reset();
-//   skillContainer.innerHTML = '';
-//   // reseteando card
-//   nameInCard.innerHTML = 'Nombre Apellido';
-//   careerInCard.innerHTML = 'Descripcion';
-//   cardImage.style.backgroundImage = 'url(../../images/image-card.png)';
-//   squareWhite.style.backgroundImage = '';
-//   for (var i = 0; i<buttonCard.length; i++){
-//     buttonCard[i].href = '';
-//   }
-// }
-// resetbtn.addEventListener('click', resetInfo);
+
 //actualizar fuentes
 
 var radioButtonFont = document.querySelectorAll('.font-check');
