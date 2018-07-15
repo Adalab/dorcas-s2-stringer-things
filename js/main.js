@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
 //Preview card
 
-var itemsSocialMedia = document.querySelectorAll(".fill-input__placeholder");
-var uploadBtn = document.querySelector(".fill-input__image");
-var uploadInput = document.querySelector(".fill-input__input");
-var uploadPhoto = document.querySelector(".card__image");
-var uploadMiniPhoto = document.querySelector(".square__white");
+var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
+var uploadBtn = document.querySelector('.fill-input__image');
+var uploadInput = document.querySelector('.fill-input__input');
+var uploadPhoto = document.querySelector('.card__image');
+var uploadMiniPhoto = document.querySelector('.square__white');
 var fr = new FileReader();
 
 function reWriteData(e) {
@@ -145,12 +145,11 @@ fillSelect();
 // }
 
 //colapsables
-var activableSection = document.querySelectorAll(".js-collapsible-title");
-var parent;
-var fieldset = document.querySelectorAll(".js-collapsible-visible");
+var activableSection = document.querySelectorAll(".js-collapsible-title");;
+// var collapsibles = document.querySelector('.js-collapsible-visible');
+var collapsibles = document.querySelectorAll('.js-collapsible-select')
 
 //abre y cierra colapsables
-//console.log(activableSection);
 
 function collapsibleDesign(event) {
   parent = event.currentTarget.parentElement;
@@ -167,9 +166,9 @@ for (var i = 0; i < activableSection.length; i++) {
 // un colapsable abierto cada vez
 
 function closeCollapsibles() {
-  for (var i = 0; i < fieldset.length; i++) {
+  for (var i = 0; i < collapsibles.length; i++) {
     //console.log(activableSection.length);
-    fieldset[i].classList.remove("js-collapsible-visible");
+    collapsibles[i].classList.remove("js-collapsible-visible");
   }
 }
 
