@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
 var uploadBtn = document.querySelector('.fill-input__image');
@@ -8,17 +8,16 @@ var uploadMiniPhoto = document.querySelector('.square__white');
 var fr = new FileReader();
 
 function reWriteData(e) {
-  console.log('Olatz');
   var fillInput = e.currentTarget;
-  var targetInput = fillInput.getAttribute("data-stringer");
-  var sendCont = document.querySelector("#" + targetInput);
-  var itemAttribute = fillInput.getAttribute("type");
-  if (itemAttribute === "number") {
+  var targetInput = fillInput.getAttribute('data-stringer');
+  var sendCont = document.querySelector('#' + targetInput);
+  var itemAttribute = fillInput.getAttribute('type');
+  if (itemAttribute === 'number') {
     sendCont.href += fillInput.value;
-  } else if (itemAttribute === "email") {
+  } else if (itemAttribute === 'email') {
     sendCont.href += fillInput.value;
-  } else if (itemAttribute === "url") {
-    var scriptUrl = fillInput.value + "/";
+  } else if (itemAttribute === 'url') {
+    var scriptUrl = fillInput.value + '/';
     sendCont.href += scriptUrl;
   } else {
     sendCont.innerHTML = fillInput.value;
@@ -29,12 +28,12 @@ function reWriteData(e) {
 
 function mostrarImagen(e) {
   var myFile = e.currentTarget.files[0];
-  fr.addEventListener("load", writeImage);
+  fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
 
 function writeImage() {
-  var urlPhoto = "url(" + '"' + fr.result + '"' + ")";
+  var urlPhoto = 'url(' + '"' + fr.result + '"' + ')';
   uploadPhoto.style.backgroundImage = urlPhoto;
   uploadMiniPhoto.style.backgroundImage = urlPhoto;
 }
@@ -43,23 +42,23 @@ function clickInput() {
   uploadInput.click();
 }
 //console.log(uploadInput);
-uploadInput.addEventListener("change", mostrarImagen);
-uploadBtn.addEventListener("click", clickInput);
+uploadInput.addEventListener('change', mostrarImagen);
+uploadBtn.addEventListener('click', clickInput);
 
 for (var i = 0; i < itemsSocialMedia.length; i++) {
-  var targetAttribute = itemsSocialMedia[i].getAttribute("type");
-  if (targetAttribute === "url") {
-    itemsSocialMedia[i].addEventListener("change", reWriteData);
+  var targetAttribute = itemsSocialMedia[i].getAttribute('type');
+  if (targetAttribute === 'url') {
+    itemsSocialMedia[i].addEventListener('change', reWriteData);
   } else {
-    itemsSocialMedia[i].addEventListener("keyup", reWriteData);
+    itemsSocialMedia[i].addEventListener('keyup', reWriteData);
   }
 }
 
 //habilidades
-var buttonAdd = document.querySelector(".js-button-abilitiesPlus");
-var buttonRemove = document.querySelectorAll(".js-button-abilitiesMinus");
-var boxSkills = document.querySelectorAll(".js-ability-box");
-var selectSkills = document.querySelectorAll(".js-select-abilities");
+var buttonAdd = document.querySelector('.js-button-abilitiesPlus');
+var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
+var boxSkills = document.querySelectorAll('.js-ability-box');
+var selectSkills = document.querySelectorAll('.js-select-abilities');
 
 //Skills
 var selectInputSkills = document.querySelector('.js-select-abilities');
@@ -68,7 +67,6 @@ var skillContainer = document.querySelector('.js-card_skills--list');
 var buttonSkills = document.querySelectorAll('.js-button-abilities');
 
 function createOption(text) {
-console.log('oli');
   //Crea un option
   var option = document.createElement('option');
   // Crea un nodo de texto
@@ -96,20 +94,20 @@ function fillSelect() {
 }
 
 function addSkill() {
-  var boxHidden = document.querySelectorAll(".skills-hidden");
+  var boxHidden = document.querySelectorAll('.skills-hidden');
 
   if (boxHidden.length === 2) {
-    boxSkills[1].classList.remove("skills-hidden");
+    boxSkills[1].classList.remove('skills-hidden');
   } else if (boxHidden.length === 1) {
-    boxSkills[2].classList.remove("skills-hidden");
+    boxSkills[2].classList.remove('skills-hidden');
   } else {
-    console.log("no hay mas habilidades que desplegar");
+    console.log('no hay mas habilidades que desplegar');
   }
 }
 
 function removeSkill(event) {
   var parentBox = event.currentTarget.parentElement;
-  parentBox.classList.add("skills-hidden");
+  parentBox.classList.add('skills-hidden');
 }
 
 function createSelectSkill () {
@@ -157,9 +155,9 @@ function addSelectSkill() {
       contador++;
     }
   }
-  buttonAdd.addEventListener("click", addSkill);
-  buttonRemove[0].addEventListener("click", removeSkill);
-  buttonRemove[1].addEventListener("click", removeSkill);
+  buttonAdd.addEventListener('click', addSkill);
+  buttonRemove[0].addEventListener('click', removeSkill);
+  buttonRemove[1].addEventListener('click', removeSkill);
   fillSelect();
 
   //HABILIDADES DE LA TARJETA
@@ -287,19 +285,19 @@ function addSelectSkill() {
   // }
 
   //actualizar colores
-  var radioButtonColor = document.querySelectorAll(".color-check");
-  var card = document.querySelector(".jsCard");
+  var radioButtonColor = document.querySelectorAll('.color-check');
+  var card = document.querySelector('.jsCard');
   var attri;
 
 function selectColorCard(event) {
   //console.log("que hay en radiobut", radioButtonColor);
-  card.classList.remove("green-card", "red-card", "blue-card");
-  attri = event.currentTarget.getAttribute("data-dest");
+  card.classList.remove('green-card', 'red-card', 'blue-card');
+  attri = event.currentTarget.getAttribute('data-dest');
   card.classList.add(attri);
 }
 
 for (var j = 0; j < radioButtonColor.length; j++) {
-  radioButtonColor[j].addEventListener("click", selectColorCard);
+  radioButtonColor[j].addEventListener('click', selectColorCard);
   //console.log(radioButtonColor[j]);
 }
 // var resetbtn =document.querySelector('.resetbutton');
@@ -318,24 +316,23 @@ for (var j = 0; j < radioButtonColor.length; j++) {
 //   cardImage.style.backgroundImage = 'url(../../images/image-card.png)';
 //   squareWhite.style.backgroundImage = '';
 //   for (var i = 0; i<buttonCard.length; i++){
-//   console.log('holinski');
 //     buttonCard[i].href = '';
 //   }
 // }
 // resetbtn.addEventListener('click', resetInfo);
 //actualizar fuentes
 
-var radioButtonFont = document.querySelectorAll(".font-check");
+var radioButtonFont = document.querySelectorAll('.font-check');
 var attriFont;
 
 function selectFontCard(event) {
   //console.log("que hay en radiobut", radioButtonFont);
-  card.classList.remove("ubuntu-card", "comic-card", "montse-card");
-  attriFont = event.currentTarget.getAttribute("data-font");
+  card.classList.remove('ubuntu-card', 'comic-card', 'montse-card');
+  attriFont = event.currentTarget.getAttribute('data-font');
   card.classList.add(attriFont);
 }
 
 for (var h = 0; h < radioButtonFont.length; h++) {
-  radioButtonFont[h].addEventListener("click", selectFontCard);
+  radioButtonFont[h].addEventListener('click', selectFontCard);
   //console.log(radioButtonFont[h]);
 }

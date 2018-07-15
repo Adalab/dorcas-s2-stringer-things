@@ -1,5 +1,5 @@
 'use strict';
-console.log('holi');
+console.log('helloWorld!2');
 
 var resetbtn = document.querySelector('.resetbutton');
 var card = document.querySelector('.card');
