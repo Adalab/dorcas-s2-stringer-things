@@ -56,7 +56,12 @@
   border: solid 2px #a2deaf;
   background: none;
   color: $color-primary;
-  margin: 5px
+  margin: 10px 5px;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 //End Section card buttons
