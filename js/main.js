@@ -142,21 +142,11 @@ fillSelect();
 function addSelectSkills() {
   var newContentSkill;
   var newBoxSkill = document.querySelectorAll('.skill');
-  console.log('newBoxSkill',newBoxSkill);
-  console.log('contenedor',skillContainer);
 
-  if(newBoxSkill.length === 1){
-    newContentSkill = document.createTextNode(selectSkills[0].value);
-    newBoxSkill[0].innerHTML = '';
-    newBoxSkill[0].appendChild(newContentSkill);
-  } else if (newBoxSkill.length === 2){
-    newBoxSkill[1].innerHTML = '';
-    newContentSkill = document.createTextNode(selectSkills[1].value);
-    newBoxSkill[1].appendChild(newContentSkill);
-  } else if (newBoxSkill.length === 3){
-    newBoxSkill[2].innerHTML = '';
-    newContentSkill = document.createTextNode(selectSkills[2].value);
-    newBoxSkill[2].appendChild(newContentSkill);
+  for (var i = 0; i < newBoxSkill.length; i++){
+    newContentSkill = document.createTextNode(selectSkills[i].value);
+    newBoxSkill[i].innerHTML = '';
+    newBoxSkill[i].appendChild(newContentSkill);
   }
 }
 
