@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
 var uploadBtn = document.querySelector('.fill-input__image');
@@ -10,56 +10,56 @@ var fr = new FileReader();
 function reWriteData(e) {
   console.log('Olatz');
   var fillInput = e.currentTarget;
-  var targetInput = fillInput.getAttribute('data-stringer');
-  var sendCont = document.querySelector('#' + targetInput);
-  var itemAttribute = fillInput.getAttribute('type');
-  if (itemAttribute === 'number') {
+  var targetInput = fillInput.getAttribute("data-stringer");
+  var sendCont = document.querySelector("#" + targetInput);
+  var itemAttribute = fillInput.getAttribute("type");
+  if (itemAttribute === "number") {
     sendCont.href += fillInput.value;
-  } else if (itemAttribute === 'email') {
+  } else if (itemAttribute === "email") {
     sendCont.href += fillInput.value;
-  } else if (itemAttribute === 'url') {
-    var scriptUrl = fillInput.value + '/';
+  } else if (itemAttribute === "url") {
+    var scriptUrl = fillInput.value + "/";
     sendCont.href += scriptUrl;
   } else {
     sendCont.innerHTML = fillInput.value;
   }
 }
 
-
-for (var i = 0; i < itemsSocialMedia.length; i++) {
-  var targetAttribute = itemsSocialMedia[i].getAttribute('type');
-  if (targetAttribute === 'url') {
-    itemsSocialMedia[i].addEventListener('change', reWriteData);
-  } else {
-    itemsSocialMedia[i].addEventListener('keyup', reWriteData);
-  }
-}
-
-
-
-
 //Cargar Imagen
 
 function mostrarImagen(e) {
   var myFile = e.currentTarget.files[0];
-  fr.addEventListener('load', writeImage);
+  fr.addEventListener("load", writeImage);
   fr.readAsDataURL(myFile);
 }
 
 function writeImage() {
-  var urlPhoto = 'url(' + '"' + fr.result + '"' + ')';
+  var urlPhoto = "url(" + '"' + fr.result + '"' + ")";
   uploadPhoto.style.backgroundImage = urlPhoto;
   uploadMiniPhoto.style.backgroundImage = urlPhoto;
-
 }
 
 function clickInput() {
   uploadInput.click();
 }
+//console.log(uploadInput);
+uploadInput.addEventListener("change", mostrarImagen);
+uploadBtn.addEventListener("click", clickInput);
 
-uploadInput.addEventListener('change', mostrarImagen);
-uploadBtn.addEventListener('click', clickInput);
+for (var i = 0; i < itemsSocialMedia.length; i++) {
+  var targetAttribute = itemsSocialMedia[i].getAttribute("type");
+  if (targetAttribute === "url") {
+    itemsSocialMedia[i].addEventListener("change", reWriteData);
+  } else {
+    itemsSocialMedia[i].addEventListener("keyup", reWriteData);
+  }
+}
 
+//habilidades
+var buttonAdd = document.querySelector(".js-button-abilitiesPlus");
+var buttonRemove = document.querySelectorAll(".js-button-abilitiesMinus");
+var boxSkills = document.querySelectorAll(".js-ability-box");
+var selectSkills = document.querySelectorAll(".js-select-abilities");
 
 //Skills
 var selectInputSkills = document.querySelector('.js-select-abilities');
@@ -73,16 +73,15 @@ console.log('oli');
   var option = document.createElement('option');
   // Crea un nodo de texto
   var optionText = document.createTextNode(text);
-  // Añade el nodo de texto al option
   option.appendChild(optionText);
-
-  // Devuelve el option creado con su nodo de texto y atributos
   return option;
 }
 
-function searchSkills() {
-  var url = 'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json';
+function fillSelect() {
+  var url =
+    "https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json";
   fetch(url)
+
   .then(function(response) {
     return response.json();
   })
@@ -93,16 +92,25 @@ function searchSkills() {
       selectInputSkills.appendChild(newOption);
     }
   });
+
 }
 
-searchSkills();
+function addSkill() {
+  var boxHidden = document.querySelectorAll(".skills-hidden");
 
-function selectSkills() {
-  var x = selectInputSkills.value;
-  skillContainer.innerHTML = '<li class="skill">' + x + '</li>';
+  if (boxHidden.length === 2) {
+    boxSkills[1].classList.remove("skills-hidden");
+  } else if (boxHidden.length === 1) {
+    boxSkills[2].classList.remove("skills-hidden");
+  } else {
+    console.log("no hay mas habilidades que desplegar");
+  }
 }
 
-selectInputSkills.addEventListener('click', selectSkills);
+function removeSkill(event) {
+  var parentBox = event.currentTarget.parentElement;
+  parentBox.classList.add("skills-hidden");
+}
 
 function createSelectSkill () {
   var newSelect = document.createElement('select');
@@ -149,7 +157,38 @@ function addSelectSkill() {
       contador++;
     }
   }
+  buttonAdd.addEventListener("click", addSkill);
+  buttonRemove[0].addEventListener("click", removeSkill);
+  buttonRemove[1].addEventListener("click", removeSkill);
+  fillSelect();
 
+  //HABILIDADES DE LA TARJETA
+  // var skillContainer = document.querySelector(".js-card_skills--list");
+
+  // function addSelectSkills() {
+  //   skillContainer.innerHTML = '';
+  //   console.log('contenedor',skillContainer);
+  //   console.log('tamaño contenedor',selectSkills.length);
+  //   for (var i = 0; i < selectSkills.length; i++) {
+  //     // if()
+  //     console.dir(selectSkills[i]);
+  //     console.log(selectSkills[i].value);
+  //     skillContainer.innerHTML += '<li class="skill">' + selectSkills[i].value + '</li>';
+  //   }
+// //   var currentSkill = e.currentTarget.value;
+// //   //for (var i=0; i<selectSkills.length; i++) {
+// //   // console.log(selectSkills);
+// //   // var x = selectSkills[i].value;
+// //   // console.dir(selectSkills.value);
+// //   //}
+// //   var boxCardSkill = document.querySelectorAll('.skill');
+// //   console.log('cuantas cajas de habiliadades hay en la tarjeta?',boxCardSkill.length);
+// //   if (boxCardSkill.length < 3){
+// //     skillContainer.innerHTML += '<li class="skill">' + currentSkill + '</li>';
+// //   } else {
+// //     console.log('No tienes tantas habilidades tio!!');
+// //   }
+// }
 
   for (var i = 0; i < buttonSkills.length; i++) {
     buttonSkills.addEventListener('click',addSelectSkill);
@@ -214,20 +253,89 @@ function addSelectSkill() {
   //       buttonSkills[i].addEventListener('click', createSkill);
   //     }
   // }
+  // for (var i = 0; i < selectSkills.length; i++) {
+  //   selectSkills[i].addEventListener('change', addSelectSkills);
+  // }
 
-//Boton resetbutton
+  //colapsables
+  // var activableSection = document.querySelectorAll(".js-collapsible-title");
+  // var parent;
+  // var fieldset = document.querySelectorAll(".js-collapsible-visible");
 
-var resetbtn = document.querySelector('.resetbutton');
+  //abre y cierra colapsables
+  //console.log(activableSection);
 
-function resetInfo() {
-  // reseteando formulario
-  document.querySelector('.form').reset();
+  // function collapsibleDesign(event) {
+  //   parent = event.currentTarget.parentElement;
+  //   //console.log(parent);
+  //   closeCollapsibles();
+  //   // Si contiene la clase hidden la elimina y sino la añade
+  //   parent.classList.toggle("js-collapsible-visible");
+  // }
+  //
+  // for (var i = 0; i < activableSection.length; i++) {
+  //   activableSection[i].addEventListener("click", collapsibleDesign);
+  //   //console.log(activableSection[i]);
+  // }
+  // // un colapsable abierto cada vez
+  //
+  // function closeCollapsibles() {
+  //   for (var i = 0; i < fieldset.length; i++) {
+  //     //console.log(activableSection.length);
+  //     fieldset[i].classList.remove("js-collapsible-visible");
+  //   }
+  // }
 
-  skillContainer.innerHTML = '';
-  // reseteando card
-  var nameInCard = document.querySelector('.card__top--name');
-  var careerInCard = document.querySelector('.card__top--career');
-  nameInCard.innerHTML = 'Nombre Apellido';
-  careerInCard.innerHTML = 'Descripcion';
+  //actualizar colores
+  var radioButtonColor = document.querySelectorAll(".color-check");
+  var card = document.querySelector(".jsCard");
+  var attri;
+
+function selectColorCard(event) {
+  //console.log("que hay en radiobut", radioButtonColor);
+  card.classList.remove("green-card", "red-card", "blue-card");
+  attri = event.currentTarget.getAttribute("data-dest");
+  card.classList.add(attri);
 }
-resetbtn.addEventListener('click', resetInfo);
+
+for (var j = 0; j < radioButtonColor.length; j++) {
+  radioButtonColor[j].addEventListener("click", selectColorCard);
+  //console.log(radioButtonColor[j]);
+}
+// var resetbtn =document.querySelector('.resetbutton');
+// function resetInfo () {
+//   var nameInCard = document.querySelector('.card__top--name');
+//   var careerInCard = document.querySelector('.card__top--career');
+//   var squareWhite = document.querySelector('.js-square__white');
+//   var cardImage = document.querySelector('.card__image');
+//   var buttonCard = document.querySelectorAll('.card__social');
+//   // reseteando formulario
+//   document.querySelector('.form').reset();
+//   skillContainer.innerHTML = '';
+//   // reseteando card
+//   nameInCard.innerHTML = 'Nombre Apellido';
+//   careerInCard.innerHTML = 'Descripcion';
+//   cardImage.style.backgroundImage = 'url(../../images/image-card.png)';
+//   squareWhite.style.backgroundImage = '';
+//   for (var i = 0; i<buttonCard.length; i++){
+//   console.log('holinski');
+//     buttonCard[i].href = '';
+//   }
+// }
+// resetbtn.addEventListener('click', resetInfo);
+//actualizar fuentes
+
+var radioButtonFont = document.querySelectorAll(".font-check");
+var attriFont;
+
+function selectFontCard(event) {
+  //console.log("que hay en radiobut", radioButtonFont);
+  card.classList.remove("ubuntu-card", "comic-card", "montse-card");
+  attriFont = event.currentTarget.getAttribute("data-font");
+  card.classList.add(attriFont);
+}
+
+for (var h = 0; h < radioButtonFont.length; h++) {
+  radioButtonFont[h].addEventListener("click", selectFontCard);
+  //console.log(radioButtonFont[h]);
+}

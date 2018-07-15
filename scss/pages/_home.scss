@@ -6,16 +6,20 @@ body {
   margin: 0;
 }
 
-.js-collapsible-visible {
-  .js-collapsible-form {
-    display: block;
-  }
+.hidden {
+  display: none;
 }
 
-.hidden {
+.skills-hidden {
   display: none;
 }
 
 .plus {
   display: flex;
+}
+
+.js-collapsible-visible {
+  .js-collapsible-form {
+    display: block;
+  }
 }

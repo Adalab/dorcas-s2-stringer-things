@@ -5,7 +5,10 @@
 	},
 	"js": {
 		"src": [
-			"js/main.js"
+			"js/main.js",
+			"js/shareTwitter.js",
+			"js/localStorage.js",
+			"js/btnreset.js"
 		],
 		"dest": "js/"
 	},
