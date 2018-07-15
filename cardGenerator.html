@@ -71,6 +71,7 @@
             </ul>
           </div>
         </div>
+      </div>
     </section>
     <!-- FIN SECCION -->
 
@@ -143,55 +144,86 @@
             </div>
           </fieldset>
 
+                    <!--SECCIÓN OLATZ-->
+        <fieldset class="section-collapsible__fill js-collapsible-visible">
+          <div class="section-collapsible__fill--title js-collapsible-title">
+            <span class="icon-title">
+              <i class="far fa-keyboard"></i>
+            </span>
+            <legend class="legend__title fill-legend">rellena</legend>
+            <span class="icon-down">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </div>
 
-          <!-- FIN SECCION -->
-
-          <!--SECCIÓN OLATZ-->
-
-          <fieldset class="section-collapsible__fill">
-            <div class="section-collapsible__fill--title">
-              <span class="icon-title"><i class="far fa-keyboard"></i></span>
-              <legend class="legend__title fill-legend">rellena</legend>
-              <span class="icon-down"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <!-- hay que poner clase hidden en el div justo denajo de este comentario -->
+          <div class="hidden js-collapsible-form">
             <div class="section-collapsible__fill--form">
-              <label class="fill-input" for="nmb ">Nombre completo</label>
-              <input class="fill-input__placeholder personal-name" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="" data-stringer="fullname">
+            <label class="fill-input" for="nmb ">Nombre completo</label>
+            <input class="fill-input__placeholder js-personal-name input-style" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name"
+              value="" data-stringer="fullname">
 
-              <label class="fill-input" for="job ">Puesto</label>
-              <input class="fill-input__placeholder job-title" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="" data-stringer="profesion">
+            <label class="fill-input" for="job ">Puesto</label>
+            <input class="fill-input__placeholder input-style" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value=""
+              data-stringer="profesion">
 
-                  <label type="file" class="fill-input" for="add-image">Imagen de perfil</label>
-                  <div class="fill-input__image__square">
-                    <button type="button" class="fill-input__image" name="button">Añadir imagen</button>
-                    <input class="fill-input__input" id="add-image" type="file" value="Añadir imagen">
+              <label type="file" class="fill-input" for="add-image">Imagen de perfil</label>
+              <div class="fill-input__image__square">
+                <button type="button" class="fill-input__image" name="button">Añadir imagen</button>
+                <input class="fill-input__input" id="add-image" type="file" value="Añadir imagen">
 
-                    <div class="square__white js-square__white"></div>
-                  </div>
-                  <label class="fill-input" for="emailaddress">Email</label>
-                  <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value="" data-stringer="mail-link">
+                <div class="square__white js-square__white"></div>
+              </div>
 
-                  <label class="fill-input" for="phone">Teléfono</label>
-                  <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value="" data-stringer="mobile-link">
+            <label class="fill-input" for="emailaddress">Email</label>
+            <input class="fill-input__placeholder input-style" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value=""
+              data-stringer="mail-link">
+            <label class="fill-input" for="phone">Teléfono</label>
+            <input class="fill-input__placeholder input-style" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value=""
+              data-stringer="mobile-link">
+            <label class="fill-input" for="lkdn">Linkedin</label>
+            <input class="fill-input__placeholder input-style" placeholder="Ej:sally-hill" id="lkdn" type="url" name="linkedin" value="" data-stringer="linkedin-link">
+            <label class="fill-input" for="GH">Github</label>
+            <input class="fill-input__placeholder input-style" placeholder="Ej: sally-hill" id="GH" type="url" name="github" value="" data-stringer="github-link">
 
-                  <label class="fill-input" for="lkdn">Linkedin</label>
-                  <input class="fill-input__placeholder" placeholder="Ej:sally-hill" id="lkdn" type="url" name="linkedin" value="" data-stringer="linkedin-link">
-                  <label class="fill-input" for="GH">Github</label>
-                  <input class="fill-input__placeholder" placeholder="Ej: sally-hill" id="GH" type="url" name="github" value="" data-stringer="github-link">
+
+            <div class="abilities-fill">
+              <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
+              <div class="ability-box js-ability-box">
+                <select class="select-abilities js-select-abilities" name="abilities">
+                </select>
+                <button class="button-abilities js-button-abilitiesPlus" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <div class="ability-box js-ability-box skills-hidden">
+                <select class="select-abilities js-select-abilities" name="abilities">
+                </select>
+                <button class="button-abilities js-button-abilitiesMinus" type="button" name="button">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+              <div class="ability-box js-ability-box skills-hidden">
+                <select class="select-abilities js-select-abilities" name="abilities">
+                </select>
+                <button class="button-abilities js-button-abilitiesMinus" type="button" name="button">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </fieldset>
 
 
-                </div>
-
-                <div class="abilities-fill">
-                  <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
-                  <div class="ability-box js-ability-box">
-                    <select class="select-abilities js-select-abilities" name="abilities">
-                  </select>
-                    <button class="button-abilities js-button-abilities" type="button" name="button" data-type="plus"><i class="fas fa-plus"></i></button>
-                  </div>
-
-                  <div class="ability-box">
+        <fieldset class="section-collapsible__share js-collapsible-visible">
+          <div class="section-collapsible__share--title js-collapsible-title">
+            <span class="icon-title">
+              <i class="fas fa-share-alt"></i>
+            </span>
+            <legend class="legend__title share-legend">comparte</legend>
+          </div>
+          <div class="js-collapsible-form hidden">
+          <div class="section-collapsible__share--button">
 
 
                 <!-- <div class="ability-box">
@@ -207,15 +239,7 @@
 </div>
 </fieldset>
 
-<fieldset class="section-collapsible__share js-collapsible-visible">
-  <div class="section-collapsible__share--title js-collapsible-title">
-    <span class="icon-title"><i class="fas fa-share-alt"></i></span>
-    <legend class="legend__title share-legend">comparte</legend>
-  </div>
-
   <div class="section-collapsible__share--button hidden js-collapsible-form">
-
-
         <button class="btn-create-card" type="button" name="button"><span><i class="far fa-address-card"></i></span>CREAR TARJETA</button>
 
   </div>
@@ -230,7 +254,6 @@
       </span>Compartir en twitter</button>
 
     </div>
-  </fieldset>
 </form>
 </section>
 

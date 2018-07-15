@@ -128,6 +128,9 @@
 }
 
 .skill {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
   display: block;
   padding: 3px;
   border-radius: 4px;
@@ -141,7 +144,7 @@
 .design__container {
   border: none;
   padding: 0;
-  margin: 0 20px;
+  margin: 0;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -361,7 +364,18 @@
   border: solid 2px #a2deaf;
   background: none;
   color: #114e4e;
-  margin: 5px;
+  margin: 10px 5px;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .button-abilities {
@@ -428,7 +442,7 @@
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  padding: 0 20px;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .section-collapsible__fill--title {
@@ -446,9 +460,8 @@
   -ms-flex-align: center;
   align-items: center;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   margin: 0;
-  border-bottom: 1px solid #d8d8d8;
 }
 
 .section-collapsible__fill--form {
@@ -544,9 +557,6 @@
 
 .section-collapsible__share {
   border: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 30px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -570,7 +580,8 @@
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .fa-address-card {
@@ -605,8 +616,16 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-top: 20px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #d8d8d8;
+}
+
+.input-style {
+  height: 30px;
+}
+
+.form {
+  margin: 0 20px 0 19px;
 }
 
 .cover-main__text--title {
@@ -641,11 +660,7 @@
   font-weight: 600;
 }
 
-.skill {
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-size: 13px;
-}
+
 
 .design__text {
   color: #54585a;
@@ -1086,7 +1101,6 @@ body {
   }
 
   .section-card {
-    min-width: 329px;
     border-radius: 6px;
     height: 639px;
     padding-top: 100px;
@@ -1105,6 +1119,11 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     border: solid 1px #d8d8d8;
+  }
+
+  .form {
+    max-width: 399px;
+    margin: 0 40px 0 30px;
   }
 
   .cover-header {

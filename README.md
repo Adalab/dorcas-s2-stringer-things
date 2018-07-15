@@ -1,67 +1,32 @@
 ![Adalab](images/logo-adalab-80px.png)
-# Adalab web starter kit
-Ahoy! Esta es nuestro Starter Kit en node/gulp para este primer contacto con el desarrollo web
-Incluye SCSS y un web server.
+# Sprint 2: Stringer things
+We are the Stringer Things team, composed by Laura, Raquel, Olatz and Loreto.
 
-## Guía de inicio rápido
-Necesitarás instalar [Node.js](https://nodejs.org/) y [Gulp](https://gulpjs.com) para trabajar con este Starter Kit, luego:  
-1. Descarga o clona el repositorio
-2. Instala las dependencias locales con `$ npm install`
-3. Arranca el kit con `$ gulp`
+This is our second project in Adalab. During the last three weeks we have been studying JavaScript from zero. So we are glad to show you what we have done.
 
-## Espera, ¿esto se hace siempre?
-> ### Solo una vez al principio en cada ordenador que utilicemos:
-- Instalamos node
-- Instalamos el comando de gulp de forma global para poder usarlo desde cualquier carpeta usando `npm install --global gulp-cli`
+We have been working to reach a milestone every week.
 
-> ### Cada vez que descarguemos o clonemos un repo:
-- `npm install` para instalar los paquetes necesarios para convertir Sass a CSS, minificarlo, etc.
+- First two days:
 
-> ### Cada vez que estemos trabajando con nuestro código:
-- Desde nuestra terminal, ejecutamos el comando `gulp` para que realice la tarea por defecto, que en el caso del `gulpfile.js` que tenemos en adalab-web-starter-kit estará pendiente de nuestros archivos Sass, html y JavaScript y los compilará, minificará y/o recargará el servidor cada vez que hagamos un cambio
+  >  We spent the first two days organizing how to work. For this we used Trello, following the Agile methodology Kanban, so it is been easier to distribute the work and to know in which section should work each member.
 
-## Tareas de gulp incluidas
-### Inicio de un web server para desarrollo
-```
-$ gulp
-```
-Lanza un webserver con BrowserSync y varios watchers estarán pendientes de los archivos SCSS/JS/HTML para recargar el navegador cuando se necesite.
+- First week:
 
-### Versión lista para subir a producción
-```
-$ gulp deploy
-```
-Genera los CSS y JS minimizados y sin sourcemaps, listos para subir a producción.
+  >  We spent one week doing our HTML and SCSS documents. We webpage is composed by to different pages: the first one is the landing page with a Button to start and the second one is where the user can create a personalized card. We did the first version of the web but it wasn't interactive.
+
+  - Second week:
+
+  >  We started to with JavaScript. We worked doing pair programming. Two members of the team worked with the part of the Design while the other two members worked with the form.
+
+  - Third week:
+
+  >  We worked with the form. The objetive was to create a preview while the user was fulfilling the form.
+
+    - Fourth week:
+
+  >  We worked with the buttons to create the form and to create the link with the final card of the user. The worked during all the project with Git so we started to merge the different branches and to solve the issues.
 
 
-## Estructura del proyecto
-Nuestro **gulpfile.js** usa un JSON de configuración con las rutas de los archivos a generar/vigilar.
+    - Fifth week:
 
-La estructura de carpetas tiene esta pinta:
-```
-/
-|- css
-|- images
-|- js
-`- scss
-   |- core
-   |- layout
-   |- components
-   `- pages
-```
-
-
-## CSS
-Viene incluído el paquete [**gulp-combine-mq**](https://www.npmjs.com/package/gulp-combine-mq) que agrupa todas las medaqueries al final del documento css.
-
-
-## JS
-En el JSON de configuración especificamos los archivos JS que utilizamos y en el orden que deben procesarse.
-
-## Falta algo?
-Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de los Issues o si te animas a mejorarlo mándanos un PR :)
-
-
-### Apuntes de Loreto
-- Comentar la función del formulario: al margen del input que sea, se utiliza siempre la misma función de manera que se insertamos algo nuevo en la tarjeta sea lo que sea no tendremos que modificar la función.
-- Dos eventos diferentes en el formulario, si type es url el evento es change, si no es keyup, de manera que el usuario puede ver como se modifica la tarjeta en tiempo real.
+  > We merged the last branches and we fixed the las SCSS details and we cleaned our JavaScript code. We prepared the presentation  and our speechs to do the presentation.
