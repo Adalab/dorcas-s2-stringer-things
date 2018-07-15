@@ -798,10 +798,6 @@ body {
   margin: 0;
 }
 
-.hidden {
-  display: none;
-}
-
 .skills-hidden {
   display: none;
 }
@@ -812,7 +808,15 @@ body {
   display: flex;
 }
 
-.js-collapsible-visible .js-collapsible-form {
+.js-collapsible-content {
+  display: none;
+}
+
+.js-collapsible-visible .js-collapsible-content {
+  display: block;
+}
+
+.js-visible {
   display: block;
 }
 

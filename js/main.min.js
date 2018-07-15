@@ -145,32 +145,37 @@ fillSelect();
 // }
 
 //colapsables
-var activableSection = document.querySelectorAll(".js-collapsible-title");
+var collapsibleSection = document.querySelectorAll('.js-collapsible');
+var activableSection = document.querySelectorAll('.js-collapsible-title');
+var collapsibleContent = document.querySelector('.js-collapsible-content');
 var parent;
-var fieldset = document.querySelectorAll(".js-collapsible-visible");
 
 //abre y cierra colapsables
-//console.log(activableSection);
 
 function collapsibleDesign(event) {
   parent = event.currentTarget.parentElement;
-  //console.log(parent);
-  closeCollapsibles();
-  // Si contiene la clase hidden la elimina y sino la añade
-  parent.classList.toggle("js-collapsible-visible");
+
+  if (parent.classList.contains('js-collapsible--visible')) {
+    parent.classList.remove('js-collapsible--visible');
+
+
+    var prueba = document.querySelector('.js-collapsible-content');
+    console.log('prueba',prueba);
+  } else {
+    console.log('y aqui?');
+    closeCollapsibles();
+    parent.classList.add('js-collapsible--visible');
+  }
+}
+
+function closeCollapsibles() {
+  for (var i = 0; i < collapsibleSection.length; i++) {
+    collapsibleSection[i].classList.remove('js-collapsible-visible');
+  }
 }
 
 for (var i = 0; i < activableSection.length; i++) {
-  activableSection[i].addEventListener("click", collapsibleDesign);
-  //console.log(activableSection[i]);
-}
-// un colapsable abierto cada vez
-
-function closeCollapsibles() {
-  for (var i = 0; i < fieldset.length; i++) {
-    //console.log(activableSection.length);
-    fieldset[i].classList.remove("js-collapsible-visible");
-  }
+  activableSection[i].addEventListener('click', collapsibleDesign);
 }
 
 //actualizar colores
