@@ -51,7 +51,7 @@ function recoverLocalStorage() {
   lSphone.value = dataCard.phone;
   lSlinkedin.value = dataCard.linkedin;
   lSlinkedinCard.href = "https://www.linkedin.com/in/" + dataCard.linkedin;
-  lSgit.value = dataCard.gitHub;
+  lSgit.value = dataCard.github;
   lSgitCard.value = "https://github.com/" + dataCard.github;
   lSphoneCard.href = "tel:" + dataCard.phone;
   for (var i = 0; i < lSpalettes.length; i++) {
