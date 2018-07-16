@@ -151,7 +151,7 @@
 .design__container {
   border: none;
   padding: 0;
-  margin: 0 20px;
+  margin: 0;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -371,7 +371,70 @@
   border: solid 2px #a2deaf;
   background: none;
   color: #114e4e;
-  margin: 5px;
+  margin: 10px 5px;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button-abilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #e17334;
+  background-color: transparent;
+  border: 1px solid #e17334;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.btn-create-card {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  width: 199px;
+  height: 50px;
+  border-radius: 12px;
+  border-style: none;
+  background-color: #e17334;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
+
+.btn-share {
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  border-style: none;
+  color: #fff;
+  background-color: #00a0f5;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
 }
 
 .icon-title {
@@ -386,7 +449,7 @@
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  padding: 0 20px;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .section-collapsible__fill--title {
@@ -404,9 +467,8 @@
   -ms-flex-align: center;
   align-items: center;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   margin: 0;
-  border-bottom: 1px solid #d8d8d8;
 }
 
 .section-collapsible__fill--form {
@@ -482,26 +544,6 @@
   margin-bottom: 5px;
 }
 
-.button-abilities {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 18px;
-  color: #e17334;
-  background-color: transparent;
-  border: 1px solid #e17334;
-  border-radius: 15px;
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-}
-
 .select-abilities {
   background: none;
   border: 1px solid #a2deaf;
@@ -522,9 +564,6 @@
 
 .section-collapsible__share {
   border: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 30px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -548,32 +587,12 @@
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .fa-address-card {
   margin-right: 10.5px;
-}
-
-.btn-create-card {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  width: 199px;
-  height: 50px;
-  border-radius: 12px;
-  border-style: none;
-  background-color: #e17334;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-decoration: none;
-  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
 }
 
 .phrase {
@@ -604,8 +623,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-top: 20px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #d8d8d8;
 }
 
 .btn-share {
@@ -617,6 +636,14 @@
   background-color: #00a0f5;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+}
+
+.input-style {
+  height: 30px;
+}
+
+.form {
+  margin: 0 20px 0 19px;
 }
 
 .cover-main__text--title {
@@ -1096,7 +1123,6 @@ body {
   }
 
   .section-card {
-    min-width: 329px;
     border-radius: 6px;
     height: 639px;
     padding-top: 100px;
@@ -1115,6 +1141,11 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     border: solid 1px #d8d8d8;
+  }
+
+  .form {
+    max-width: 399px;
+    margin: 0 40px 0 30px;
   }
 
   .cover-header {
