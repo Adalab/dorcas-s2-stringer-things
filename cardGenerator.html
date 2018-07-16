@@ -89,19 +89,19 @@
               <div class="design__palettes">
 
                 <div class="design__palette design__palette1">
-                  <input class="design__check-radio color-check" id="palette1" type="radio" name="colors" value="palette1" checked data-dest="green-card">
+                  <input class="design__check-radio color-check" id="palette1" type="radio" name="palette" value="palette1" checked data-dest="green-card">
                   <label class="palette1__greens" for="palette1">
                   </label>
                 </div>
 
                 <div class="design__palette design__palette2">
-                  <input class="design__check-radio color-check" id="palette2" type="radio" name="colors" value="palette2" data-dest="red-card">
+                  <input class="design__check-radio color-check" id="palette2" type="radio" name="palette" value="palette2" data-dest="red-card">
                   <label class="palette2__reds" for="palette2">
                   </label>
                 </div>
 
                 <div class="design__palette design__palette3">
-                  <input class="design__check-radio color-check" id="palette3" type="radio" name="colors" value="palette3" data-dest="blue-card">
+                  <input class="design__check-radio color-check" id="palette3" type="radio" name="palette" value="palette3" data-dest="blue-card">
                   <label class="palette3__blues" for="palette3">
                   </label>
                 </div>
@@ -113,21 +113,21 @@
               <div class="design__letter-type">
 
                 <div class="design__type--common design__type--font1">
-                  <input class="design__check-radio font-check" id="font1" type="radio" name="fonts" value="font1" data-font="ubuntu-card">
+                  <input class="design__check-radio font-check" id="font1" type="radio" name="typography" value="font1" data-font="ubuntu-card">
                   <label class="font1" for="font1">
                     ubuntu
                   </label>
                 </div>
 
                 <div class="design__type--common design__type--font2">
-                  <input class="design__check-radio font-check" id="font2" type="radio" name="fonts" value="font2" data-font="comic-card" checked>
+                  <input class="design__check-radio font-check" id="font2" type="radio" name="typography" value="font2" data-font="comic-card" checked>
                   <label class="font2" for="font2">
                     comic sans
                   </label>
                 </div>
 
                 <div class="design__type--common design__type--font3">
-                  <input class="design__check-radio font-check" id="font3" type="radio" name="fonts" value="font3" data-font="montse-card">
+                  <input class="design__check-radio font-check" id="font3" type="radio" name="typography" value="font3" data-font="montse-card">
                   <label class="font3" for="font3">
                     monserrat
                   </label>
@@ -156,24 +156,24 @@
           <div class="hidden js-collapsible-form">
             <div class="section-collapsible__fill--form">
               <label class="fill-input" for="nmb ">Nombre completo</label>
-              <input class="fill-input__placeholder js-personal-name input-style" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name" value="" data-stringer="fullname">
+              <input class="fill-input__placeholder js-personal-name input-style" placeholder="Ej: Sally Jill" id="nmb" type="text" name="name" value="" data-stringer="fullname">
 
               <label class="fill-input" for="job ">Puesto</label>
-              <input class="fill-input__placeholder input-style" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value="" data-stringer="profesion">
+              <input class="fill-input__placeholder input-style" placeholder="Ej: Front-end unicorn" id="job" type="text" name="job" value="" data-stringer="profesion">
 
               <label type="file" class="fill-input" for="add-image">Imagen de perfil</label>
               <div class="fill-input__image__square">
 
                 <button type="button" class="fill-input__image" name="button">Añadir imagen</button>
-                <input class="fill-input__input" id="add-image" type="file" value="Añadir imagen">
+                <input class="fill-input__input" id="add-image" name="photo" type="file" value="Añadir imagen">
 
                 <div class="square__white"></div>
               </div>
 
               <label class="fill-input" for="emailaddress">Email</label>
-              <input class="fill-input__placeholder input-style" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value="" data-stringer="mail-link">
+              <input class="fill-input__placeholder input-style" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="email" value="" data-stringer="mail-link">
               <label class="fill-input" for="phone">Teléfono</label>
-              <input class="fill-input__placeholder input-style" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value="" data-stringer="mobile-link">
+              <input class="fill-input__placeholder input-style" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="phone" value="" data-stringer="mobile-link">
               <label class="fill-input" for="lkdn">Linkedin</label>
               <input class="fill-input__placeholder input-style" placeholder="Ej:sally-hill" id="lkdn" type="url" name="linkedin" value="" data-stringer="linkedin-link">
               <label class="fill-input" for="GH">Github</label>
@@ -195,21 +195,21 @@
               <div class="abilities-fill">
                 <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
                 <div class="ability-box js-ability-box">
-                  <select class="select-abilities js-select-abilities" name="abilities">
+                  <select class="select-abilities js-select-abilities" name="skills">
                 </select>
                   <button class="button-abilities js-button-abilitiesPlus" type="button" name="button">
                   <i class="fas fa-plus"></i>
                 </button>
                 </div>
                 <div class="ability-box js-ability-box skills-hidden">
-                  <select class="select-abilities js-select-abilities" name="abilities">
+                  <select class="select-abilities js-select-abilities" name="skills">
                 </select>
                   <button class="button-abilities js-button-abilitiesMinus" type="button" name="button">
                   <i class="fas fa-minus"></i>
                 </button>
                 </div>
                 <div class="ability-box js-ability-box skills-hidden">
-                  <select class="select-abilities js-select-abilities" name="abilities">
+                  <select class="select-abilities js-select-abilities" name="skills">
                 </select>
                   <button class="button-abilities js-button-abilitiesMinus" type="button" name="button">
                   <i class="fas fa-minus"></i>
@@ -240,14 +240,13 @@
 
             <div class="section-collapsible__share--end">
               <p class="phrase">La tarjeta ha sido creada:</p>
-              <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a>
-              <a href="#" class="linkTwitter"></a>
+              <!-- <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a> -->
+              <a href="#" class="link-awesome linkTwitter"></a>
               <button class="btn-share btn-sharejs" type="button" name="button">
-
-                      <button class="btn-share" type="button" name="button">
-                           <span>
-                             <i class="fab fa-twitter" style="font-size: 15px;"></i>
-                           </span>Compartir en twitter</button>
+                <span>
+                  <i class="fab fa-twitter" style="font-size: 15px;"></i>
+                </span>Compartir en twitter
+              </button>
             </div>
           </div>
         </fieldset>
