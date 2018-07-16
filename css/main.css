@@ -646,11 +646,6 @@
   margin: 0 20px 0 19px;
 }
 
-.rotatejs {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .cover-main__text--title {
   color: #e17334;
   font-family: "Merriweather", serif;
@@ -840,6 +835,11 @@ body {
 
 .js-collapsible-visible .js-collapsible-form {
   display: block;
+}
+
+.js-collapsible-visible .jsRotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 * {

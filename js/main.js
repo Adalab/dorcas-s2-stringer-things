@@ -165,6 +165,7 @@ for (var j = 0; j < selectSkills.length; j++) {
 //colapsables
 var activableSection = document.querySelectorAll('.js-collapsible-title');
 var collapsibles = document.querySelectorAll('.js-collapsible-select');
+
 //abre y cierra colapsables
 
 function collapsibleDesign(event) {
