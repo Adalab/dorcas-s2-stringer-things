@@ -15,64 +15,69 @@ var lSgit = document.querySelector('#GH');
 var lSgitCard = document.querySelector('#github-link');
 
 
+var lSpalettes = document.querySelectorAll('.color-check');
+var lSfonts = document.querySelectorAll('.font-check');
+
+var card = document.querySelector('.jsCard');
+
 var dataCard = {};
 
-function saveLocalStorage() {
-  console.dir(lSgitCard);
+
+function recoverLocalStorage() {
   if (!localStorage.getItem('Business-Card')) {
-  dataCard = {
-    'name': '',
-    'occupation': '',
-    'image': '',
-    'email': '',
-    'telephone': '',
-    'linkedin': '',
-    'gitHub': '',
-    'nameCard': '',
-    'occupationCard': '',
-    'imageCard': '',
-    'emailCard': '',
-    'telephoneCard': '',
-    'linkedinCard': '',
-    'gitHubCard': '',
-  }
-} else {
-  dataCard = JSON.parse(localStorage.getItem('Business-Card'));
+    dataCard = {
+      'name': '',
+      'job': '',
+      'photo': '',
+      'email': '',
+      'phone': '',
+      'linkedin': '',
+      'github': '',
+      'pallete': '',
+      'typography': ''
+    }
+  } else {
+    dataCard = JSON.parse(localStorage.getItem('Business-Card'));
   }
 
-  dataCard.name = lSname.value;
-  dataCard.occupation = lSjob.value;
-  dataCard.image = lSimg.value;
-  dataCard.email = lSmail.value;
-  dataCard.telephone = lSphone.value;
-  dataCard.linkedin = lSlinkedin.value;
-  dataCard.gitHub = lSgit.value;
-
-  dataCard.nameCard = lSnameCard.innerHTML;
-  dataCard.occupationCard = lSjobCard.innerHTML;
-  //dataCard.imageCard = lSimgCard.value;
-  dataCard.emailCard = lSmailCard.value;
-  dataCard.telephoneCard = lSphoneCard.value;
-  dataCard.linkedinCard = lSlinkedin.href;
-  dataCard.lSgitCard = lSgit.href;
-
-  localStorage.setItem('Business-Card', JSON.stringify(dataCard));
-}
-
-function recoverLocalStorage () {
-  dataCard = JSON.parse(localStorage.getItem('Business-Card'));
   lSname.value = dataCard.name;
-  lSnameCard.innerHTML = dataCard.occupationCard;
-  lSjob.value = dataCard.occupation;
-  lSjobCard.innerHTML = dataCard.occupationCard;
-  uploadPhoto.style.backgroundImage = "'url("+dataCard.image+")'";
-    //miniBox.style.backgroundImage = infoTarjeta.foto;
+  lSnameCard.innerText = dataCard.name;
+  lSjob.value = dataCard.job;
+  lSjobCard.innerText = dataCard.job
+  uploadPhoto.style.backgroundImage = "url(" + dataCard.photo + ")";
+  uploadMiniPhoto.style.backgroundImage = "url(" + dataCard.photo + ")";
   lSmail.value = dataCard.email;
-  lSphone.value = dataCard.telephone;
+  lSmailCard.href = "mailto:" + dataCard.email;
+  lSphone.value = dataCard.phone;
   lSlinkedin.value = dataCard.linkedin;
+  lSlinkedinCard.href = "https://www.linkedin.com/in/" + dataCard.linkedin;
   lSgit.value = dataCard.gitHub;
+  lSgitCard.value = "https://github.com/" + dataCard.github;
+  lSphoneCard.href = "tel:" + dataCard.phone;
+  for (var i = 0; i < lSpalettes.length; i++) {
+    if (lSpalettes[i].value === dataCard.palette) {
+      lSpalettes[i].checked = true;
+      card.classList.remove('green-card', 'red-card', 'blue-card');
+      var attri = lSpalettes[i].getAttribute('data-dest');
+      card.classList.add(attri);
+    } else {
+      lSpalettes[i].checked = false;
+    }
+  }
+  for (var i = 0; i < lSfonts.length; i++) {
+    if (lSfonts[i].value === dataCard.typography) {
+
+      lSfonts[i].checked = true;
+      card.classList.remove('ubuntu-card', 'comic-card', 'montse-card');
+      var attriFont = lSfonts[i].getAttribute('data-font');
+      card.classList.add(attriFont);
+
+    } else {
+      lSfonts[i].checked = false;
+    }
+  }
+
 }
 
 
-btnCreateCard.addEventListener('click', saveLocalStorage);
 recoverLocalStorage();

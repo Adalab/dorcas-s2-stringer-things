@@ -30,6 +30,7 @@ function sendData() {
   json.photo = photoFileReader.result;
   delete json[''];
   sendRequest(json);
+  localStorage.setItem('Business-Card', JSON.stringify(json));
 }
 
 function loadPhoto() {
