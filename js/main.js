@@ -1,5 +1,7 @@
 'use strict';
 
+//Preview card
+
 var itemsSocialMedia = document.querySelectorAll('.fill-input__placeholder');
 var uploadBtn = document.querySelector('.fill-input__image');
 var uploadInput = document.querySelector('.fill-input__input');
@@ -198,14 +200,13 @@ function addSelectSkill() {
 // }
 
 //colapsables
-var activableSection = document.querySelectorAll(".js-collapsible-title");
-var parent;
-var fieldset = document.querySelectorAll(".js-collapsible-visible");
-
+var activableSection = document.querySelectorAll(".js-collapsible-title");;
+// var collapsibles = document.querySelector('.js-collapsible-visible');
+var collapsibles = document.querySelectorAll('.js-collapsible-select')
 //abre y cierra colapsables
 
 function collapsibleDesign(event) {
-  parent = event.currentTarget.parentElement;
+  var parent = event.currentTarget.parentElement;
   //console.log(parent);
   closeCollapsibles();
   // Si contiene la clase hidden la elimina y sino la añade
@@ -219,9 +220,9 @@ for (var i = 0; i < activableSection.length; i++) {
 // un colapsable abierto cada vez
 
 function closeCollapsibles() {
-  for (var i = 0; i < fieldset.length; i++) {
+  for (var i = 0; i < collapsibles.length; i++) {
     //console.log(activableSection.length);
-    fieldset[i].classList.remove("js-collapsible-visible");
+    collapsibles[i].classList.remove("js-collapsible-visible");
   }
 }
 
