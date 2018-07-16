@@ -63,12 +63,6 @@ var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
 var boxSkills = document.querySelectorAll('.js-ability-box');
 var selectSkills = document.querySelectorAll('.js-select-abilities');
 
-//Skills
-var selectInputSkills = document.querySelector('.js-select-abilities');
-var selectInputSkillsContainer = document.querySelector('.js-ability-box');
-var skillContainer = document.querySelector('.js-card_skills--list');
-var buttonSkills = document.querySelectorAll('.js-button-abilities');
-
 function createOption(text) {
   //Crea un option
   var option = document.createElement('option');
@@ -80,19 +74,19 @@ function createOption(text) {
 
 function fillSelect() {
   var url =
-    "https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json";
+    'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json';
   fetch(url)
 
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(json) {
-    var skillsList = json.skills;
-    for (var i = 0; i < skillsList.length; i++) {
-      var newOption = createOption(skillsList[i]);
-      selectInputSkills.appendChild(newOption);
-    }
-  });
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      var skillsList = json.skills;
+      for (var i = 0; i < skillsList.length; i++) {
+        var newOption = createOption(skillsList[i]);
+        selectInputSkills.appendChild(newOption);
+      }
+    });
 
 }
 
@@ -113,91 +107,10 @@ function removeSkill(event) {
   parentBox.classList.add('skills-hidden');
 }
 
-function createSelectSkill () {
-  var newSelect = document.createElement('select');
-  newSelect.classList.add('select-abilities');
-  // var newOptionDefault =
-}
-
-function addSelectSkill() {
-  var newSelectList = createSelectSkill();
-  selectInputSkillsContainer.appendChild(newSelectList);
-
-  // create box skills
-  var buttonSkills = document.querySelectorAll('.js-button-abilities');
-  var boxSkills = document.querySelectorAll('.js-ability-box');
-  var dataType;
-  var dataIndex = 0;
-  var contador = 0;
-  var dataIndexPlus = 1;
-
-
-  function createSkill(event){
-    for (var i = 0; i < boxSkills.length; i++){
-      dataType = event.currentTarget.getAttribute('data-type');
-      dataIndex = event.currentTarget.getAttribute('data-index');
-      dataIndex = parseInt(dataIndex);
-      // console.log('dataType' ,dataType);
-      // console.log('dataIndex' ,dataIndex);
-      // console.log('dataIndex type' ,typeof dataIndex);
-      if((boxSkills[dataIndex].classList.contains('hidden'))) {
-        console.log(boxSkills[dataIndex].classList.contains('hidden'));
-        console.log('menos');
-        // boxSkills[dataIndex].classList.add('hidden', 'plus');
-        boxSkills[dataIndex].classList.add(dataType);
-      } else if ((boxSkills[dataIndex].classList.contains('plus'))){
-
-        boxSkills[dataIndexPlus].classList.add(dataType);
-      } //else {
-      //   }
-      // }
-      for (var i = 0; i < 2; i++){
-        dataIndexPlus = contador + 1;
-      }
-      console.log('contador', contador);
-      contador++;
-    }
-  }
-  buttonAdd.addEventListener('click', addSkill);
-  buttonRemove[0].addEventListener('click', removeSkill);
-  buttonRemove[1].addEventListener('click', removeSkill);
-  fillSelect();
-
-  //HABILIDADES DE LA TARJETA
-  // var skillContainer = document.querySelector(".js-card_skills--list");
-
-  // function addSelectSkills() {
-  //   skillContainer.innerHTML = '';
-  //   console.log('contenedor',skillContainer);
-  //   console.log('tamaño contenedor',selectSkills.length);
-  //   for (var i = 0; i < selectSkills.length; i++) {
-  //     // if()
-  //     console.dir(selectSkills[i]);
-  //     console.log(selectSkills[i].value);
-  //     skillContainer.innerHTML += '<li class="skill">' + selectSkills[i].value + '</li>';
-  //   }
-// //   var currentSkill = e.currentTarget.value;
-// //   //for (var i=0; i<selectSkills.length; i++) {
-// //   // console.log(selectSkills);
-// //   // var x = selectSkills[i].value;
-// //   // console.dir(selectSkills.value);
-// //   //}
-// //   var boxCardSkill = document.querySelectorAll('.skill');
-// //   console.log('cuantas cajas de habiliadades hay en la tarjeta?',boxCardSkill.length);
-// //   if (boxCardSkill.length < 3){
-// //     skillContainer.innerHTML += '<li class="skill">' + currentSkill + '</li>';
-// //   } else {
-// //     console.log('No tienes tantas habilidades tio!!');
-// //   }
-// }
-
-
-  for (var i = 0; i < buttonSkills.length; i++) {
-    buttonSkills.addEventListener('click',addSelectSkill);
-
-// for (var i = 0; i < selectSkills.length; i++) {
-//   selectSkills[i].addEventListener('change', addSelectSkills);
-// }
+buttonAdd.addEventListener('click', addSkill);
+buttonRemove[0].addEventListener('click', removeSkill);
+buttonRemove[1].addEventListener('click', removeSkill);
+fillSelect();
 
 //colapsables
 var activableSection = document.querySelectorAll(".js-collapsible-title");
@@ -214,7 +127,7 @@ function collapsibleDesign(event) {
 }
 
 for (var i = 0; i < activableSection.length; i++) {
-  activableSection[i].addEventListener("click", collapsibleDesign);
+  activableSection[i].addEventListener('click', collapsibleDesign);
   //console.log(activableSection[i]);
 }
 // un colapsable abierto cada vez
@@ -222,105 +135,14 @@ for (var i = 0; i < activableSection.length; i++) {
 function closeCollapsibles() {
   for (var i = 0; i < collapsibles.length; i++) {
     //console.log(activableSection.length);
-    collapsibles[i].classList.remove("js-collapsible-visible");
+    collapsibles[i].classList.remove('js-collapsible-visible');
   }
 }
 
-  //
-  //   for(var i = 0; i < buttonSkills.length; i++){
-  //     buttonSkills[i].addEventListener('click', createSkill);
-  //     var activableSection = document.querySelectorAll('.js-collapsible-title');
-  //     var parent;
-  //     var fieldset = document.querySelectorAll('.js-collapsible-visible');
-  //
-  //     //abre y cierra colapsables
-  //     console.log(activableSection);
-  //
-  //     function collapsibleDesign(event) {
-  //       parent = event.currentTarget.parentElement;
-  //       console.log(parent);
-  //       closeCollapsibles();
-  //       // Si contiene la clase hidden la elimina y sino la añade
-  //       parent.classList.toggle('js-collapsible-visible');
-  //     }
-  //
-  //     for (var i = 0; i < activableSection.length; i++) {
-  //       activableSection[i].addEventListener('click', collapsibleDesign);
-  //       console.log(activableSection[i]);
-  //     }
-  //     // un colapsable abierto cada vez
-  //
-  //     function closeCollapsibles() {
-  //       for (var i = 0; i < fieldset.length; i++) {
-  //         console.log(activableSection.length);
-  //         fieldset[i].classList.remove('js-collapsible-visible');
-  //       }
-  //     }
-  //
-  //     // create box skills
-  //     var buttonSkills = document.querySelectorAll('.js-button-abilities');
-  //     var boxSkills = document.querySelectorAll('.js-ability-box');
-  //     var dataType;
-  //     var dataIndex = 0;
-  //
-  //     function createSkill(event) {
-  //       for (var i = 0; i < boxSkills.length; i++) {
-  //         dataType = event.currentTarget.getAttribute('data-type');
-  //         dataIndex = event.currentTarget.getAttribute('data-index');
-  //         dataIndex = parseInt(dataIndex);
-  //         console.log('dataType', dataType);
-  //         console.log('dataIndex type', typeof dataIndex);
-  //         if (dataType === 'hidden') {
-  //           boxSkills[dataIndex].classList.add(dataType);
-  //         } else if (dataType === 'plus') {
-  //           console.log('dataIndex', dataIndex);
-  //           dataIndex = dataIndex + 1;
-  //           boxSkills[dataIndex].classList.add(dataType);
-  //         }
-  //       }
-  //     }
-  //
-  //     for (var i = 0; i < buttonSkills.length; i++) {
-  //       buttonSkills[i].addEventListener('click', createSkill);
-  //     }
-  // }
-  // for (var i = 0; i < selectSkills.length; i++) {
-  //   selectSkills[i].addEventListener('change', addSelectSkills);
-  // }
-
-  //colapsables
-  // var activableSection = document.querySelectorAll(".js-collapsible-title");
-  // var parent;
-  // var fieldset = document.querySelectorAll(".js-collapsible-visible");
-
-  //abre y cierra colapsables
-  //console.log(activableSection);
-
-  // function collapsibleDesign(event) {
-  //   parent = event.currentTarget.parentElement;
-  //   //console.log(parent);
-  //   closeCollapsibles();
-  //   // Si contiene la clase hidden la elimina y sino la añade
-  //   parent.classList.toggle("js-collapsible-visible");
-  // }
-  //
-  // for (var i = 0; i < activableSection.length; i++) {
-  //   activableSection[i].addEventListener("click", collapsibleDesign);
-  //   //console.log(activableSection[i]);
-  // }
-  // // un colapsable abierto cada vez
-  //
-  // function closeCollapsibles() {
-  //   for (var i = 0; i < fieldset.length; i++) {
-  //     //console.log(activableSection.length);
-  //     fieldset[i].classList.remove("js-collapsible-visible");
-  //   }
-  // }
-
-  //actualizar colores
-  var radioButtonColor = document.querySelectorAll('.color-check');
-  var card = document.querySelector('.jsCard');
-  var attri;
+//actualizar colores
+var radioButtonColor = document.querySelectorAll('.color-check');
+var card = document.querySelector('.jsCard');
+var attri;
 
 function selectColorCard(event) {
   //console.log("que hay en radiobut", radioButtonColor);
