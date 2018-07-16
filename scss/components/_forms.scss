@@ -262,20 +262,6 @@
   margin-bottom: 5px;
 }
 
-.button-abilities {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: $font-size-hecta;
-  color: $color-orange-monkey;
-  background-color: transparent;
-  border: 1px solid $color-orange-monkey;
-  border-radius: 15px;
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-}
-
 .select-abilities {
   background: none;
   border: 1px solid $color-green-fish;
@@ -316,22 +302,6 @@
   margin-right: 10.5px;
 }
 
-.btn-create-card {
-  font-family: $font-family-primary;
-  font-size: $font-size-hecta;
-  font-weight: 600;
-  color: $color-white-horse;
-  width: 199px;
-  height: 50px;
-  border-radius: 12px;
-  border-style: none;
-  background-color: $color-orange-monkey;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-}
-
 .phrase {
   margin-bottom: 0;
   font-size: $font-size-hecta;
@@ -365,7 +335,7 @@
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
 }
 
-.input-style{
+.input-style {
   height: 30px;
 }
 

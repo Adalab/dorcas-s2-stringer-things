@@ -375,6 +375,58 @@
   text-decoration: none;
 }
 
+.button-abilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #e17334;
+  background-color: transparent;
+  border: 1px solid #e17334;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.btn-create-card {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  width: 199px;
+  height: 50px;
+  border-radius: 12px;
+  border-style: none;
+  background-color: #e17334;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
+
+.btn-share {
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  border-style: none;
+  color: #fff;
+  background-color: #00a0f5;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+}
+
 .icon-title {
   color: #e17334;
   padding-right: 10px;
@@ -482,26 +534,6 @@
   margin-bottom: 5px;
 }
 
-.button-abilities {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 18px;
-  color: #e17334;
-  background-color: transparent;
-  border: 1px solid #e17334;
-  border-radius: 15px;
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-}
-
 .select-abilities {
   background: none;
   border: 1px solid #a2deaf;
@@ -551,27 +583,6 @@
 
 .fa-address-card {
   margin-right: 10.5px;
-}
-
-.btn-create-card {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  width: 199px;
-  height: 50px;
-  border-radius: 12px;
-  border-style: none;
-  background-color: #e17334;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-decoration: none;
-  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
 }
 
 .phrase {

@@ -28,6 +28,7 @@ function reWriteData(e) {
 
 //Cargar Imagen
 
+
 function mostrarImagen(e) {
   var myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
@@ -35,7 +36,7 @@ function mostrarImagen(e) {
 }
 
 function writeImage() {
-  var urlPhoto = "url(" + '"' + fr.result + '"' + ")";
+  var urlPhoto = 'url(' + '"' + fr.result + '"' + ')';
   uploadPhoto.style.backgroundImage = urlPhoto;
   uploadMiniPhoto.style.backgroundImage = urlPhoto;
 }
@@ -62,10 +63,16 @@ var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
 var boxSkills = document.querySelectorAll('.js-ability-box');
 var selectSkills = document.querySelectorAll('.js-select-abilities');
 
-//console.log(buttonAdd);
+//Skills
+var selectInputSkills = document.querySelector('.js-select-abilities');
+var selectInputSkillsContainer = document.querySelector('.js-ability-box');
+var skillContainer = document.querySelector('.js-card_skills--list');
+var buttonSkills = document.querySelectorAll('.js-button-abilities');
 
 function createOption(text) {
+  //Crea un option
   var option = document.createElement('option');
+  // Crea un nodo de texto
   var optionText = document.createTextNode(text);
   option.appendChild(optionText);
   return option;
@@ -75,18 +82,18 @@ function fillSelect() {
   var url =
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json';
   fetch(url)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(json) {
-      var skillList = json.skills;
-      for (var i = 0; i < selectSkills.length; i++) {
-        for (var j = 0; j < skillList.length; j++) {
-          var newSkillsOption = createOption(skillList[j]);
-          selectSkills[i].appendChild(newSkillsOption);
-        }
-      }
-    });
+
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(json) {
+    var skillsList = json.skills;
+    for (var i = 0; i < skillsList.length; i++) {
+      var newOption = createOption(skillsList[i]);
+      selectInputSkills.appendChild(newOption);
+    }
+  });
+
 }
 
 function addSkill() {
@@ -125,6 +132,51 @@ fillSelect();
 //     skillContainer.innerHTML += '<li class='skill'>' + selectSkills[i].value + '</li>';
 //   }
 
+
+  function createSkill(event){
+    for (var i = 0; i < boxSkills.length; i++){
+      dataType = event.currentTarget.getAttribute('data-type');
+      dataIndex = event.currentTarget.getAttribute('data-index');
+      dataIndex = parseInt(dataIndex);
+      // console.log('dataType' ,dataType);
+      // console.log('dataIndex' ,dataIndex);
+      // console.log('dataIndex type' ,typeof dataIndex);
+      if((boxSkills[dataIndex].classList.contains('hidden'))) {
+        console.log(boxSkills[dataIndex].classList.contains('hidden'));
+        console.log('menos');
+        // boxSkills[dataIndex].classList.add('hidden', 'plus');
+        boxSkills[dataIndex].classList.add(dataType);
+      } else if ((boxSkills[dataIndex].classList.contains('plus'))){
+
+        boxSkills[dataIndexPlus].classList.add(dataType);
+      } //else {
+      //   }
+      // }
+      for (var i = 0; i < 2; i++){
+        dataIndexPlus = contador + 1;
+      }
+      console.log('contador', contador);
+      contador++;
+    }
+  }
+  buttonAdd.addEventListener('click', addSkill);
+  buttonRemove[0].addEventListener('click', removeSkill);
+  buttonRemove[1].addEventListener('click', removeSkill);
+  fillSelect();
+
+  //HABILIDADES DE LA TARJETA
+  // var skillContainer = document.querySelector(".js-card_skills--list");
+
+  // function addSelectSkills() {
+  //   skillContainer.innerHTML = '';
+  //   console.log('contenedor',skillContainer);
+  //   console.log('tamaño contenedor',selectSkills.length);
+  //   for (var i = 0; i < selectSkills.length; i++) {
+  //     // if()
+  //     console.dir(selectSkills[i]);
+  //     console.log(selectSkills[i].value);
+  //     skillContainer.innerHTML += '<li class="skill">' + selectSkills[i].value + '</li>';
+  //   }
 // //   var currentSkill = e.currentTarget.value;
 // //   //for (var i=0; i<selectSkills.length; i++) {
 // //   // console.log(selectSkills);
@@ -139,6 +191,10 @@ fillSelect();
 // //     console.log('No tienes tantas habilidades tio!!');
 // //   }
 // }
+
+
+  for (var i = 0; i < buttonSkills.length; i++) {
+    buttonSkills.addEventListener('click',addSelectSkill);
 
 // for (var i = 0; i < selectSkills.length; i++) {
 //   selectSkills[i].addEventListener('change', addSelectSkills);
@@ -185,7 +241,7 @@ function selectColorCard(event) {
 
 for (var j = 0; j < radioButtonColor.length; j++) {
   radioButtonColor[j].addEventListener('click', selectColorCard);
-  console.log('hola');
+
 }
 
 
