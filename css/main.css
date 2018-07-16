@@ -120,7 +120,7 @@
   margin-bottom: 5px;
   opacity: 1;
   padding-left: 20px;
-  padding-right: 82px;
+  padding-right: 40px;
 }
 
 .card__social--li {
@@ -128,7 +128,17 @@
 }
 
 .skill {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 18px;
+  width: 70px;
   padding: 3px;
   border-radius: 4px;
   background-color: #438792;
@@ -825,6 +835,11 @@ body {
 
 .js-collapsible-visible .js-collapsible-form {
   display: block;
+}
+
+.js-collapsible-visible .jsRotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 * {

@@ -9,6 +9,7 @@ var uploadPhoto = document.querySelector('.card__image');
 var uploadMiniPhoto = document.querySelector('.square__white');
 var fr = new FileReader();
 
+
 function reWriteData(e) {
   var fillInput = e.currentTarget;
   var targetInput = fillInput.getAttribute('data-stringer');
@@ -63,11 +64,7 @@ var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
 var boxSkills = document.querySelectorAll('.js-ability-box');
 var selectSkills = document.querySelectorAll('.js-select-abilities');
 
-//Skills
-var selectInputSkills = document.querySelector('.js-select-abilities');
-var selectInputSkillsContainer = document.querySelector('.js-ability-box');
-var skillContainer = document.querySelector('.js-card_skills--list');
-var buttonSkills = document.querySelectorAll('.js-button-abilities');
+//var selectInputSkills = document.querySelector('.js-select-abilities');
 
 function createOption(text) {
   //Crea un option
@@ -83,22 +80,31 @@ function fillSelect() {
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json';
   fetch(url)
 
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(json) {
-    var skillsList = json.skills;
-    for (var i = 0; i < skillsList.length; i++) {
-      var newOption = createOption(skillsList[i]);
-      selectInputSkills.appendChild(newOption);
-    }
-  });
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      var skillList = json.skills;
+      skillList.unshift('Selecciona una habilidad');
+      for (var i = 0; i < selectSkills.length; i++) {
+        for (var j = 0; j < skillList.length; j++) {
+          var newSkillsOption = createOption(skillList[j]);
+          selectSkills[i].appendChild(newSkillsOption);
+        }
+      }
+    });
 
 }
 
-function addSkill() {
-  var boxHidden = document.querySelectorAll('.skills-hidden');
+var pseudoBoxCardSkill;
+//function addSkill() {
+//  var boxHidden = document.querySelectorAll('.skills-hidden');
 
+var skillContainer = document.querySelector('.js-card_skills--list');
+
+function addSkill() {
+  var boxCardSkill = document.querySelectorAll('.skill');
+  var boxHidden = document.querySelectorAll('.skills-hidden');
   if (boxHidden.length === 2) {
     boxSkills[1].classList.remove('skills-hidden');
   } else if (boxHidden.length === 1) {
@@ -106,11 +112,31 @@ function addSkill() {
   } else {
     console.log('no hay mas habilidades que desplegar');
   }
+
+  if (boxCardSkill.length === 1) {
+    pseudoBoxCardSkill = document.createElement('li');
+    console.log(pseudoBoxCardSkill);
+    pseudoBoxCardSkill.setAttribute('class','js-skill skill remove');
+  } else if (boxCardSkill.length === 2) {
+    pseudoBoxCardSkill = document.createElement('li');
+    pseudoBoxCardSkill.setAttribute('class', 'js-skill skill remove');
+  } else {
+    console.log('no hay mas habilidades que añadir');
+  }
+  skillContainer.appendChild(pseudoBoxCardSkill);
 }
 
+
 function removeSkill(event) {
+  var sizePseudoBoxCardSkill = document.querySelectorAll('.remove');
   var parentBox = event.currentTarget.parentElement;
   parentBox.classList.add('skills-hidden');
+
+  if(sizePseudoBoxCardSkill.length === 2){
+    sizePseudoBoxCardSkill[1].remove();
+  } else if(sizePseudoBoxCardSkill.length === 1){
+    sizePseudoBoxCardSkill[0].remove();
+  }
 }
 
 buttonAdd.addEventListener('click', addSkill);
@@ -119,104 +145,38 @@ buttonRemove[1].addEventListener('click', removeSkill);
 fillSelect();
 
 //HABILIDADES DE LA TARJETA
-// var skillContainer = document.querySelector('.js-card_skills--list');
-
-// function addSelectSkills() {
-//   skillContainer.innerHTML = '';
-//   console.log('contenedor',skillContainer);
-//   console.log('tamaño contenedor',selectSkills.length);
-//   for (var i = 0; i < selectSkills.length; i++) {
-//     // if()
-//     console.dir(selectSkills[i]);
-//     console.log(selectSkills[i].value);
-//     skillContainer.innerHTML += '<li class='skill'>' + selectSkills[i].value + '</li>';
-//   }
 
 
-  function createSkill(event){
-    for (var i = 0; i < boxSkills.length; i++){
-      dataType = event.currentTarget.getAttribute('data-type');
-      dataIndex = event.currentTarget.getAttribute('data-index');
-      dataIndex = parseInt(dataIndex);
-      // console.log('dataType' ,dataType);
-      // console.log('dataIndex' ,dataIndex);
-      // console.log('dataIndex type' ,typeof dataIndex);
-      if((boxSkills[dataIndex].classList.contains('hidden'))) {
-        console.log(boxSkills[dataIndex].classList.contains('hidden'));
-        console.log('menos');
-        // boxSkills[dataIndex].classList.add('hidden', 'plus');
-        boxSkills[dataIndex].classList.add(dataType);
-      } else if ((boxSkills[dataIndex].classList.contains('plus'))){
+function addSelectSkills() {
+  var newContentSkill;
+  var newBoxSkill = document.querySelectorAll('.skill');
 
-        boxSkills[dataIndexPlus].classList.add(dataType);
-      } //else {
-      //   }
-      // }
-      for (var i = 0; i < 2; i++){
-        dataIndexPlus = contador + 1;
-      }
-      console.log('contador', contador);
-      contador++;
-    }
+  for (var i = 0; i < newBoxSkill.length; i++){
+    newContentSkill = document.createTextNode(selectSkills[i].value);
+    newBoxSkill[i].innerHTML = '';
+    newBoxSkill[i].appendChild(newContentSkill);
   }
-  buttonAdd.addEventListener('click', addSkill);
-  buttonRemove[0].addEventListener('click', removeSkill);
-  buttonRemove[1].addEventListener('click', removeSkill);
-  fillSelect();
-
-  //HABILIDADES DE LA TARJETA
-  // var skillContainer = document.querySelector(".js-card_skills--list");
-
-  // function addSelectSkills() {
-  //   skillContainer.innerHTML = '';
-  //   console.log('contenedor',skillContainer);
-  //   console.log('tamaño contenedor',selectSkills.length);
-  //   for (var i = 0; i < selectSkills.length; i++) {
-  //     // if()
-  //     console.dir(selectSkills[i]);
-  //     console.log(selectSkills[i].value);
-  //     skillContainer.innerHTML += '<li class="skill">' + selectSkills[i].value + '</li>';
-  //   }
-// //   var currentSkill = e.currentTarget.value;
-// //   //for (var i=0; i<selectSkills.length; i++) {
-// //   // console.log(selectSkills);
-// //   // var x = selectSkills[i].value;
-// //   // console.dir(selectSkills.value);
-// //   //}
-// //   var boxCardSkill = document.querySelectorAll('.skill');
-// //   console.log('cuantas cajas de habiliadades hay en la tarjeta?',boxCardSkill.length);
-// //   if (boxCardSkill.length < 3){
-// //     skillContainer.innerHTML += '<li class='skill'>' + currentSkill + '</li>';
-// //   } else {
-// //     console.log('No tienes tantas habilidades tio!!');
-// //   }
-// }
-
-
-  for (var i = 0; i < buttonSkills.length; i++) {
-    buttonSkills.addEventListener('click',addSelectSkill);
 }
-// for (var i = 0; i < selectSkills.length; i++) {
-//   selectSkills[i].addEventListener('change', addSelectSkills);
-// }
+
+for (var j = 0; j < selectSkills.length; j++) {
+  selectSkills[j].addEventListener('change', addSelectSkills);
+}
 
 //colapsables
-var activableSection = document.querySelectorAll('.js-collapsible-title');;
-// var collapsibles = document.querySelector('.js-collapsible-visible');
-var collapsibles = document.querySelectorAll('.js-collapsible-select')
+var activableSection = document.querySelectorAll('.js-collapsible-title');
+var collapsibles = document.querySelectorAll('.js-collapsible-select');
+
 //abre y cierra colapsables
 
 function collapsibleDesign(event) {
   var parent = event.currentTarget.parentElement;
-  //console.log(parent);
   closeCollapsibles();
   // Si contiene la clase hidden la elimina y sino la añade
   parent.classList.toggle('js-collapsible-visible');
 }
 
-for (var i = 0; i < activableSection.length; i++) {
-  activableSection[i].addEventListener('click', collapsibleDesign);
-  //console.log(activableSection[i]);
+for (var k = 0; k < activableSection.length; k++) {
+  activableSection[k].addEventListener('click', collapsibleDesign);
 }
 // un colapsable abierto cada vez
 
@@ -239,8 +199,8 @@ function selectColorCard(event) {
   card.classList.add(attri);
 }
 
-for (var j = 0; j < radioButtonColor.length; j++) {
-  radioButtonColor[j].addEventListener('click', selectColorCard);
+for (var l = 0; l < radioButtonColor.length; l++) {
+  radioButtonColor[l].addEventListener('click', selectColorCard);
 
 }
 
@@ -257,7 +217,7 @@ function selectFontCard(event) {
   card.classList.add(attriFont);
 }
 
-for (var h = 0; h < radioButtonFont.length; h++) {
-  radioButtonFont[h].addEventListener('click', selectFontCard);
+for (var m = 0; m < radioButtonFont.length; m++) {
+  radioButtonFont[m].addEventListener('click', selectFontCard);
   //console.log(radioButtonFont[h]);
 }

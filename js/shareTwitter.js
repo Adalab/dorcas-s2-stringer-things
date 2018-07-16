@@ -10,9 +10,11 @@ var responseURL = document.querySelector('.link-awesome');
 function getJSONFromInputs(inputs) {
   return inputs.reduce(function (acc, val) {
     if (val.type==='radio' && val.checked===true) {
+      console.log('hola');
       acc[val.name] = val.value;
     }
     if ((val.nodeName !== 'BUTTON') && (val.nodeName !== 'FIELDSET') && (val.type!=='radio') ) {
+      console.log('capullito');
       acc[val.name] = val.value;
     }
     return acc;
@@ -22,8 +24,9 @@ function getJSONFromInputs(inputs) {
 
 function sendData() {
   var inputs = Array.from(form.elements);
+  console.log(inputs);
   var json = getJSONFromInputs(inputs);
-  json.skills = ['Javascript', ' React'];
+  // json.skills = ['Javascript', ' React'];
   json.photo = photoFileReader.result;
   delete json[''];
   sendRequest(json);
@@ -31,18 +34,22 @@ function sendData() {
 
 function loadPhoto() {
   var addedPhoto = document.querySelector('#add-image').files[0];
-  photoFileReader.addEventListener('load', sendData);
-  photoFileReader.readAsDataURL(addedPhoto);
+  if(addedPhoto){
+    photoFileReader.addEventListener('load', sendData);
+    photoFileReader.readAsDataURL(addedPhoto);
+  } else {
+    console.log('Carga la foto melon!!');
+  }
 }
 
 function sendRequest(json) {
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
-      method: 'POST',
-      body: JSON.stringify(json),
-      headers: {
-        'content-type': 'application/json'
-      },
-    })
+    method: 'POST',
+    body: JSON.stringify(json),
+    headers: {
+      'content-type': 'application/json'
+    },
+  })
     .then(function(resp) {
       return resp.json();
     })
@@ -57,7 +64,7 @@ function sendRequest(json) {
 var tweet;
 function showURL(result) {
   if (result.success) {
-    responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    responseURL.innerHTML = '<a class="link-awesome" target="_blank" href=' + result.cardURL + '>' + result.cardURL + '</a>';
   } else {
     responseURL.innerHTML = 'ERROR:' + result.error;
   }
