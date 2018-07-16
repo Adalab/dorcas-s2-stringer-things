@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-  crossorigin="anonymous">
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
@@ -29,13 +30,13 @@
       </button>
       <div class="card jsCard">
         <div class="card__top">
-          <div class="card-info">
-            <p class="card__top--name" id="fullname">Nombre apellido</p>
-            <p class="card__top--career" id="profesion">Profesión</p>
+          <div class="card-info js-card-info">
+            <p class="card__top--name js-card__top--name" id="fullname">Nombre apellido</p>
+            <p class="card__top--career js-card__top--career" id="profesion">Profesión</p>
           </div>
         </div>
-        <div class="card__image" style="">
-
+        <div class="card__image">
+          <!-- <img src="images/image-card.png" alt="user-photo"> -->
         </div>
         <div>
           <ul class="card__social">
@@ -51,138 +52,154 @@
             </li>
             <li class="card__social--li">
               <a class="button-card button--linkedin js-social" id="linkedin-link" href="https://www.linkedin.com/in/" title="Linkedin"
-              target="_blank">
-              <i class="fab fa-linkedin-in js-icon"></i>
-            </a>
-          </li>
-          <li class="card__social--li">
-            <a class="button-card button--github js-social" id="github-link" href="https://github.com/" title="Github" target="_blank">
-              <i class="fab fa-github-alt js-icon"></i>
-            </a>
-          </li>
-        </ul>
-        <div class="card__skills">
-          <ul class="card_skills--list js-card_skills--list">
-            <!-- <li class= "skill">HTML</li>
-            <li class= "skill">CSS</li>
-            <li class= "skill">GULP</li> -->
+                target="_blank">
+                <i class="fab fa-linkedin-in js-icon"></i>
+              </a>
+            </li>
+            <li class="card__social--li">
+              <a class="button-card button--github js-social" id="github-link" href="https://github.com/" title="Github" target="_blank">
+                <i class="fab fa-github-alt js-icon"></i>
+              </a>
+            </li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- FIN SECCION -->
-
-  <!--SECCIÓN RAQUEL-->
-
-  <section class="section-collapsible">
-    <form class="form" action="cardGenerator.html" method="post">
-      <fieldset class="design__container js-collapsible-visible js-collapsible-select">
-        <div class="design__title js-collapsible-title">
-          <legend class="legend__title design-title__legend">
-            <i class="icon-title far fa-object-ungroup"></i>
-            diseña
-          </legend>
-          <span>
-            <i class="design__icon-legend fas fa-chevron-down"></i>
-          </span>
-        </div>
-
-        <div class="design__form hidden js-collapsible-form">
-          <div class="design__form-colors">
-            <p class="design__text">colores</p>
-            <div class="design__palettes">
-
-              <div class="design__palette design__palette1">
-                <input class="design__check-radio color-check" id="palette1" type="radio" name="colors" value="palette1" checked data-dest="green-card">
-                <label class="palette1__greens" for="palette1">
-                </label>
-              </div>
-
-              <div class="design__palette design__palette2">
-                <input class="design__check-radio color-check" id="palette2" type="radio" name="colors" value="palette2" data-dest="red-card">
-                <label class="palette2__reds" for="palette2">
-                </label>
-              </div>
-
-              <div class="design__palette design__palette3">
-                <input class="design__check-radio color-check" id="palette3" type="radio" name="colors" value="palette3" data-dest="blue-card">
-                <label class="palette3__blues" for="palette3">
-                </label>
-              </div>
-
-            </div>
+          <div class="card__skills">
+            <ul class="card_skills--list js-card_skills--list">
+              <!-- <li class= "skill">HTML</li>
+                <li class= "skill">CSS</li>
+                <li class= "skill">GULP</li> -->
+            </ul>
           </div>
         </div>
-        <div class="design__form-fonts">
-          <p class="design__text">fuentes</p>
-          <div class="design__letter-type">
+    </section>
+    <!-- FIN SECCION -->
 
-            <div class="design__type--common design__type--font1">
-              <input class="design__check-radio font-check" id="font1" type="radio" name="fonts" value="font1" data-font="ubuntu-card">
-              <label class="font1" for="font1">
-                ubuntu
-              </label>
+    <!--SECCIÓN RAQUEL-->
+
+    <section class="section-collapsible">
+      <form class="form" action="cardGenerator.html" method="post">
+        <fieldset class="design__container js-collapsible-visible js-collapsible-select">
+          <div class="design__title js-collapsible-title">
+            <legend class="legend__title design-title__legend">
+              <i class="icon-title far fa-object-ungroup"></i>
+              diseña
+            </legend>
+            <span>
+              <i class="design__icon-legend fas fa-chevron-down"></i>
+            </span>
+          </div>
+
+          <div class="design__form hidden js-collapsible-form">
+            <div class="design__form-colors">
+              <p class="design__text">colores</p>
+              <div class="design__palettes">
+
+                <div class="design__palette design__palette1">
+                  <input class="design__check-radio color-check" id="palette1" type="radio" name="colors" value="palette1" checked data-dest="green-card">
+                  <label class="palette1__greens" for="palette1">
+                  </label>
+                </div>
+
+                <div class="design__palette design__palette2">
+                  <input class="design__check-radio color-check" id="palette2" type="radio" name="colors" value="palette2" data-dest="red-card">
+                  <label class="palette2__reds" for="palette2">
+                  </label>
+                </div>
+
+                <div class="design__palette design__palette3">
+                  <input class="design__check-radio color-check" id="palette3" type="radio" name="colors" value="palette3" data-dest="blue-card">
+                  <label class="palette3__blues" for="palette3">
+                  </label>
+                </div>
+
+              </div>
             </div>
+            <div class="design__form-fonts">
+              <p class="design__text">fuentes</p>
+              <div class="design__letter-type">
 
-            <div class="design__type--common design__type--font2">
-              <input class="design__check-radio font-check" id="font2" type="radio" name="fonts" value="font2" data-font="comic-card" checked>
-              <label class="font2" for="font2">
-                comic sans
-              </label>
-            </div>
+                <div class="design__type--common design__type--font1">
+                  <input class="design__check-radio font-check" id="font1" type="radio" name="fonts" value="font1" data-font="ubuntu-card">
+                  <label class="font1" for="font1">
+                    ubuntu
+                  </label>
+                </div>
 
-            <div class="design__type--common design__type--font3">
-              <input class="design__check-radio font-check" id="font3" type="radio" name="fonts" value="font3" data-font="montse-card">
-              <label class="font3" for="font3">
-                monserrat
-              </label>
+                <div class="design__type--common design__type--font2">
+                  <input class="design__check-radio font-check" id="font2" type="radio" name="fonts" value="font2" data-font="comic-card" checked>
+                  <label class="font2" for="font2">
+                    comic sans
+                  </label>
+                </div>
+
+                <div class="design__type--common design__type--font3">
+                  <input class="design__check-radio font-check" id="font3" type="radio" name="fonts" value="font3" data-font="montse-card">
+                  <label class="font3" for="font3">
+                    monserrat
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </fieldset>
+        </fieldset>
 
 
-      <fieldset class="section-collapsible__fill js-collapsible-select">
-        <div class="section-collapsible__fill--title js-collapsible-title">
-          <span class="icon-title">
-            <i class="far fa-keyboard"></i>
-          </span>
-          <legend class="legend__title fill-legend">rellena</legend>
-          <span class="icon-down">
-            <i class="fas fa-chevron-down"></i>
-          </span>
-        </div>
+        <!-- FIN SECCION -->
 
-        <div class="hidden js-collapsible-form">
-          <div class="section-collapsible__fill--form">
+        <!--SECCIÓN OLATZ-->
+
+        <fieldset class="section-collapsible__fill js-collapsible-select">
+          <div class="section-collapsible__fill--title js-collapsible-title">
+            <span class="icon-title">
+              <i class="far fa-keyboard"></i>
+            </span>
+            <legend class="legend__title fill-legend">rellena</legend>
+            <span class="icon-down">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </div>
+
+          <div class="hidden js-collapsible-form">
+            <div class="section-collapsible__fill--form">
             <label class="fill-input" for="nmb ">Nombre completo</label>
             <input class="fill-input__placeholder js-personal-name input-style" placeholder="Ej: Sally Jill" id="nmb" type="text" name="full name"
-            value="" data-stringer="fullname">
+              value="" data-stringer="fullname">
 
             <label class="fill-input" for="job ">Puesto</label>
             <input class="fill-input__placeholder input-style" placeholder="Ej: Front-end unicorn" id="job" type="text" name="occupation" value=""
-            data-stringer="profesion">
+              data-stringer="profesion">
 
             <label type="file" class="fill-input" for="add-image">Imagen de perfil</label>
             <div class="fill-input__image__square">
+
               <button type="button" class="fill-input__image" name="button">Añadir imagen</button>
               <input class="fill-input__input" id="add-image" type="file" value="Añadir imagen">
 
-              <div class="square__white js-square__white"></div>
+              <div class="square__white"></div>
             </div>
 
             <label class="fill-input" for="emailaddress">Email</label>
             <input class="fill-input__placeholder input-style" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value=""
-            data-stringer="mail-link">
+              data-stringer="mail-link">
             <label class="fill-input" for="phone">Teléfono</label>
             <input class="fill-input__placeholder input-style" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value=""
-            data-stringer="mobile-link">
+              data-stringer="mobile-link">
             <label class="fill-input" for="lkdn">Linkedin</label>
             <input class="fill-input__placeholder input-style" placeholder="Ej:sally-hill" id="lkdn" type="url" name="linkedin" value="" data-stringer="linkedin-link">
             <label class="fill-input" for="GH">Github</label>
             <input class="fill-input__placeholder input-style" placeholder="Ej: sally-hill" id="GH" type="url" name="github" value="" data-stringer="github-link">
 
+
+            <!-- <label class="fill-input" for="emailaddress">Email</label>
+                  <input class="fill-input__placeholder" placeholder="Ej: sally-hill@gmail.com" id="emailaddress" type="email" name="" value="" data-stringer = "mail-link">
+
+                  <label class="fill-input" for="phone">Teléfono</label>
+                  <input class="fill-input__placeholder" placeholder="Ej: 555-55-55-55" id="phone" type="number" name="telephone" value="" data-stringer = "mobile-link" >
+
+                  <label class="fill-input" for="lkdn">Linkedin</label>
+                  <input class="fill-input__placeholder" placeholder="Ej: linkedin.com/in/sally.hill" id="lkdn" type="url" name="mail" value="" data-stringer = "linkedin-link">
+
+                  <label class="fill-input" for="GH">Github</label>
+                  <input class="fill-input__placeholder" placeholder="Ej: @sally-hill" id="GH" type="url" name="mail" value="" data-stringer = "github-link"> -->
 
             <div class="abilities-fill">
               <label class="fill-input__abilities" for="">Habilidades (máximo 3)</label>
@@ -209,59 +226,55 @@
               </div>
             </div>
           </div>
-        </div>
-      </fieldset>
+          </div>
+        </fieldset>
 
 
-      <fieldset class="section-collapsible__share  js-collapsible-select">
-        <div class="section-collapsible__share--title js-collapsible-title">
-          <span class="icon-title">
-            <i class="fas fa-share-alt"></i>
-          </span>
-          <legend class="legend__title share-legend">comparte</legend>
-        </div>
-        <div class="js-collapsible-form hidden">
+        <fieldset class="section-collapsible__share  js-collapsible-select">
+          <div class="section-collapsible__share--title js-collapsible-title">
+            <span class="icon-title">
+              <i class="fas fa-share-alt"></i>
+            </span>
+            <legend class="legend__title share-legend">comparte</legend>
+          </div>
+          <div class="js-collapsible-form hidden">
           <div class="section-collapsible__share--button">
 
+            <button class="btn-create-card" type="button" name="button">
+              <span>
+                <i class="far fa-address-card"></i>
+              </span>CREAR TARJETA</button>
 
-            <!-- <div class="ability-box">
-            <select class="select-abilities" name="abilities" >
-            <option value="CSS">CSS</option>
-            <option value="JAVASCRIPT">JAVASCRIPT</option>
-            <option value="SASS">SASS</option>
-          </select>
-          <button class="button-abilities js-button-abilities" type="button" name="button" data-type="hidden"><i class="fas fa-minus"></i></button>
+          </div>
+
+          <div class="section-collapsible__share--end">
+            <p class="phrase">La tarjeta ha sido creada:</p>
+
+            <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a>
+
+            <button class="btn-share" type="button" name="button">
+              <span>
+                <i class="fab fa-twitter" style="font-size: 15px;"></i>
+              </span>Compartir en twitter</button>
+
+          </div>
         </div>
-      -->
-    </div>
-  </div>
-</fieldset>
+        </fieldset>
 
-<div class="section-collapsible__share--button hidden js-collapsible-form">
-  <button class="btn-create-card" type="button" name="button"><span><i class="far fa-address-card"></i></span>CREAR TARJETA</button>
+      </form>
+    </section>
 
-</div>
+  </main>
+  <footer class="footer">
+    <p class="footer--credit">Awesome profile-cards@2018</p>
+    <a href="http://adalab.es/">
+      <img src="images/logo-adalab.png" alt="Logo Adalab" class="footer--image">
+    </a>
+  </footer>
 
-<div class="section-collapsible__share--end">
-  <p class="phrase">La tarjeta ha sido creada:</p>
 
-  <a class="link-awesome" href="http://awesome-profile-card.com?id=S456DF0001"> http://awesome-profile-card.com?id=S456DF0001 </a>
 
-  <button class="btn-share" type="button" name="button">
-    <span><i class="fab fa-twitter" style="font-size: 15px;"></i>
-    </span>Compartir en twitter</button>
 
-  </div>
-</form>
-</section>
-
-</main>
-<footer class="footer">
-  <p class="footer--credit">Awesome profile-cards@2018</p>
-  <a href="http://adalab.es/">
-    <img src="images/logo-adalab.png" alt="Logo Adalab" class="footer--image">
-  </a>
-</footer>
 
   <!-- Como toques aquí te matamos -->
   <script type="text/javascript" src="js/main.min.js"></script>
