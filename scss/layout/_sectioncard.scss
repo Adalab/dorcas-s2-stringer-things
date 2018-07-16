@@ -83,7 +83,7 @@
   margin-bottom: 5px;
   opacity: 1;
   padding-left: 20px;
-  padding-right: 82px;
+  padding-right: 40px;
 }
 
 .card__social--li {
@@ -91,7 +91,11 @@
 }
 
 .skill {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+  width: 70px;
   padding: 3px;
   border-radius: 4px;
   background-color: $color-green-sirena;
