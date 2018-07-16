@@ -39,6 +39,7 @@ function loadPhoto() {
   var showTwitter = document.querySelector('.js-hidden-twitter');
   var addedPhoto = document.querySelector('#add-image').files[0];
   showTwitter.classList.remove('js-hidden-twitter');
+  btnCreateCard.classList.add('js-press-button');
   if(addedPhoto){
     photoFileReader.addEventListener('load', sendData);
     photoFileReader.readAsDataURL(addedPhoto);

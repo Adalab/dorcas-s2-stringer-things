@@ -10,6 +10,8 @@ var linkedinLink = document.querySelector('#linkedin-link');
 var githubLink = document.querySelector('#github-link');
 
 var card = document.querySelector('.jsCard');
+var showTwitter = document.querySelector('.js-hidden-twitter');
+var btnCreateCard = document.querySelector('.js-btn-create-card');
 
 //Objeto que traemos del saveLocalStorage
 var resetCard = {};
@@ -38,6 +40,8 @@ function resetform() {
   card.classList.add('green-card');
   card.classList.remove('ubuntu-card', 'comic-card', 'montse-card');
   card.classList.add('comic-card');
+  showTwitter.classList.add('js-hidden-twitter');
+  btnCreateCard.classList.remove('js-press-button');
 }
 
 
