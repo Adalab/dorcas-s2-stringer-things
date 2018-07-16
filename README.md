@@ -1,4 +1,3 @@
-![Adalab](images/logo-adalab-80px.png)
 # Sprint 2: Stringer things
 We are the Stringer Things team, composed by Laura, Raquel, Olatz and Loreto.
 
