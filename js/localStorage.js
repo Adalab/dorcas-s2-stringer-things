@@ -11,6 +11,7 @@ var lSgit = document.querySelector('#GH');
 var dataCard = {};
 
 function saveLocalStorage() {
+  console.log('hola');
   if (!localStorage.getItem('Business-Card')) {
   dataCard = {
     'name': '',
@@ -50,4 +51,4 @@ function recoverLocalStorage () {
 
 
 btnCreateCard.addEventListener('click', saveLocalStorage);
-//recoverLocalStorage();
+recoverLocalStorage();

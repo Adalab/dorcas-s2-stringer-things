@@ -20,6 +20,7 @@ resetCard.linkedin = '';
 resetCard.gitHub = '';
 localStorage.setItem('Reset-Card', JSON.stringify(resetCard));
 
+
   function resetform() {
     document.querySelector('.form').reset();
 
