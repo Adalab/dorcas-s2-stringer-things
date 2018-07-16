@@ -195,7 +195,7 @@ fillSelect();
 
   for (var i = 0; i < buttonSkills.length; i++) {
     buttonSkills.addEventListener('click',addSelectSkill);
-
+}
 // for (var i = 0; i < selectSkills.length; i++) {
 //   selectSkills[i].addEventListener('change', addSelectSkills);
 // }

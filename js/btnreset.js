@@ -1,7 +1,7 @@
 'use strict';
 
+
 var resetbtn = document.querySelector('.resetbutton');
-var minicard = document.querySelector('.square__white');
 var fullName = document.querySelector('#fullname');
 var profesion = document.querySelector('#profesion');
 var mobileNumber = document.querySelector('#mobile-link');
@@ -9,11 +9,11 @@ var mailAddress = document.querySelector('#mail-link');
 var linkedinLink = document.querySelector('#linkedin-link');
 var githubLink = document.querySelector('#github-link');
 
+
 //Objeto que traemos del saveLocalStorage
 var resetCard = {};
 resetCard.name = 'Nombre apellido';
 resetCard.occupation = 'Profesión';
-//resetCard.image = lSimg.value;
 resetCard.email = '';
 resetCard.telephone = '';
 resetCard.linkedin = '';
@@ -34,5 +34,6 @@ localStorage.setItem('Reset-Card', JSON.stringify(resetCard));
     uploadPhoto.style.backgroundImage = 'url(../../images/image-card.png)';
     uploadMiniPhoto.style.backgroundImage = '';
   };
+
 
 resetbtn.addEventListener('click', resetform);
