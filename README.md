@@ -15,7 +15,7 @@ We have been working to reach a milestone every week.
 
   - Second week:
 
-  >  We started to with JavaScript. We worked doing pair programming. Two members of the team worked with the part of the Design while the other two members worked with the form.
+  >  We started to work with JavaScript. We worked doing pair programming. Two members of the team worked with the part of the Design while the other two members worked with the fillable form.
 
   - Third week:
 
@@ -23,9 +23,9 @@ We have been working to reach a milestone every week.
 
     - Fourth week:
 
-  >  We worked with the buttons to create the form and to create the link with the final card of the user. The worked during all the project with Git so we started to merge the different branches and to solve the issues.
+  >  We worked with the buttons to create the form and to create the link with the final card of the user. The worked during all the project with Git so we started to merge the different branches and to do pull requests to our team mates. 
 
 
     - Fifth week:
 
-  > We merged the last branches and we fixed the las SCSS details and we cleaned our JavaScript code. We prepared the presentation  and our speechs to do the presentation.
+  > The fifth week was composed by two days. We merged the last branches solving all the conflicts, we fixed the last SCSS details and we cleaned our JavaScript code. We prepared the presentation and our speechs to do the presentation.
