@@ -63,6 +63,8 @@ var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
 var boxSkills = document.querySelectorAll('.js-ability-box');
 var selectSkills = document.querySelectorAll('.js-select-abilities');
 
+var selectInputSkills =document.querySelector('.js-select-abilities');
+
 function createOption(text) {
   //Crea un option
   var option = document.createElement('option');
@@ -113,7 +115,7 @@ buttonRemove[1].addEventListener('click', removeSkill);
 fillSelect();
 
 //colapsables
-var activableSection = document.querySelectorAll(".js-collapsible-title");
+var activableSection = document.querySelectorAll('.js-collapsible-title');;
 // var collapsibles = document.querySelector('.js-collapsible-visible');
 var collapsibles = document.querySelectorAll('.js-collapsible-select')
 //abre y cierra colapsables
@@ -123,7 +125,7 @@ function collapsibleDesign(event) {
   //console.log(parent);
   closeCollapsibles();
   // Si contiene la clase hidden la elimina y sino la añade
-  parent.classList.toggle("js-collapsible-visible");
+  parent.classList.toggle('js-collapsible-visible');
 }
 
 for (var i = 0; i < activableSection.length; i++) {
@@ -145,7 +147,7 @@ var card = document.querySelector('.jsCard');
 var attri;
 
 function selectColorCard(event) {
-  //console.log("que hay en radiobut", radioButtonColor);
+  //console.log('que hay en radiobut', radioButtonColor);
   card.classList.remove('green-card', 'red-card', 'blue-card');
   attri = event.currentTarget.getAttribute('data-dest');
   card.classList.add(attri);
@@ -153,8 +155,9 @@ function selectColorCard(event) {
 
 for (var j = 0; j < radioButtonColor.length; j++) {
   radioButtonColor[j].addEventListener('click', selectColorCard);
-  //console.log(radioButtonColor[j]);
+
 }
+
 
 //actualizar fuentes
 
@@ -162,7 +165,7 @@ var radioButtonFont = document.querySelectorAll('.font-check');
 var attriFont;
 
 function selectFontCard(event) {
-  //console.log("que hay en radiobut", radioButtonFont);
+  //console.log('que hay en radiobut', radioButtonFont);
   card.classList.remove('ubuntu-card', 'comic-card', 'montse-card');
   attriFont = event.currentTarget.getAttribute('data-font');
   card.classList.add(attriFont);
