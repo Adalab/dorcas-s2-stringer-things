@@ -194,7 +194,7 @@ var attri;
 
 function selectColorCard(event) {
   //console.log('que hay en radiobut', radioButtonColor);
-  card.classList.remove('green-card', 'red-card', 'blue-card');
+  card.classList.remove('green-card', 'red-card', 'blue-card', 'neon-card');
   attri = event.currentTarget.getAttribute('data-dest');
   card.classList.add(attri);
 }

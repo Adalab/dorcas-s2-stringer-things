@@ -77,6 +77,33 @@
   }
 }
 
+//paleta 5 neon
+.neon-card {
+  .js-card-info {
+    border-left: 5px solid $color-palette-53;
+  }
+
+  .js-card__top--name {
+    color: $color-palette-51;
+  }
+
+  .js-card__top--career {
+    color: $color-palette-51;
+  }
+
+  .js-social {
+    border: solid 2px $color-palette-53;
+  }
+
+  .js-icon {
+    color: $color-palette-51;
+  }
+
+  .js-skill {
+    background-color: $color-palette-52;
+  }
+}
+
 //tipografia
 //fuente 1
 .ubuntu-card {

@@ -89,6 +89,23 @@
   @include boxPalette(30px, $color-palette-33);
 }
 
+.palette5__neons::before {
+  content: '';
+
+  @include boxPalette(30px, $color-palette-51);
+}
+
+.palette5__neons {
+  @include boxPalette(90px, $color-palette-52);
+  @include flexBetween();
+}
+
+.palette5__neons::after {
+  content: '';
+
+  @include boxPalette(30px, $color-palette-53);
+}
+
 .design__form-fonts {
   align-items: flex-start;
   padding-bottom: 30px;

@@ -1,4 +1,4 @@
-@charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* color check *//* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* Tipo de fuente *//* Tamaño fuente */.cardGenerator__header {
+@charset "UTF-8";/* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* Palette neon *//* color check *//* Palette 1 *//* Palette 2 *//* Palette 3 *//* Palette 4 *//* Palette 5 neon *//* Tipo de fuente *//* Tamaño fuente */.cardGenerator__header {
   padding-top: 30px;
   padding-left: 40px;
   padding-bottom: 30px;
@@ -19,8 +19,10 @@
 }
 
 .section-card {
-  background: -webkit-gradient(linear, left top, left bottom, from(lightblue), to(pink));
-  background: linear-gradient(lightblue, pink);
+  background-image: url("../../images/bombillas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: 100vw;
   height: 457px;
   padding-top: 10px;
@@ -93,6 +95,8 @@
   height: 200px;
   background-image: url("../../images/image-card.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card__social {
@@ -280,6 +284,32 @@
   width: 30px;
   height: 25px;
   background-color: #a0c0cf;
+}
+
+.palette5__neons::before {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #67FD85;
+}
+
+.palette5__neons {
+  width: 90px;
+  height: 25px;
+  background-color: #FC8926;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.palette5__neons::after {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background-color: #F73291;
 }
 
 .design__form-fonts {
@@ -522,6 +552,8 @@
   border: 1px solid #a2deaf;
   margin-left: 20px;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .fill-input__image__square {
@@ -789,6 +821,30 @@
 
 .blue-card .js-skill {
   background-color: #dfe5eb;
+}
+
+.neon-card .js-card-info {
+  border-left: 5px solid #F73291;
+}
+
+.neon-card .js-card__top--name {
+  color: #67FD85;
+}
+
+.neon-card .js-card__top--career {
+  color: #67FD85;
+}
+
+.neon-card .js-social {
+  border: solid 2px #F73291;
+}
+
+.neon-card .js-icon {
+  color: #67FD85;
+}
+
+.neon-card .js-skill {
+  background-color: #FC8926;
 }
 
 .ubuntu-card .js-card__top--name {

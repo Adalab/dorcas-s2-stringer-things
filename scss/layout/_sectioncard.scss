@@ -1,5 +1,9 @@
 .section-card {
-  background: linear-gradient(lightblue, pink);
+  background-image: url('../../images/bombillas.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  //background: linear-gradient(lightblue, pink);
   width: 100vw;
   height: 457px;
   padding-top: 10px;
@@ -61,6 +65,8 @@
   height: 200px;
   background-image: url('../../images/image-card.png');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card__social {
