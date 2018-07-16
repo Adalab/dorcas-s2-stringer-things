@@ -1,13 +1,9 @@
 // Core
-@import 'core/functions';
 @import 'core/mixins';
 @import 'core/variables';
 
 // Layout
 @import 'layout/header';
-@import 'layout/footer';
-@import 'layout/grid';
-@import 'layout/section-collapsible__fill';
 @import 'layout/sectioncard';
 @import 'layout/mediaqueries';
 @import 'layout/design';
@@ -15,8 +11,6 @@
 // Components
 @import 'components/buttons';
 @import 'components/forms';
-@import 'components/hero';
-@import 'components/newsletter';
 @import 'components/typography';
 @import 'components/cardstyles';
 
