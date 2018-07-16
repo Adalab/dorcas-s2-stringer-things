@@ -164,13 +164,12 @@ for (var j = 0; j < selectSkills.length; j++) {
 
 //colapsables
 var activableSection = document.querySelectorAll('.js-collapsible-title');
-// var collapsibles = document.querySelector('.js-collapsible-visible');
 var collapsibles = document.querySelectorAll('.js-collapsible-select');
+
 //abre y cierra colapsables
 
 function collapsibleDesign(event) {
   var parent = event.currentTarget.parentElement;
-  //console.log(parent);
   closeCollapsibles();
   // Si contiene la clase hidden la elimina y sino la añade
   parent.classList.toggle('js-collapsible-visible');
@@ -178,7 +177,6 @@ function collapsibleDesign(event) {
 
 for (var k = 0; k < activableSection.length; k++) {
   activableSection[k].addEventListener('click', collapsibleDesign);
-  //console.log(activableSection[i]);
 }
 // un colapsable abierto cada vez
 

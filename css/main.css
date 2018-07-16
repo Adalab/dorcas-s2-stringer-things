@@ -837,6 +837,11 @@ body {
   display: block;
 }
 
+.js-collapsible-visible .jsRotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 * {
   margin: 0;
   padding: 0;
