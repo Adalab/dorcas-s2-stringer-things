@@ -823,6 +823,10 @@ body {
   display: none;
 }
 
+.js-hidden-twitter {
+  display: none;
+}
+
 .skills-hidden {
   display: none;
 }
