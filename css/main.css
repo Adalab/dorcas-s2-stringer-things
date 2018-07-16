@@ -823,6 +823,10 @@ body {
   display: none;
 }
 
+.js-hidden-twitter {
+  display: none;
+}
+
 .skills-hidden {
   display: none;
 }
@@ -840,6 +844,10 @@ body {
 .js-collapsible-visible .jsRotate {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.js-press-button {
+  background-color: #d8d8d8;
 }
 
 * {

@@ -10,15 +10,18 @@ var responseURL = document.querySelector('.link-awesome');
 function getJSONFromInputs(inputs) {
   return inputs.reduce(function (acc, val) {
     if (val.type==='radio' && val.checked===true) {
-      console.log('hola');
       acc[val.name] = val.value;
     }
-    if ((val.nodeName !== 'BUTTON') && (val.nodeName !== 'FIELDSET') && (val.type!=='radio') ) {
-      console.log('capullito');
+    if ((val.nodeName !== 'BUTTON') && (val.nodeName !== 'FIELDSET') && (val.type!=='radio') && ( val.type !== 'select-one' ) ) {
       acc[val.name] = val.value;
+    }
+    if ( val.type === 'select-one' ){
+      if (val.value !== 'Selecciona una habilidad'){
+        acc.skills.push(val.value);
+      }
     }
     return acc;
-  }, {});
+  }, {skills: []});
 }
 
 
@@ -34,7 +37,10 @@ function sendData() {
 }
 
 function loadPhoto() {
+  var showTwitter = document.querySelector('.js-hidden-twitter');
   var addedPhoto = document.querySelector('#add-image').files[0];
+  showTwitter.classList.remove('js-hidden-twitter');
+  btnCreateCard.classList.add('js-press-button');
   if(addedPhoto){
     photoFileReader.addEventListener('load', sendData);
     photoFileReader.readAsDataURL(addedPhoto);
