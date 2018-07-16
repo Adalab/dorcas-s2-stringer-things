@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('hellohello');
 var resetbtn = document.querySelector('.resetbutton');
 var card = document.querySelector('.card');
 var fullName = document.querySelector('#fullname');

@@ -128,9 +128,6 @@
 }
 
 .skill {
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-size: 13px;
   display: block;
   padding: 3px;
   border-radius: 4px;
@@ -620,6 +617,17 @@
   padding-bottom: 30px;
 }
 
+.btn-share {
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  border-style: none;
+  color: #fff;
+  background-color: #00a0f5;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+}
+
 .input-style {
   height: 30px;
 }
@@ -660,7 +668,11 @@
   font-weight: 600;
 }
 
-
+.skill {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+}
 
 .design__text {
   color: #54585a;
