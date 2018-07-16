@@ -200,7 +200,7 @@ function addSelectSkill() {
 // }
 
 //colapsables
-var activableSection = document.querySelectorAll(".js-collapsible-title");;
+var activableSection = document.querySelectorAll(".js-collapsible-title");
 // var collapsibles = document.querySelector('.js-collapsible-visible');
 var collapsibles = document.querySelectorAll('.js-collapsible-select')
 //abre y cierra colapsables
