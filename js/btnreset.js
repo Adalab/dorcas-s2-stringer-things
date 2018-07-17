@@ -34,7 +34,7 @@ function resetform() {
   mailAddress.href = resetCard.telephone;
   linkedinLink.href = resetCard.linkedin;
   githubLink.href = resetCard.gitHub;
-  uploadPhoto.style.backgroundImage = 'url(../../images/image-card.png)';
+  uploadPhoto.style.backgroundImage = 'url(../images/image-card.png)';
   uploadMiniPhoto.style.backgroundImage = '';
   card.classList.remove('green-card', 'red-card', 'blue-card');
   card.classList.add('green-card');
