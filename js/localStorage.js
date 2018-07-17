@@ -25,17 +25,18 @@ var dataCard = {};
 
 function recoverLocalStorage() {
   if (!localStorage.getItem('Business-Card')) {
-    dataCard = {
-      'name': '',
-      'job': '',
-      'photo': '',
-      'email': '',
-      'phone': '',
-      'linkedin': '',
-      'github': '',
-      'pallete': '',
-      'typography': ''
-    }
+    resetform();
+    // dataCard = {
+    //   'name': 'Nombre apellidos',
+    //   'job': 'Profesión',
+    //   'photo': '',
+    //   'email': '',
+    //   'phone': '',
+    //   'linkedin': '',
+    //   'github': '',
+    //   'pallete': '',
+    //   'typography': ''
+    // }
   } else {
     dataCard = JSON.parse(localStorage.getItem('Business-Card'));
   }
