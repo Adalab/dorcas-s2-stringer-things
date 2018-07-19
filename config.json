@@ -8,7 +8,8 @@
 			"js/main.js",
 			"js/shareTwitter.js",
 			"js/localStorage.js",
-			"js/btnreset.js"
+			"js/btnreset.js",
+			"js/cardpreview.js"
 		],
 		"dest": "js/"
 	},
