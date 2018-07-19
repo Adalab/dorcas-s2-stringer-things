@@ -1,0 +1,107 @@
+'use strict';
+
+//habilidades
+var buttonAdd = document.querySelector('.js-button-abilitiesPlus');
+var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
+var boxSkills = document.querySelectorAll('.js-ability-box');
+var selectSkills = document.querySelectorAll('.js-select-abilities');
+
+//var selectInputSkills = document.querySelector('.js-select-abilities');
+
+function createOption(text) {
+  //Crea un option
+  var option = document.createElement('option');
+  // Crea un nodo de texto
+  var optionText = document.createTextNode(text);
+  option.appendChild(optionText);
+  return option;
+}
+
+function fillSelect() {
+  var url =
+    'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json';
+  fetch(url)
+
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      var skillList = json.skills;
+      skillList.unshift('Selecciona una habilidad');
+      for (var i = 0; i < selectSkills.length; i++) {
+        for (var j = 0; j < skillList.length; j++) {
+          var newSkillsOption = createOption(skillList[j]);
+          selectSkills[i].appendChild(newSkillsOption);
+        }
+      }
+    });
+
+}
+
+var pseudoBoxCardSkill;
+//function addSkill() {
+//  var boxHidden = document.querySelectorAll('.skills-hidden');
+
+var skillContainer = document.querySelector('.js-card_skills--list');
+
+function addSkill() {
+  var boxCardSkill = document.querySelectorAll('.skill');
+  var boxHidden = document.querySelectorAll('.skills-hidden');
+  if (boxHidden.length === 2) {
+    boxSkills[1].classList.remove('skills-hidden');
+  } else if (boxHidden.length === 1) {
+    boxSkills[2].classList.remove('skills-hidden');
+  } else {
+    console.log('no hay mas habilidades que desplegar');
+  }
+
+  if (boxCardSkill.length === 1) {
+    pseudoBoxCardSkill = document.createElement('li');
+    console.log(pseudoBoxCardSkill);
+    pseudoBoxCardSkill.setAttribute('class','js-skill skill remove');
+  } else if (boxCardSkill.length === 2) {
+    pseudoBoxCardSkill = document.createElement('li');
+    pseudoBoxCardSkill.setAttribute('class', 'js-skill skill remove');
+  } else {
+    console.log('no hay mas habilidades que añadir');
+  }
+  skillContainer.appendChild(pseudoBoxCardSkill);
+}
+
+
+function removeSkill(event) {
+  var sizePseudoBoxCardSkill = document.querySelectorAll('.remove');
+  var parentBox = event.currentTarget.parentElement;
+  parentBox.classList.add('skills-hidden');
+
+  if(sizePseudoBoxCardSkill.length === 2){
+    sizePseudoBoxCardSkill[1].remove();
+  } else if(sizePseudoBoxCardSkill.length === 1){
+    sizePseudoBoxCardSkill[0].remove();
+  }
+}
+
+buttonAdd.addEventListener('click', addSkill);
+buttonRemove[0].addEventListener('click', removeSkill);
+buttonRemove[1].addEventListener('click', removeSkill);
+fillSelect();
+
+
+
+//HABILIDADES DE LA TARJETA
+
+
+function addSelectSkills() {
+  var newContentSkill;
+  var newBoxSkill = document.querySelectorAll('.skill');
+
+  for (var i = 0; i < newBoxSkill.length; i++){
+    newContentSkill = document.createTextNode(selectSkills[i].value);
+    newBoxSkill[i].innerHTML = '';
+    newBoxSkill[i].appendChild(newContentSkill);
+  }
+}
+
+for (var j = 0; j < selectSkills.length; j++) {
+  selectSkills[j].addEventListener('change', addSelectSkills);
+}

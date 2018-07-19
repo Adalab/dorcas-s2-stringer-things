@@ -9,7 +9,9 @@
 			"js/shareTwitter.js",
 			"js/localStorage.js",
 			"js/btnreset.js",
-			"js/cardpreview.js"
+			"js/cardpreview.js",
+			"js/abilities.js"
+			"js/collapsablesdesign"
 		],
 		"dest": "js/"
 	},
