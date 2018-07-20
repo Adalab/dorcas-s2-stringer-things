@@ -1,6 +1,5 @@
 'use strict';
 
-//query selector de id's
 const lSname = document.querySelector('#nmb');
 const lSnameCard = document.querySelector('#fullname');
 const lSjob = document.querySelector('#job');
@@ -46,13 +45,13 @@ const recoverLocalStorage = () => {
   lSnameCard.innerText = dataCard.name;
   lSjob.value = dataCard.job;
   lSjobCard.innerText = dataCard.job
-  uploadPhoto.style.backgroundImage = 'url(' + dataCard.photo + ')';
-  uploadMiniPhoto.style.backgroundImage = 'url(' + dataCard.photo + ')';
+  uploadPhoto.style.backgroundImage = "url(" + dataCard.photo + ")";
+  uploadMiniPhoto.style.backgroundImage = "url(" + dataCard.photo + ")";
   lSmail.value = dataCard.email;
-  lSmailCard.href = 'mailto:' + dataCard.email;
+  lSmailCard.href = "mailto:" + dataCard.email;
   lSphone.value = dataCard.phone;
   lSlinkedin.value = dataCard.linkedin;
-  lSlinkedinCard.href = 'https://www.linkedin.com/in/' + dataCard.linkedin;
+  lSlinkedinCard.href = "https://www.linkedin.com/in/" + dataCard.linkedin;
   lSgit.value = dataCard.github;
   lSgitCard.value = 'https://github.com/' + dataCard.github;
   lSphoneCard.href = 'tel:' + dataCard.phone;
