@@ -14,7 +14,7 @@ const showTwitter = document.querySelector('.js-hidden-twitter');
 const btnCreateCardReset = document.querySelector('.js-btn-create-card');
 
 //Objeto que traemos del saveLocalStorage
-const resetCard = {};
+let resetCard = {};
 resetCard.name = 'Nombre apellido';
 resetCard.occupation = 'Profesión';
 resetCard.email = '';
