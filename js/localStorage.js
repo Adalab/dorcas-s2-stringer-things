@@ -1,29 +1,29 @@
 'use strict';
 
-var lSname = document.querySelector('#nmb');
-var lSnameCard = document.querySelector('#fullname');
-var lSjob = document.querySelector('#job');
-var lSjobCard = document.querySelector('#profesion');
-var lSimg = document.querySelector('#add-image');
-var lSmail = document.querySelector('#emailaddress');
-var lSmailCard = document.querySelector('#mail-link');
-var lSphone = document.querySelector('#phone');
-var lSphoneCard = document.querySelector('#mobile-link');
-var lSlinkedin = document.querySelector('#lkdn');
-var lSlinkedinCard = document.querySelector('#linkedin-link');
-var lSgit = document.querySelector('#GH');
-var lSgitCard = document.querySelector('#github-link');
+const lSname = document.querySelector('#nmb');
+const lSnameCard = document.querySelector('#fullname');
+const lSjob = document.querySelector('#job');
+const lSjobCard = document.querySelector('#profesion');
+const lSimg = document.querySelector('#add-image');
+const lSmail = document.querySelector('#emailaddress');
+const lSmailCard = document.querySelector('#mail-link');
+const lSphone = document.querySelector('#phone');
+const lSphoneCard = document.querySelector('#mobile-link');
+const lSlinkedin = document.querySelector('#lkdn');
+const lSlinkedinCard = document.querySelector('#linkedin-link');
+const lSgit = document.querySelector('#GH');
+const lSgitCard = document.querySelector('#github-link');
 
 
-var lSpalettes = document.querySelectorAll('.color-check');
-var lSfonts = document.querySelectorAll('.font-check');
+const lSpalettes = document.querySelectorAll('.color-check');
+const lSfonts = document.querySelectorAll('.font-check');
 
-var card = document.querySelector('.jsCard');
+const cardlocal = document.querySelector('.jsCard');
 
-var dataCard = {};
+let dataCard = {};
 
 
-function recoverLocalStorage() {
+const recoverLocalStorage = () => {
   if (!localStorage.getItem('Business-Card')) {
     resetform();
     // dataCard = {
@@ -53,32 +53,32 @@ function recoverLocalStorage() {
   lSlinkedin.value = dataCard.linkedin;
   lSlinkedinCard.href = "https://www.linkedin.com/in/" + dataCard.linkedin;
   lSgit.value = dataCard.github;
-  lSgitCard.value = "https://github.com/" + dataCard.github;
-  lSphoneCard.href = "tel:" + dataCard.phone;
-  for (var i = 0; i < lSpalettes.length; i++) {
-    if (lSpalettes[i].value === dataCard.palette) {
-      lSpalettes[i].checked = true;
-      card.classList.remove('green-card', 'red-card', 'blue-card');
-      var attri = lSpalettes[i].getAttribute('data-dest');
-      card.classList.add(attri);
+  lSgitCard.value = 'https://github.com/' + dataCard.github;
+  lSphoneCard.href = 'tel:' + dataCard.phone;
+  for (const paletteLocal of lSpalettes.length) {
+    if (paletteLocal.value === dataCard.palette) {
+      paletteLocal.checked = true;
+      cardlocal.classList.remove('green-card', 'red-card', 'blue-card');
+      const attri = paletteLocal.getAttribute('data-dest');
+      cardlocal.classList.add(attri);
     } else {
-      lSpalettes[i].checked = false;
+      paletteLocal.checked = false;
     }
   }
-  for (var i = 0; i < lSfonts.length; i++) {
-    if (lSfonts[i].value === dataCard.typography) {
+  for (const fontLocal of lSfonts.length) {
+    if (fontLocal.value === dataCard.typography) {
 
-      lSfonts[i].checked = true;
-      card.classList.remove('ubuntu-card', 'comic-card', 'montse-card');
-      var attriFont = lSfonts[i].getAttribute('data-font');
-      card.classList.add(attriFont);
+      fontLocal.checked = true;
+      cardlocal.classList.remove('ubuntu-card', 'comic-card', 'montse-card');
+      const attriFont = fontLocal.getAttribute('data-font');
+      cardlocal.classList.add(attriFont);
 
     } else {
-      lSfonts[i].checked = false;
+      fontLocal.checked = false;
     }
   }
 
-}
+};
 
 
 recoverLocalStorage();
