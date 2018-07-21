@@ -55,7 +55,7 @@ const recoverLocalStorage = () => {
   lSgit.value = dataCard.github;
   lSgitCard.value = 'https://github.com/' + dataCard.github;
   lSphoneCard.href = 'tel:' + dataCard.phone;
-  for (const paletteLocal of lSpalettes.length) {
+  for (const paletteLocal of lSpalettes) {
     if (paletteLocal.value === dataCard.palette) {
       paletteLocal.checked = true;
       cardlocal.classList.remove('green-card', 'red-card', 'blue-card');
@@ -65,7 +65,7 @@ const recoverLocalStorage = () => {
       paletteLocal.checked = false;
     }
   }
-  for (const fontLocal of lSfonts.length) {
+  for (const fontLocal of lSfonts) {
     if (fontLocal.value === dataCard.typography) {
 
       fontLocal.checked = true;
