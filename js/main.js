@@ -59,52 +59,49 @@ for (var i = 0; i < itemsSocialMedia.length; i++) {
 }
 
 //habilidades
-var buttonAdd = document.querySelector('.js-button-abilitiesPlus');
-var buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
-var boxSkills = document.querySelectorAll('.js-ability-box');
-var selectSkills = document.querySelectorAll('.js-select-abilities');
+const buttonAdd = document.querySelector('.js-button-abilitiesPlus');
+const buttonRemove = document.querySelectorAll('.js-button-abilitiesMinus');
+const boxSkills = document.querySelectorAll('.js-ability-box');
+const selectSkills = document.querySelectorAll('.js-select-abilities');
 
 //var selectInputSkills = document.querySelector('.js-select-abilities');
 
-function createOption(text) {
+const createOption = text => {
   //Crea un option
-  var option = document.createElement('option');
+  const option = document.createElement('option');
   // Crea un nodo de texto
-  var optionText = document.createTextNode(text);
+  const optionText = document.createTextNode(text);
   option.appendChild(optionText);
   return option;
 }
 
-function fillSelect() {
-  var url =
+const fillSelect = () => {
+  const url =
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json';
   fetch(url)
-
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(json) {
-      var skillList = json.skills;
+    .then(response => response.json())
+    .then(json => {
+      const skillList = json.skills;
       skillList.unshift('Selecciona una habilidad');
-      for (var i = 0; i < selectSkills.length; i++) {
-        for (var j = 0; j < skillList.length; j++) {
-          var newSkillsOption = createOption(skillList[j]);
-          selectSkills[i].appendChild(newSkillsOption);
+      for (const selectSkill of selectSkills) {
+        for (const skillElement of skillList) {
+          var newSkillsOption = createOption(skillElement);
+          selectSkill.appendChild(newSkillsOption);
         }
       }
     });
 
 }
 
-var pseudoBoxCardSkill;
+let pseudoBoxCardSkill;
 //function addSkill() {
 //  var boxHidden = document.querySelectorAll('.skills-hidden');
 
-var skillContainer = document.querySelector('.js-card_skills--list');
+const skillContainer = document.querySelector('.js-card_skills--list');
 
-function addSkill() {
-  var boxCardSkill = document.querySelectorAll('.skill');
-  var boxHidden = document.querySelectorAll('.skills-hidden');
+const addSkill = () => {
+  const boxCardSkill = document.querySelectorAll('.skill');
+  const boxHidden = document.querySelectorAll('.skills-hidden');
   if (boxHidden.length === 2) {
     boxSkills[1].classList.remove('skills-hidden');
   } else if (boxHidden.length === 1) {
@@ -127,9 +124,9 @@ function addSkill() {
 }
 
 
-function removeSkill(event) {
-  var sizePseudoBoxCardSkill = document.querySelectorAll('.remove');
-  var parentBox = event.currentTarget.parentElement;
+const removeSkill = event => {
+  const sizePseudoBoxCardSkill = document.querySelectorAll('.remove');
+  const parentBox = event.currentTarget.parentElement;
   parentBox.classList.add('skills-hidden');
 
   if(sizePseudoBoxCardSkill.length === 2){
@@ -147,9 +144,9 @@ fillSelect();
 //HABILIDADES DE LA TARJETA
 
 
-function addSelectSkills() {
-  var newContentSkill;
-  var newBoxSkill = document.querySelectorAll('.skill');
+const addSelectSkills = () => {
+  const newContentSkill;
+  const newBoxSkill = document.querySelectorAll('.skill');
 
   for (var i = 0; i < newBoxSkill.length; i++){
     newContentSkill = document.createTextNode(selectSkills[i].value);
