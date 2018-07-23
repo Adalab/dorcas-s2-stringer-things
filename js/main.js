@@ -73,7 +73,7 @@ const createOption = text => {
   const optionText = document.createTextNode(text);
   option.appendChild(optionText);
   return option;
-}
+};
 
 const fillSelect = () => {
   const url =
@@ -85,13 +85,13 @@ const fillSelect = () => {
       skillList.unshift('Selecciona una habilidad');
       for (const selectSkill of selectSkills) {
         for (const skillElement of skillList) {
-          var newSkillsOption = createOption(skillElement);
+          const newSkillsOption = createOption(skillElement);
           selectSkill.appendChild(newSkillsOption);
         }
       }
     });
 
-}
+};
 
 let pseudoBoxCardSkill;
 //function addSkill() {
@@ -121,7 +121,7 @@ const addSkill = () => {
     console.log('no hay mas habilidades que añadir');
   }
   skillContainer.appendChild(pseudoBoxCardSkill);
-}
+};
 
 
 const removeSkill = event => {
@@ -134,7 +134,7 @@ const removeSkill = event => {
   } else if(sizePseudoBoxCardSkill.length === 1){
     sizePseudoBoxCardSkill[0].remove();
   }
-}
+};
 
 buttonAdd.addEventListener('click', addSkill);
 buttonRemove[0].addEventListener('click', removeSkill);
@@ -145,18 +145,18 @@ fillSelect();
 
 
 const addSelectSkills = () => {
-  const newContentSkill;
+  let newContentSkill;
   const newBoxSkill = document.querySelectorAll('.skill');
 
-  for (var i = 0; i < newBoxSkill.length; i++){
+  for (let i = 0; i < newBoxSkill.length; i++){ //Si lo pasas a "for of" da error
     newContentSkill = document.createTextNode(selectSkills[i].value);
     newBoxSkill[i].innerHTML = '';
     newBoxSkill[i].appendChild(newContentSkill);
   }
-}
+};
 
-for (var j = 0; j < selectSkills.length; j++) {
-  selectSkills[j].addEventListener('change', addSelectSkills);
+for (const selectSkill of selectSkills) {
+  selectSkill.addEventListener('change', addSelectSkills);
 }
 
 //colapsables
